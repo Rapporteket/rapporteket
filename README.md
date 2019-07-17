@@ -1,6 +1,7 @@
 # rapporteket
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/Rapporteket/rapporteket.svg?branch=master)](https://travis-ci.org/Rapporteket/rapporteket)
 <!-- badges: end -->
 
 The goal of rapporteket is to ...
