@@ -9,11 +9,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-5210-3656")))
 URL: https://rapporteket.github.io/rapporteket/index.html
 BugReports: https://github.com/Rapporteket/rapporteket/issues
-Description: Oppdatert informasjon om Rapporteket vedlikeholdt som en R-pakke.
-Målgruppen er først og fremst brukere av Rapporteket selv om innholdet også kan
-være nytting for de som utvikler innhold og tjenster på Rapporteket.
-Spesifikk informasjon om/for hvert enkelt register på Rapporteket finnes i
-respektive R-pakker som alle er tilgjengelig fra github.com/Rapporteket.
+Description: Oppdatert informasjon om Rapporteket vedlikeholdt som en R-pakke. Målgruppen er først og fremst brukere av Rapporteket selv om innholdet også kan være nytting for de som utvikler innhold og tjenster på Rapporteket. Spesifikk informasjon om/for hvert enkelt register på Rapporteket finnes i respektive R-pakker som alle er tilgjengelig fra github.com/Rapporteket.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
