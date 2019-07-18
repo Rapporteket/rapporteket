@@ -19,11 +19,11 @@ Følgende informasjon er tilgjengelig:
 - for
 - informasjon
 
-Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. Innspill og kommentarer er derfor svært velkomne.
+Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. [Innspill og kommentarer er derfor svært velkomne](https://github.com/Rapporteket/rapporteket/issues).
 
 
 ## For utviklere av innhold på Rapporteket generelt
-Alt innhold på Rapporteket er strukturert i R-pakker der koden tilgjengeliggjøres på [GitHub](https://github.com/Rapporteket). For å bidra i slikt arbeid kreves en [github-konto](https://github.com/join) og medlemsskap i organisasjonen *Rapporteket*.
+Alt innhold på Rapporteket er strukturert i R-pakker der koden tilgjengeliggjøres på [GitHub](https://github.com/Rapporteket). For å bidra kreves en [github-konto](https://github.com/join) og medlemsskap i organisasjonen *Rapporteket*.
 
 ## For utviklere av dette prosjektet (*rapporteket*) spesielt
-[SKDE](https://helse-nord.no/skde) har et særlig ansvar for å holde denne pakken (*rapporteket*) oppdatert men også andre kan bidra (eksempelvis gjennom "fork" og "pull request"). Ved å bidra godtar man også [de etiske retningslinjene](CODE_OF_CONDUCT.md) som gjelder for prosjektet.
+[SKDE](https://helse-nord.no/skde) har et særlig ansvar for å holde denne pakken (*rapporteket*) oppdatert men også andre kan bidra (eksempelvis gjennom ["fork"](https://help.github.com/en/articles/fork-a-repo) og ["pull request"](https://help.github.com/en/articles/about-pull-requests)). Ved å bidra godtar man også [de etiske retningslinjene](CODE_OF_CONDUCT.md) som gjelder for prosjektet.
