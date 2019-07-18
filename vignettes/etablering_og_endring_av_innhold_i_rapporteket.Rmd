@@ -1,0 +1,14 @@
+---
+title: "Etablering og endring av innhold i Rapporteket"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rapporteket)
+```

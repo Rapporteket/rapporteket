@@ -6,3 +6,6 @@
 ^docs$
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
+^vignettes/kort_om_rapporteket\.Rmd$
+^vignettes/etablering_av_rapportektet_for_et_register\.Rmd$
+^vignettes/etablering_og_endring_av_innhold_i_rapporteket\.Rmd$

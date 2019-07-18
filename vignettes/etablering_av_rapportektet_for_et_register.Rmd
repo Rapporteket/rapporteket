@@ -1,0 +1,14 @@
+---
+title: "Etablering av Rapporteket for et register"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rapporteket)
+```
