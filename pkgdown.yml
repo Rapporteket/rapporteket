@@ -1,5 +1,9 @@
 pandoc: '2.2'
 pkgdown: 1.3.0
 pkgdown_sha: ~
-articles: []
+articles:
+  etablering_av_rapportektet_for_et_register: etablering_av_rapportektet_for_et_register.html
+  etablering_og_endring_av_innhold_i_rapporteket: etablering_og_endring_av_innhold_i_rapporteket.html
+  kort_om_rapporteket: kort_om_rapporteket.html
+  rapportektet_hva_hvorfor_hvordan: rapportektet_hva_hvorfor_hvordan.html
 
