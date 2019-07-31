@@ -1,5 +1,10 @@
 ---
 title: "Rapporteket, hva, hvorfor, hvordan?"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Rapporteket, hva, hvorfor, hvordan?}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
