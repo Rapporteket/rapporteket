@@ -12,3 +12,4 @@
 ^vignettes/etablering_av_rapportektet_for_et_register\.Rmd$
 ^vignettes/etablering_og_endring_av_innhold_i_rapporteket\.Rmd$
 ^vignettes/rapporteket_hva_hvorfor_hvordan\.Rmd$
+^appveyor\.yml$
