@@ -14,7 +14,8 @@
 Følgende informasjon er tilgjengelig:
 
 - [Kort om Rapporteket](https://rapporteket.github.io/rapporteket/articles/kort_introduksjon.html) / [Rapporteket: a Short Introduction](https://rapporteket.github.io/rapporteket/articles/short_introduction.html)
-- [Rapporteket, hva, hvordan, hvorfor](https://rapporteket.github.io/rapporteket/articles/hva_hvorfor_hvordan.html)
+- [Rapporteket, hva, hvordan, hvorfor (FAQ)](https://rapporteket.github.io/rapporteket/articles/hva_hvorfor_hvordan.html)
+- [Rapporteket, generell informasjon](https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html)
 - [Etablering av Rapportektet for et register](https://rapporteket.github.io/rapporteket/etablering_for_et_register.html)
 - [Etablering og endring av innhold i Rapporteket](https://rapporteket.github.io/rapporteket/etablering_og_endring_av_innhold.html)
 
