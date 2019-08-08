@@ -4,6 +4,7 @@ pkgdown_sha: ~
 articles:
   etablering_for_et_register: etablering_for_et_register.html
   etablering_og_endring_av_innhold: etablering_og_endring_av_innhold.html
+  generell_informasjon: generell_informasjon.html
   hva_hvorfor_hvordan: hva_hvorfor_hvordan.html
   kort_introduksjon: kort_introduksjon.html
   short_introduction: short_introduction.html
