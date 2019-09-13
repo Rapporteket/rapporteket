@@ -27,8 +27,11 @@ Resultatene genereres på grunnlag av all tilgjengelig informasjon i Registerets
 Begrepet «rapport» brukes tradisjonelt i noe diffust registermiljøet. En rapport kan i denne sammenheng først og fremst omfatte figurer og tabeller som oppsummerer data hentet direkte fra registerets datakilde. En rapport kan også være ei sammenstilling av figurer og/eller tabeller som presenteres i nettleseren eller som et pdf-dokument. En rapport kan også være det man vanligvis tenker på som en rapport, nemlig et dokument med både figurer, tabeller, analyser og tekst (prosa). Rapporter kan settes opp til å sendes ut regelmessig  på e-post.
 
 _Eksempler på hvilke resultater man kan ha på Rapporteket:_
+
 * Forhåndsdefinerte figurer hvor man kan gjøre ulike datautvalg, eksempelvis fordelingsfigurer eller figurer som sammenligner resultater fra hvert av sykehusene. 
-* Samlerapport med figurer/tabeller og tekst som brukeren ber om i Rapporteket og får tilsendt på e-post. Registeret må definere innholdet i samlerapporten (figurer, tabeller, analyser og tekst), hvilket utvalg rapporten skal gjelde og hvor ofte den skal sendes ut. Alle tall i rapporten er basert på alle data som er registret inn i databasen.  
+* Registreringsoversikter, status
+* Dashboard - samling av oppdatert nøkkelinforasjon for registeret
+* Samlerapport med figurer/tabeller og tekst som brukeren kan laste ned fra Rapporteket eller få tilsendt på e-post. Registeret må definere innholdet i samlerapporten (figurer, tabeller, analyser og tekst), hvilket utvalg rapporten skal gjelde og hvor ofte den skal sendes ut. Alle tall i rapporten er basert på alle data som er registret inn i databasen.  
 
 
 Det er registeret som definerer hvilke resultater/visualiseringer de ønsker å finne på Rapporteket. En bestilling av Rapporteket må minst inneholde følgende informasjon:
