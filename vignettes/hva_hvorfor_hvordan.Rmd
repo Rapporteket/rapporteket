@@ -14,12 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Dette er det noen som lurer litt på...
-
 ### Hvorfor trenger mitt register Rapporteket?
 For å få tilgang til kontinuerlig oppdaterte resultater, potensielt for alle variable.
-Hvis man skal registrere data, er det viktig å kunne få noe tilbake i form av oppdaterte resultater. Alle avdelinger som registrerer vil kunne gå inn på Rapporteket å se på sine resultater. Registeret definerer selv hva det skal være mulighet for å se på sitt Rapportek.
-Gjennom Rapporteket kan hver registrerende avdeling se egne resultater og sammenligne med resten av landet. På denne måten kan man lære av hverandres erfaringer. 
+Når man bruker tid på å registrere data, er det viktig å kunne få noe tilbake i form av oppdaterte resultater. Alle avdelinger som registrerer vil kunne gå inn på Rapporteket å se på sine resultater. Registeret definerer selv hva det skal være mulighet for å se på sitt Rapportek og hvem som skal ha det. Man kan også velge å vise ulike deler av Rapporteket til personer med ulike roller.
+Gjennom Rapporteket kan hver registrerende avdeling se egne resultater og sammenligne med resten av landet. På denne måten kan man også lære av hverandres erfaringer. 
 
 ### Trenger jeg Rapporteket når jeg har Resultatportalen?
 Ja. 
@@ -32,14 +30,16 @@ På Resultatportalen er det anonymiserte data som ligger til grunn for visningen
 * Regelmessig (automatisk) utsending av rapporter.
 
 
+### Er Rapporteket bare for QReg-registre?
+Nei.
+
 ### Hvordan går jeg fram for å få Rapporteket?
 Kontakte Are Edvardsen (Are.Edvardsen@helse-nord.no). Videre prosess blir å avklare hvem som skal utvikle innhold på Rapporteket for registeret. Fortrinnsvis er dette statistiker i egen region eller i registeret.
 
 
-### Er Rapporteket bare for QReg-registre?
-Nei.
+### Hvordan får man på plass dataoverføring til Rapporteket
 Har man Qreg er per i dag dataoverføring lett å få til. For MRS-registre er det 
-ikke en permanent løsning på plass, men det jobbes med saken. Fra andre innregistreringsløsninger 
+en midlertidig løsning på plass. Fra andre innregistreringsløsninger (e-Reg)
 er det så langt ikke gjort dataoverføring, men ikke la det hindre deg i å ta kontakt! Det skal være mulig å få Rapporteket uansett hvilken innregistreringsløsning du har.  
 
 
