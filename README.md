@@ -1,4 +1,4 @@
-# Rapporteket <img src="man/figures/favicon.ico" align="right" height="150" />
+# Rapporteket <img src="man/figures/logo.svg" align="right" height="150" />
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/Rapporteket/rapporteket.svg?branch=master)](https://travis-ci.org/Rapporteket/rapporteket)
