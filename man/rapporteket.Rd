@@ -3,7 +3,6 @@
 \docType{package}
 \name{rapporteket}
 \alias{rapporteket}
-\alias{rapporteket-package}
 \title{rapporteket: A package containing information regarding Rapporteket}
 \description{
 The rapporteket package provides information regarding Rapporteket: what it
