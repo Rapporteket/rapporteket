@@ -1,9 +1,12 @@
 # Rapporteket <img src="man/figures/logo.svg" align="right" height="150" />
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/Rapporteket/rapporteket.svg?branch=master)](https://travis-ci.org/Rapporteket/rapporteket)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Rapporteket/rapporteket?branch=master&svg=true)](https://ci.appveyor.com/project/Rapporteket/rapporteket)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Version](https://img.shields.io/github/v/release/rapporteket/rapporteket?sort=semver)](https://github.com/rapporteket/rapporteket/releases)
+[![R build status](https://github.com/Rapporteket/rapporteket/workflows/R-CMD-check/badge.svg)](https://github.com/Rapporteket/rapporteket/actions)
+[![codecov.io](https://codecov.io/github/Rapporteket/rapporteket/rapporteket.svg?branch=rel)](https://codecov.io/github/Rapporteket/rapporteket?branch=master)
+[![CRAN status](https://www.r-pkg.org/badges/version/rapporteket)](https://CRAN.R-project.org/package=rapporteket)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![Doc](https://img.shields.io/badge/Doc--grey.svg)](https://rapporteket.github.io/rapporteket/)
 <!-- badges: end -->
 
 
