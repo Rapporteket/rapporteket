@@ -1,6 +1,6 @@
 ---
-Navn: Ønske om ny egenskap
-Tema: Foreslå nye egenskaper og funksjonalitet
+Name: Ønske om ny egenskap
+About: Foreslå nye egenskaper og funksjonalitet
 Tittel: ''
 Nøkkelord: ''
 Ansvarlig: ''
