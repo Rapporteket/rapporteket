@@ -23,7 +23,7 @@ Description: Oppdatert informasjon om Rapporteket vedlikeholdt som en R-pakke.
     kan være nytting for de som utvikler innhold og tjenster på Rapporteket.
     Spesifikk informasjon om/for hvert enkelt register på Rapporteket finnes i
     respektive R-pakker som alle er tilgjengelig fra github.com/Rapporteket.
-License: GPL-3
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
