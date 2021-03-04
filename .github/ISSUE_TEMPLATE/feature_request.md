@@ -1,6 +1,6 @@
 ---
-Name: Ønske om ny egenskap
-About: Foreslå nye egenskaper og funksjonalitet
+name: Ønske om ny egenskap
+about: Foreslå nye egenskaper og funksjonalitet
 Tittel: ''
 Nøkkelord: ''
 Ansvarlig: ''
