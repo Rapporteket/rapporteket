@@ -1,20 +1,20 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Ønske om ny egenskap
+about: Foreslå nye egenskaper og funksjonalitet
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Er ønsket egenskap knyttet itl et problem? Beskriv gjerne.**
+En kort men tydelig beskrivelse av hva problemet er.
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Beskriv foretrukket løsning**
+En kort men tydelig beskrivelse hva du ønsker skal skje.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Beskriv alternative løsniger**
+Hvis relevant, beskriv andre mulige løsninger.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Utfyllende beskrivelse**
+Ved behov, legg inn ytterligere informasjon i form av tekst eller skjermdumper.
