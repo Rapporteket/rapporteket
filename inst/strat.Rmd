@@ -1,0 +1,126 @@
+---
+geometry:
+title: Rapporteket
+subtitle: Bakgrunn, status og videre utvikling
+author:
+- name: Are Edvardsen
+  affiliation: SKDE
+- name: Kevin O. Thon
+  affiliation: SKDE
+- name: Lena R. Olsen
+  affiliation: met.no
+date: "`r format(Sys.time(), '%d. %B, %Y')`"
+keywords: "rapporteket, kvalitetsregister, skde, resultat, analyse, statistikk"
+abstract: "Rapportket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre. Fra det første gang ble satt i drift i 2011 har bruken økt og per mars 2021 benyttes Rapporteket av 13 nasjonale medisinske kvalitetsregistre. Hvert enkelt register etablerer selv ved hjelp av egene statistikerressurser relevant innhold på Rapporteket og det primære verktøyer som benyttes er programvaremiljøet R. Hvor omfattende resultattjenesten er for hvert enkelt register er i stor grad avhengig av kompetanse og kapasitet hos de statistiker- og/eller analysemedarbeidere som er til rådighet. SKDE har gjennom databehandleravtaler bistått registre med etablering og vedlikehold av innhold, men har ikke kapasitet til å hjelpe alle som ønsker å benytte Rapporteket. En større utbredelse av Rapportekte blant kvalitetsregistene forutsetter derfor økt tilgang hos registrene på personer med riktig kompetanse. Rapporteket har vært i drift siden 2011"
+lang: "no-nb"
+fontfamily: mathpazo
+fontsize: 11pt
+output:
+  #pdf_document:
+  bookdown::pdf_document2:
+    toc: yes
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: pdflatex
+    template: raptex-std.tex
+    keep_md: yes
+
+---
+
+```{r set options and load packages, include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+options(tinytex.verbose = TRUE)
+```
+
+# Bakgrunn
+Rapporteket er en resultattjeneste som tilbyr statistikk og analyser basert på dynamiske registerdata fra de medisinske kvalitetsregistrene som benytter tjenesten. Det er hvert enkelt register som ved hjelp av egne statistikere eller analysemedarbeider fyller tjenesten med ønsket innhold der det primære verktøyet for tallbehandling og formidling er [R](https://www.r-project.org/). Hvert enkelt register bestemmer selv hvilke varaibler som skal gjøres tilgjengelig for egen resultattjeneste på Rapporteket og siden dette også kan omfatte person- og helseopplysninger så forutsetter all interaktiv bruk av tjenesten pålogging.
+
+Rapporteket er etablert av SKDE og ble første gang satt i drift i 2011. Per mars 2021 er det 13 nasjonale kvalitetregistre som benytter tjenesten.
+
+Et nyttig og leveringsdyktig Rapportek forutsetter et samvirke mellom to hovedkomponenter:
+
+1. underliggende __teknologi__ for databehandling, presentasjon og distribusjon, og
+
+1. __folk__ som forstår seg på tall og som kan anvende relevante verktøy på registerdata 
+
+
+# Status for Rapporteket
+Under er det gitt en status for sentrale egenskaper ved Rapporteket __per mars måned 2021__.
+
+## Registre
+10 nasjonale og 14 lokale kvalitetsregistre er representert på Rapporteket og disse antallene er basert på den formelle organiseringen hos de respektive dataansvarlige foretakene. Ut fra praktiske og formelle hensyn representeres registrene som __funksjonelle enheter__ i Rapporteket. I tabell \@ref(tab:unitMap) er sammenhengen mellom disse forsøkt vist. Funksjonell enhet er en sentral "størrelse" blant annet for en diskusjon rundt ressursbehov i etablering og vedlikehold av resultattjenester som leveres gjennom Rapporteket. 
+
+```{r make table of unitMap, results='asis'}
+tabData <- data.frame(
+  Register = c("NorSpis*", "HISREG*", "NKR*", "NoRGast*", "NRA*",
+               "NordicScir*",
+               "Intensivregisteret*", "NORIC Nasjonal*", "NORIC UNN",
+               "NORIC Bodø","NORIC St Olav", "NORIC HUS", "NORIC SUS",
+               "NORIC Arendal","NORIC AHUS", "NORIC Rikshospitalet",
+               "NORIC Ullevål", "NORIC LHL", "Smerte Nasjonal*",
+               "Smerte UNN", "Smerte St Olav", "Smerte HUS",
+               "Smerte OUS", "NGER*"),
+  Dataansvarlig = c("NLSH HF", "UNN HF", "UNN HF", "UNN HF", "UNN HF",
+                    "St Olav HF",
+                    "Helse Bergen HF", "FHI", "UNN HF",
+                    "NLSH HF", "St Olav HF", "Helse Bergen HF",
+                    "Helse Stavanger HF",
+                    "Sørlandssykehuset HF", "Aksershus universitetssykehus HF",
+                    "OUS HF",
+                    "OUS HF", "LHL", "Helse Bergen HF",
+                    "UNN HF", "St Olav HF", "Helse Bergen HF",
+                    "OUS HF", "SiV HF"),
+  `Funksjonell enhet` = c("norspis", "hisreg", "rygg, nakke", "norgast", "nra",
+                          "nordicscir",
+                          "intensiv, intensivberedskap, korona", "noric", "noric",
+                          "noric", "noric", "noric", "noric",
+                          "noric", "noric", "noric",
+                          "noric", "noric", "smerte",
+                          "smerte", "smerte", "smerte",
+                          "smerte", "smerte"),
+  stringsAsFactors = FALSE
+)
+
+cap <- paste("Kobling mellom registre, dataansvarlig og funksjonell enhet på",
+             "Rapporteket. Tekniske sett kan en funksjonell enhet likestilles",
+             "med en R-pakke. Ett kvalitetsregister kan ha én eller flere",
+             "funksjonelle",
+             "enheter på Rapporteket, og én funksjonell enhet kan",
+             "representere ett eller flere kvalitetsregistre. Registre merket",
+             "med * er nasjonale kvalitetsregistre.")
+
+noric::mst(tab = tabData, cap = cap, label = "unitMap")
+```
+
+## Innholdsprodusenter
+asdf
+
+```{r make table of current status, results='asis'}
+tabData <- data.frame(
+  Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
+              "Helse Sør-Øst"),
+  `Funksjonell enhet` = c(paste("norspis, hisreg, norgast, nakke,",
+                                "nra, rygg, nakke"),
+                          paste("nordicscir"),
+                          paste("intensiv, intensivberedskap, korona,",
+                                "noric, smerte"),
+                          paste("nger")),
+  Innholdsprodusenter = c(3, 0, 4, 0))
+
+cap <- paste("Registre i form av funksjonelle enheter som er etablert på",
+             "Rapporteket og antall personer (Innholdsprodusenter) som",
+             "jobber med innhold i disse fordelt på de fire helseregionene.",
+             "Innholdsprodusenter i Helse Nord bidrar i tillegg til egne også",
+             "med innhold til registre i de andre helseregionene.")
+
+noric::mst(tab = tabData, cap = cap, label = "currentStatus")
+
+```
+
+## Teknologi
+
+# Utfordringer
+asdf
+
+# Videre utvikling
+adf
