@@ -93,7 +93,13 @@ noric::mst(tab = tabData, cap = cap, label = "unitMap")
 ```
 
 ## Innholdsprodusenter
-asdf
+Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form figurer, tabeller, rapporter basert på analyse av registerdata. Disse må ha kompetanse innen tallbehandling og programmering og har gjerne en naturvitenskapelig utdanning inne matematikk eller statistikk.
+
+I de regionale servicemiljøene er det ansatt egne folk som har registerdata som en sentral arbeidsoppgave og som skal gi støtte til registre i egen region. Men, det er stor variasjon mellom de regionale servicemiljøene hvor mange som er ansatt i en slik funksjon og hvor mange registre de skal dekke. I tillegg til de som er ansatt i servicemiljøene så har enkelte nasjonale registre også ansatt egne statistikere.
+
+Alle de over nevnte kan inngå som __innholdsprodusenter__ for registre på Rapporteket. Av ulike årsaker er det bare noe av disse som faktisk produserer innhold for registrene på Rapporteket og en regionvis sammestilling av dette er gitt i tabell \@ref(tab:currentStatus).
+
+Nye eller endrede behov og utfordringer som oppstår ved etablering og vedlikehold av innhold (resultatjenester) for registrene på Rapporteket koordineres og løses av SKDE. Ved behov tas slike tema inn til behandling i en egen forvatningsgruppe for Rapporteket der også Helse Nord IKT inngår.
 
 ```{r make table of current status, results='asis'}
 tabData <- data.frame(
@@ -118,6 +124,12 @@ noric::mst(tab = tabData, cap = cap, label = "currentStatus")
 ```
 
 ## Teknologi
+Teknologien bak Rapporteket er i hovedsak basert på [R](https://www.r-project.org/) som er et [fritt tilgjengelig](https://www.gnu.org/philosophy/free-sw.html) programvaremiljø for statistiske og grafiske formål. All programkode og annet innhold (utenom registerdata) på Rapporteket er strukturert i [R-pakker som lages og vedlikeholdes av statistikere i registrene](https://github.com/Rapporteket). Rapporteket benytter eksistrende og nasjonal infrastruktur for de medisinske kvalitetsregistrene, blant annet for å ivareta tilstrekkelig sikkerhet slik som identifikasjon og adgangskontroll. Teknisk drift av Rapporteket skjer gjennom [Norsk Helsenett](https://www.nhn.no/) med [Helse Nord IKT](https://helsenordikt.no/) som underleverandør.
+
+Nye eller endrede behov og utfordringer knyttet til underliggende teknologi koordineres og løses av Helse Nord IKT. Ved behov behandles slike tema i en egen forvaltningsgruppe for Rapporteket der SKDE også inngår. 
+
+
+
 
 # Utfordringer
 asdf
