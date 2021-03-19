@@ -58,12 +58,13 @@
 \let\authblk@author\author
 \let\oldaffil\affil
 
+%footnotesize
 \usepackage[absolute]{textpos}
 \renewcommand{\@maketitle}{%
     \def\@makefnmark{}%
     \begin{textblock*}{\marginparwidth}[1,0]%
       (\dimexpr\Gm@lmargin-\marginparsep,\Gm@tmargin)
-      \raggedleft\footnotesize%
+      \raggedleft\scriptsize%
       \includegraphics[width=\hsize]{logo}%
       {\\ RAPPORTEKET er en analysetjenste som tilbyr interaktiv undersøkelse
       av rådata, rutinemessig utsending av rapporter og visualisering av
