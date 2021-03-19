@@ -3,3 +3,6 @@
 .RData
 docs/
 inst/doc
+inst/*.html
+inst/*.md
+inst/*.pdf
