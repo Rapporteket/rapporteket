@@ -25,10 +25,12 @@
 \usepackage[defaultsans]{lato}
 \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage[font={rm},labelfont={bf,sf},%
+%font={rm},
+\usepackage[font={small,rm},labelfont={bf,sf},%
             labelsep=period,%
             skip=4pt,tableposition=top,%
-            singlelinecheck=false,justification=centering]{caption}
+            singlelinecheck=false,justification=raggedright]{caption}
+\captionsetup{margin={10pt,0pt},oneside}
 
 % Oppsett hode, kne og tå
 \usepackage{fancyhdr}  % custom headers/footers
@@ -189,6 +191,7 @@ $endif$
   \color{#1}\global\let\default@color\current@color
 }
 \makeatother
+
 
 \AtBeginDocument{\globalcolor{text}}
 
