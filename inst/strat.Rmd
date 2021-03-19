@@ -11,19 +11,17 @@ author:
   affiliation: met.no
 date: "`r format(Sys.time(), '%d. %B, %Y')`"
 keywords: "rapporteket, kvalitetsregister, skde, resultat, analyse, statistikk"
-abstract: "Rapportket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre. Fra det første gang ble satt i drift i 2011 har bruken økt og per mars 2021 benyttes Rapporteket av 10 nasjonale medisinske kvalitetsregistre. Hvert enkelt register etablerer selv ved hjelp av egene statistikerressurser relevant innhold på Rapporteket og det primære verktøyer som benyttes er programvaremiljøet R. Hvor omfattende resultattjenesten er for hvert enkelt register er i stor grad avhengig av kompetanse og kapasitet hos de statistiker- og/eller analysemedarbeidere som er til rådighet. SKDE har gjennom databehandleravtaler bistått registre med etablering og vedlikehold av innhold, men har ikke kapasitet til å hjelpe alle som ønsker å benytte Rapporteket. En større utbredelse av Rapportekte blant kvalitetsregistene forutsetter derfor økt tilgang hos registrene på personer med riktig kompetanse."
+abstract: "Rapportket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre. Fra det første gang ble satt i drift i 2011 har bruken økt og per mars 2021 benyttes Rapporteket av 11 nasjonale medisinske kvalitetsregistre. Hvert enkelt register etablerer selv ved hjelp av egene statistikerressurser relevant innhold på Rapporteket og det primære verktøyer som benyttes er programvaremiljøet R. Hvor omfattende resultattjenesten er for hvert enkelt register er i stor grad avhengig av kompetanse og kapasitet hos de statistiker- og/eller analysemedarbeidere som er til rådighet. SKDE har gjennom databehandleravtaler bistått registre med etablering og vedlikehold av innhold, men har ikke kapasitet til å hjelpe alle som ønsker å benytte Rapporteket. En større utbredelse av Rapportekte blant kvalitetsregistene forutsetter derfor økt tilgang hos registrene på personer med riktig kompetanse."
 lang: "no-nb"
 fontfamily: mathpazo
 fontsize: 11pt
 output:
-  #pdf_document:
   bookdown::pdf_document2:
     toc: yes
     fig_caption: yes
     keep_tex: yes
     latex_engine: pdflatex
     template: raptex-std.tex
-    keep_md: yes
 
 ---
 
@@ -33,7 +31,7 @@ options(tinytex.verbose = TRUE)
 ```
 
 # Bakgrunn
-Rapporteket er en resultattjeneste som tilbyr statistikk og analyser basert på dynamiske registerdata fra de medisinske kvalitetsregistrene som benytter tjenesten. Det er hvert enkelt register som ved hjelp av egne statistikere eller analysemedarbeider fyller tjenesten med ønsket innhold der det primære verktøyet for tallbehandling og formidling er [R](https://www.r-project.org/). Hvert enkelt register bestemmer selv hvilke varaibler som skal gjøres tilgjengelig for egen resultattjeneste på Rapporteket og siden dette også kan omfatte person- og helseopplysninger så forutsetter all interaktiv bruk av tjenesten pålogging.
+Rapporteket er en resultattjeneste som tilbyr statistikk og analyser basert på dynamiske registerdata fra de medisinske kvalitetsregistrene som benytter tjenesten. Det er hvert enkelt register som ved hjelp av tilgjengelige statistikere eller analysemedarbeider fyller tjenesten med ønsket innhold der det primære verktøyet for tallbehandling og formidling er [R](https://www.r-project.org/). Hvert enkelt register bestemmer selv hvilke varaibler som skal gjøres tilgjengelig for egen resultattjeneste på Rapporteket og siden dette også kan omfatte person- og helseopplysninger så forutsetter all interaktiv bruk av tjenesten pålogging.
 
 Rapporteket er etablert av SKDE og ble første gang satt i drift i 2011. Per mars 2021 er det 13 nasjonale kvalitetregistre som benytter tjenesten.
 
@@ -48,11 +46,14 @@ Et nyttig og leveringsdyktig Rapportek forutsetter et samvirke mellom to hovedko
 Under er det gitt en status for sentrale egenskaper ved Rapporteket __per mars måned 2021__.
 
 ## Registre
-10 nasjonale og 14 lokale kvalitetsregistre er representert på Rapporteket og disse antallene er basert på formelt eierskap i de respektive dataansvarlige foretakene. På Rapporteket representeres registrene som [R-pakker](https://en.wikipedia.org/wiki/R_package) og Tabell \@ref(tab:unitMap) angir sammenhengen mellom disse. For vurderinger av blant annet ressursbehov i etablering og vedlikehold av resultattjenester som leveres gjennom Rapporteket så er R-pakke et sentralt begrep. 
+På Rapporteket finnes det 11 nasjonale og 14 lokale kvalitetsregistre der disse antallene er basert på formelt eierskap i de respektive dataansvarlige foretakene. I alt er det ni av Norges helseforetak som har egne registre på Rapporteket i tillegg til [Folkehelseinstituttet (FHI)](https://www.fhi.no/) og [Landsforenigen for hjerte- og lungesyke (LHL)](https://www.lhl.no/).
+
+I Rapporteket er registrene representert som [R-pakker](https://en.wikipedia.org/wiki/R_package) og Tabell \@ref(tab:unitMap) angir sammenhengen mellom disse. For vurderinger av blant annet ressursbehov i etablering og vedlikehold av resultattjenester som leveres gjennom Rapporteket så er begrepet R-pakke nyttig å kunne forholde seg til. 
 
 ```{r make table of unitMap, results='asis'}
 tabData <- data.frame(
-  Register = c("NorSpis*", "HISREG*", "NKR*", "NoRGast*", "NRA*",
+  Register = c("NorSpis*",
+               "HISREG*", "NKR*", "NoRGast*", "NRA*", "Muskel*",
                "NordicScir*",
                "Intensivregisteret*", "NORIC Nasjonal*", "NORIC UNN",
                "NORIC Bodø","NORIC St Olav", "NORIC HUS", "NORIC SUS",
@@ -60,7 +61,8 @@ tabData <- data.frame(
                "NORIC Ullevål", "NORIC LHL", "Smerte Nasjonal*",
                "Smerte UNN", "Smerte St Olav", "Smerte HUS",
                "Smerte OUS", "NGER*"),
-  Dataansvarlig = c("NLSH HF", "UNN HF", "UNN HF", "UNN HF", "UNN HF",
+  Dataansvarlig = c("NLSH HF",
+                    "UNN HF", "UNN HF", "UNN HF", "UNN HF", "UNN HF",
                     "St Olav HF",
                     "Helse Bergen HF", "FHI", "UNN HF",
                     "NLSH HF", "St Olav HF", "Helse Bergen HF",
@@ -70,7 +72,8 @@ tabData <- data.frame(
                     "OUS HF", "LHL", "Helse Bergen HF",
                     "UNN HF", "St Olav HF", "Helse Bergen HF",
                     "OUS HF", "SiV HF"),
-  `R-pakke` = c("norspis", "hisreg", "rygg, nakke", "norgast", "nra",
+  `R-pakke` = c("norspis",
+                "hisreg", "rygg, nakke", "norgast", "nra", "muskel",
                 "nordicscir",
                 "intensiv, intensivberedskap, korona", "noric", "noric",
                 "noric", "noric", "noric", "noric",
@@ -86,26 +89,26 @@ cap <- paste("Kvalitetsregistre og respektive dataansvarlige foretak som",
              "Hvert kvalitetsregister på Rapporteket kan være representert",
              "gjennom én eller flere R-pakker, og én R-pakke kan",
              "representere ett eller flere kvalitetsregistre. Registre merket",
-             "med * er nasjonale kvalitetsregistre.")
+             "* er nasjonale kvalitetsregistre.")
 
 noric::mst(tab = tabData, cap = cap, label = "unitMap")
 ```
 
-## Innholdsprodusenter
-Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form figurer, tabeller, rapporter basert på analyse av registerdata. Disse må ha kompetanse innen tallbehandling og programmering og har gjerne en naturvitenskapelig utdanning inne matematikk eller statistikk.
+## Produksjon av innhold
+Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form figurer, tabeller og rapporter basert på analyse av registerdata. Disse må ha kompetanse særlig innen tallbehandling men også enkel programmering og har gjerne en naturvitenskapelig utdanning inne matematikk eller statistikk.
 
 I de regionale servicemiljøene er det ansatt egne folk som har registerdata som en sentral arbeidsoppgave og som skal gi støtte til registre i egen region. Men, det er stor variasjon mellom de regionale servicemiljøene hvor mange som er ansatt i en slik funksjon og hvor mange registre de skal dekke. I tillegg til de som er ansatt i servicemiljøene så har enkelte nasjonale registre også ansatt egne statistikere.
 
 Alle de over nevnte kan inngå som __innholdsprodusenter__ for registre på Rapporteket. Av ulike årsaker er det bare noe av disse som faktisk produserer innhold for registrene på Rapporteket og en regionvis sammestilling av dette er gitt i tabell \@ref(tab:currentStatus).
 
-Nye eller endrede behov og utfordringer som oppstår ved etablering og vedlikehold av innhold (resultatjenester) for registrene på Rapporteket koordineres og løses av SKDE. Ved behov tas slike tema inn til behandling i en egen forvatningsgruppe for Rapporteket der også Helse Nord IKT inngår.
+
 
 ```{r make table of current status, results='asis'}
 tabData <- data.frame(
   Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
               "Helse Sør-Øst"),
   `R-pakke` = c(paste("norspis, hisreg, norgast, nakke,",
-                                "nra, rygg, nakke"),
+                                "nra, rygg, nakke, muskel"),
                           paste("nordicscir"),
                           paste("intensiv, intensivberedskap, korona,",
                                 "noric, smerte"),
@@ -125,7 +128,13 @@ noric::mst(tab = tabData, cap = cap, label = "currentStatus")
 ## Teknologi
 Teknologien bak Rapporteket er i hovedsak basert på [R](https://www.r-project.org/) som er et [fritt tilgjengelig](https://www.gnu.org/philosophy/free-sw.html) programvaremiljø for statistiske og grafiske formål. All programkode og annet innhold (utenom registerdata) på Rapporteket er strukturert i [R-pakker som lages og vedlikeholdes av statistikere i registrene](https://github.com/Rapporteket). Rapporteket benytter eksistrende og nasjonal infrastruktur for de medisinske kvalitetsregistrene, blant annet for å ivareta tilstrekkelig sikkerhet slik som identifikasjon og adgangskontroll. Teknisk drift av Rapporteket skjer gjennom [Norsk Helsenett](https://www.nhn.no/) med [Helse Nord IKT](https://helsenordikt.no/) som underleverandør.
 
-Nye eller endrede behov og utfordringer knyttet til underliggende teknologi koordineres og løses av Helse Nord IKT. Ved behov behandles slike tema i en egen forvaltningsgruppe for Rapporteket der SKDE også inngår. 
+## Nasjonal koordinering og forvaltning
+Alt av innhold på rapporteket (_i.e._ registrenes resultattjenester) er representert gjennom R-kode som forvaltes og deles gjennom bruk av [GitHub](https://en.wikipedia.org/wiki/GitHub). Her er det etablert en egen [organisasjon for Rapporteket](https://github.com/Rapporteket) som administreres av SKDE
+
+Nødvendige avklaringer og eventuelle problemer knyttet til nye eller endrede behov som oppstår ved innholdsproduksjon koordineres og løses av SKDE. Aktuelle problemstillinger kan også løftes til forvatningsgruppen for Rapporteket der Helse Nord IKT inngår sammen med SKDE. Tema som omhandler avhengigheter mellom funksjonalitet knyttet til innhold og underliggende teknologi er særlig aktuell for behandling i forvaltningsgruppen.
+
+## Finansiering
+Den tekniske driften av Rapporteket inngår i den nasjonale oppgjørsordningen for kvalitetsregistre. Nasjonale kvalitetsregistre tilbys derfor Rapporteket gratis. Produksjon av innhold er basert på egenfinansiering fra servicemiljøene eller fra registrene selv. Ved behov yter SKDE bistand til innholdsprodusjon, og særlig gjelder dette når et register skal i gang med bruk av Rapporteket for første gang. 
 
 
 # Utfordringer
