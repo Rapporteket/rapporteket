@@ -10,7 +10,7 @@ subtitle: Bakgrunn, status og videre utvikling
 author: Are Edvardsen, Kevin O. Thon, Lena R. Olsen, Eva Stensland
 date: "`r format(Sys.time(), '%d. %B, %Y')`"
 keywords: "rapporteket, kvalitetsregister, skde, resultat, analyse, statistikk"
-abstract: "Rapportket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre. Fra det første gang ble satt i drift i 2011 har bruken økt og per mars 2021 benyttes Rapporteket av 11 nasjonale medisinske kvalitetsregistre. Hvert enkelt register etablerer selv ved hjelp av egene statistikerressurser relevant innhold på Rapporteket og det primære verktøyer som benyttes er programvaremiljøet R. Hvor omfattende resultattjenesten er for hvert enkelt register er i stor grad avhengig av kompetanse og kapasitet hos de statistiker- og/eller analysemedarbeidere som er til rådighet. SKDE har gjennom databehandleravtaler bistått registre med etablering og vedlikehold av innhold, men har ikke kapasitet til å hjelpe alle som ønsker å benytte Rapporteket. En større utbredelse av Rapportekte blant kvalitetsregistene forutsetter derfor økt tilgang hos registrene på personer med riktig kompetanse."
+abstract: "Rapporteket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre. Fra det første gang ble satt i drift i 2011 har bruken økt og per mars 2021 benyttes Rapporteket av 11 nasjonale medisinske kvalitetsregistre. Hvert enkelt register etablerer selv ved hjelp av egene statistikerressurser relevant innhold på Rapporteket og det primære verktøyer som benyttes er programvaremiljøet R. Hvor omfattende resultattjenesten er for hvert enkelt register er i stor grad avhengig av kompetanse og kapasitet hos de statistiker- og/eller analysemedarbeidere som er til rådighet. SKDE har gjennom databehandleravtaler bistått registre med etablering og vedlikehold av innhold, men har ikke kapasitet til å hjelpe alle som ønsker å benytte Rapporteket. En større utbredelse av Rapportekte blant kvalitetsregistene forutsetter derfor økt tilgang hos registrene på personer med riktig kompetanse."
 lang: "no-nb"
 fontfamily: mathpazo
 fontsize: 11pt
@@ -99,7 +99,7 @@ Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlike
 
 I de regionale servicemiljøene er det ansatt egne folk som har registerdata som en sentral arbeidsoppgave og som skal gi støtte til registre i egen region. Men, det er stor variasjon mellom de regionale servicemiljøene hvor mange som er ansatt i en slik funksjon og hvor mange registre de skal dekke. I tillegg til de som er ansatt i servicemiljøene så har enkelte nasjonale registre også ansatt egne statistikere.
 
-Alle de over nevnte kan inngå som __innholdsprodusenter__ for registre på Rapporteket. Av ulike årsaker er det bare noe av disse som faktisk produserer innhold for registrene på Rapporteket og en regionvis sammenstilling av dette er gitt i tabell \@ref(tab:currentStatus).
+Alle de over nevnte kan inngå som __innholdsprodusenter__ for registre på Rapporteket. Av ulike årsaker er det bare noen av disse som faktisk produserer innhold for registrene på Rapporteket og en regionvis sammenstilling av dette er gitt i tabell \@ref(tab:currentStatus).
 
 
 
