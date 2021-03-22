@@ -53,6 +53,8 @@
 \makeatother
 
 
+$if(anonymous)$$else$\author{$author$}$endif$
+
 % Oppsett tittelside
 \makeatletter
 \let\authblk@author\author
@@ -65,6 +67,12 @@
     \begin{textblock*}{\marginparwidth}[1,0]%
       (\dimexpr\Gm@lmargin-\marginparsep,\Gm@tmargin)
       \raggedleft\scriptsize%
+      $if(logo)$
+      \includegraphics[width=\hsize]{$logo$}%
+      $endif$
+      $if(logotext)$
+      {\\ $logotext$ \\[10pt]}%
+      $endif$
       \includegraphics[width=\hsize]{logo}%
       {\\ RAPPORTEKET er en analysetjenste som tilbyr interaktiv undersøkelse
       av rådata, rutinemessig utsending av rapporter og visualisering av
@@ -78,9 +86,15 @@
       (\dimexpr\Gm@lmargin-\marginparsep,\dimexpr\paperheight-\Gm@bmargin)
       \raggedleft\footnotesize\itshape%
       {\large\rmfamily\upshape\bfseries Om rapporten\par}%
-      {\textbf{Bestilt av}\\ ledergruppen SKDE\par}%
-      {\textbf{Ansvarlig for innhold}\\ SKDE\par}%
-      {\textbf{Produsert av}\\ Rapporteket\par}%
+      $if(order)$
+      {\textbf{Bestilt av}\\ $order$\par}%
+      $endif$
+      $if(responsible)$
+      {\textbf{Ansvarlig for innhold}\\ $responsible$\par}%
+      $endif$
+      $if(producer)$
+      {\textbf{Produsert av}\\ $producer$\par}%
+      $endif$
       {\textbf{Dato}\\ \today\par}%
       {\textbf{Tid}\\ \currenttime\par}%
     \end{textblock*}
@@ -101,7 +115,7 @@ $endif$
 
 
 % $if(anonymous)$$else$\author{$for(author)$\Large $author.name$\vspace{0.05in} \normalsize\emph{$author.affiliation$} \and $endfor$}$endif$
-\author{Are, Kevin og Lena}
+%\author{Are, Kevin og Lena}
 
 
 % Bruk hf-rager på nivå 1 og 2 overskrifter
