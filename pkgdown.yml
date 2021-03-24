@@ -2,9 +2,10 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
+  exgr: exgr.html
   generell_informasjon: generell_informasjon.html
   hva_hvorfor_hvordan: hva_hvorfor_hvordan.html
   kort_introduksjon: kort_introduksjon.html
   short_introduction: short_introduction.html
-last_built: 2021-03-04T13:51Z
+last_built: 2021-03-24T07:57Z
 

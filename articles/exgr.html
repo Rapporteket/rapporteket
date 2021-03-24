@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rapporteket: a Short Introduction • rapporteket</title>
+<title>Hva er Rapporteket? • rapporteket</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Rapporteket: a Short Introduction">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Hva er Rapporteket?">
 <meta property="og:description" content="rapporteket">
 <meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -103,27 +103,47 @@
 
       
 
-      </header><script src="short_introduction_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="exgr_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Rapporteket: a Short Introduction</h1>
+      <h1 data-toc-skip>Hva er Rapporteket?</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/Rapporteket/rapporteket/blob/master/vignettes/short_introduction.Rmd"><code>vignettes/short_introduction.Rmd</code></a></small>
-      <div class="hidden name"><code>short_introduction.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/Rapporteket/rapporteket/blob/master/vignettes/exgr.Rmd"><code>vignettes/exgr.Rmd</code></a></small>
+      <div class="hidden name"><code>exgr.Rmd</code></div>
 
     </div>
 
     
     
-<!-- Please consult 'rapbase' maintainer before editing -->
-<p><em>Rapporteket</em> is an analysis and reporting service used by Norwegian medical quality registries. The purpose of these registries is to monitor and facilitate quality improvements of public health care in Norway. Based on the underlying data <em>Rapporteket</em> provides registries with the ability of data mining, routine reporting and publication. The service is hosted by <a href="https://helse-nord.no/skde">Centre for Clinical Documentation and Evaluation</a> and funded by the <a href="https://www.regjeringen.no/en/dep/hod/id421/">Ministry of Health and Care Services</a>.</p>
-<p>Technically, <em>Rapporteket</em> is mainly based on <a href="https://www.r-project.org/">R</a> which is a <a href="https://www.gnu.org/philosophy/free-sw.html">free</a> software environment for statistical computing and graphics. All code and content (except data) are structured in <a href="https://github.com/Rapporteket">R-packages maintained by registry statisticians</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rapporteket.github.io/rapporteket/index.html">rapporteket</a></span><span class="op">)</span></code></pre></div>
+<div id="rapporteket-er-ikke-en-teknisk-løsning" class="section level2">
+<h2 class="hasAnchor">
+<a href="#rapporteket-er-ikke-en-teknisk-l%C3%B8sning" class="anchor"></a>Rapporteket er ikke en “teknisk løsning”</h2>
+<p><img src="../inst/whatIs1.png" align="center" height="400"></p>
+</div>
+<div id="bruk" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bruk" class="anchor"></a>Bruk</h2>
+<div id="interaktivitet" class="section level3">
+<h3 class="hasAnchor">
+<a href="#interaktivitet" class="anchor"></a>Interaktivitet</h3>
+<p><img src="../inst/whatIs2.png" align="center" height="600"></p>
+</div>
+<div id="utsendelser" class="section level3">
+<h3 class="hasAnchor">
+<a href="#utsendelser" class="anchor"></a>Utsendelser</h3>
+<p><img src="../inst/whatIs3.png" align="center" height="800"></p>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
