@@ -36,11 +36,13 @@ Rapporteket forutsetter samvirke mellom to hovedkomponenter:
 
 1. underliggende __teknologi__ for databehandling, presentasjon og distribusjon, og
 
-1. __folk__ som forstår seg på tall og som kan anvende relevante verktøy på registerdata 
+1. __folk__ som forstår seg på tall og som kan anvende relevante verktøy på registerdata
 
 Det er ønskelig at flere nasjonale kvalitetsregistre tar i bruk Rapporteket og utfordringer blant annet innen kapasitet har vært et ofte diskutert tema i servicemiljøet ved SKDE over mange år. Ledergruppen ved SKDE kom i februar 2021 med følgende bestilling som da er utgangspunktet for denne rapporten:
 
 > Servicemiljøet er bedt om å komme tilbake med en samlet og retningsgivende rapport som løfter forståelsen av "Rapporteket" ved å beskrive hva som er gjort, hvilke utfordringer og begrensinger som finnes, og ved å angi en mulig fremtidig løsning som kan breddes til flere registre.
+
+Ved behov for mer informasjon om Rapporteket utover det som er gitt over er det etablert [en egen infomasjonsside](https://rapporteket.github.io/rapporteket/) med blant annet mer utfyllende generell informasjon som man finner på [https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html](https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html).
 
 # Status for Rapporteket
 Under er det gitt en status for sentrale egenskaper ved Rapporteket __per mars måned 2021__.
@@ -108,7 +110,7 @@ tabData <- data.frame(
   Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
               "Helse Sør-Øst"),
   `R-pakke` = c(paste("norspis, hisreg, norgast, nakke,",
-                                "nra, rygg, nakke, muskel"),
+                                "nra, rygg, muskel"),
                           paste("nordicscir"),
                           paste("intensiv, intensivberedskap, korona,",
                                 "noric, smerte"),
@@ -175,7 +177,6 @@ Erfaringsmessig kan én statistiker i en full stilling grovt sett dekke behovet 
 ## Teknologi
 Rapporteket har etter nylig gjennomført modernisering egentlig ingen kritiske begrensninger som kan tilskrives de teknologiene som benyttes. Det som kan gi utfordringer er å holde tritt med den generelt raske utviklingstakten i relevante digitale verktøy og eventuelle nye krav til funksjonalitet som måtte følge av dette. Det finnes dog (og alltid) et ikke utnyttet potensiale i forenkling og effektivisering av arbeidsprosessene og som kan gjøre hverdagen enklere for de som jobber i og med Rapporteket. Dette vil gi en positiv effekt på både kvalitet og kvantitet.
 
-## Uvilje, furting, udugelighet, eller noe sånt...
 Dataleveranser til Rapporteket fra MRS-baserte registre har siden starten vært av svært dårlig kvalitet og slik er det fortsatt. Resultattjenester på Rapporteket for registrene dette gjelder har derfor vært beheftet med mange feil og lange perioder med manglende oppdatering av data. For kvalitetsregistre som driftes på nasjonal infrastruktur (hos Norsk Helsenett) er det tekniske sett ukomplisert å levere data til Rapporteket. Siden denne situasjonen har eksistert over så mange år har det festet seg et feilaktig inntrykk av at Rapporteket ikke er egnet som resultattjeneste for registre som benytter MRS til datafangst.
 
 
