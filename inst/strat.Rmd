@@ -181,11 +181,11 @@ Dataleveranser til Rapporteket fra MRS-baserte registre har siden starten vært 
 
 
 # Videre utvikling
-Alle kvalitetsregistrene er avhengig av riktig kompetanse med tilstrekkelig kapasitet for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse. Den sammen kompetansen sammenfaller godt med forutsetningene for å kunne ta i bruk og få nytte av Rapporteket. Manglene kompetanse og/eller kapasitet er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er også at når registrene har ansatt egne statistikere så er det gjerne enklere å få på plass en resultattjeneste på Rapporteket. En forutsetning for dette er imidlertid en aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
+Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglene kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er også at når registrene har ansatt egne statistikere så er det gjerne enklere å få på plass en resultattjeneste på Rapporteket. En forutsetning for dette er imidlertid en aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
 
 - skalere opp statistikerkapasiteten i servicemiljøene, i SKDE eller begge deler,
 
-- økt fokus på nødvendigheten av statistikerkompetanse i servicemiljøenes rådgivning ovenfor registrene,
+- økt fokus på nødvendigheten av statistikerkompetanse i servicemiljøenes råd-givning ovenfor registrene,
 
 - oppfordre større registre, eventuelt klynger av mindre der det er mulig, å ansette egen statistikerkompetanse og da helst med erfaring i bruk av R,
 
