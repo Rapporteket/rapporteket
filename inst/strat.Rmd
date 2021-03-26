@@ -136,7 +136,7 @@ tabData <- data.frame(
                 "rapporteket", "sship"),
   Funksjon = c(paste("Brukerhåndtering, databasekoblinger, bruksstatistikk, ",
                      "konfigurasjon mm."),
-             "Obligatorisk for alle som registre på Rapporteket.",
+             "Obligatorisk for alle registre på Rapporteket.",
              "Kodemaler for ulike figurtyper. Brukes av noen registre.",
              "Forvaltningsverktøy. Brukes av SKDE og HNIKT.",
              "Kodeeksempler for opplæring og etablering.",
