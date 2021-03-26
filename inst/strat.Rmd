@@ -97,9 +97,9 @@ noric::mst(tab = tabData, cap = cap, label = "unitMap")
 ```
 
 ## Produksjon av innhold
-Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form figurer, tabeller og rapporter basert på analyse av registerdata. Disse må ha kompetanse særlig innen tallbehandling men også enkel programmering og har gjerne en naturvitenskapelig utdanning inne matematikk eller statistikk.
+Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form av figurer, tabeller og rapporter basert på analyse av registerdata. Disse må ha kompetanse særlig innen tallbehandling men også enkel programmering og har gjerne en naturvitenskapelig utdanning innen matematikk eller statistikk.
 
-I de regionale servicemiljøene er det ansatt egne folk som har registerdata som en sentral arbeidsoppgave og som skal gi støtte til registre i egen region. Men, det er stor variasjon mellom de regionale servicemiljøene hvor mange som er ansatt i en slik funksjon og hvor mange registre de skal dekke. I tillegg til de som er ansatt i servicemiljøene så har enkelte nasjonale registre også ansatt egne statistikere.
+I de regionale servicemiljøene er det ansatt egne folk som har registerdata som en sentral arbeidsoppgave og som skal gi støtte til registre i egen region. Men, det er stor variasjon mellom de regionale servicemiljøene hvor mange som er ansatt i en slik funksjon og hvor mange registre de skal dekke. I tillegg har enkelte nasjonale registre ansatt egne statistikere.
 
 Alle de over nevnte kan inngå som __innholdsprodusenter__ for registre på Rapporteket. Av ulike årsaker er det bare noen av disse som faktisk produserer innhold for registrene på Rapporteket og en regionvis sammenstilling av dette er gitt i tabell \@ref(tab:currentStatus).
 
@@ -172,7 +172,7 @@ Dataansvaret (_i.e._ eierskapet) til de nasjonale kvalitetsregistrene er i de fl
 ## Kompetanse: kvalitet og kvantitet
 Hovedutfordring for større utbredelse av Rapporteket er begrensning i kapasitet og delvis kompetanse hos statistikere og analysemedarbeidere som jobber med registerdata. Det har over mange år vært en ambisjon å ansette nok folk med riktig kompetansen i servicemiljøene. Dette har man delvis klart i regionene Nord og Vest mens Midt og Sør-Øst i praksis står uten denne kapasiteten. De registrene som fungerer på Rapporteket idag har enten ansatt egne folk med riktig kompetanse i registeret eller det er registre som får kompetansebehovet dekket av statistikere ved SKDE.
 
-Erfaringsmessig kan én statistiker i en full stilling grovt sett dekke behovet til fem kvalitetsregistre. I dette ligger det å ivareta nødvendig kunnskap om datagrunnlaget i de ulike registrene samt å kunne etablere og vedlikeholde en resultattjeneste på Rapporteket for de samme registrene. Selv er SKDE er nokså nært denne kapasitetsgrensen.
+Erfaringsmessig kan én statistiker i en full stilling grovt sett dekke behovet til maksimum fem kvalitetsregistre. I dette ligger det å ivareta nødvendig kunnskap om datagrunnlaget i de ulike registrene samt å kunne etablere og vedlikeholde en resultattjeneste på Rapporteket for de samme registrene. Selv er SKDE er nokså nært denne kapasitetsgrensen.
 
 ## Teknologi
 Rapporteket har etter nylig gjennomført modernisering egentlig ingen kritiske begrensninger som kan tilskrives de teknologiene som benyttes. Det som kan gi utfordringer er å holde tritt med den generelt raske utviklingstakten i relevante digitale verktøy og eventuelle nye krav til funksjonalitet som måtte følge av dette. Det finnes dog (og alltid) et ikke utnyttet potensiale i forenkling og effektivisering av arbeidsprosessene og som kan gjøre hverdagen enklere for de som jobber i og med Rapporteket. Dette vil gi en positiv effekt på både kvalitet og kvantitet.
@@ -181,7 +181,7 @@ Dataleveranser til Rapporteket fra MRS-baserte registre har siden starten vært 
 
 
 # Videre utvikling
-Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglene kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er også at når registrene har ansatt egne statistikere så er det gjerne enklere å få på plass en resultattjeneste på Rapporteket. En forutsetning for dette er imidlertid en aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
+Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er at når registrene har ansatt egne statistikere, er det enklere å få på plass en resultattjeneste på Rapporteket. En forutsetning for dette er imidlertid en aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
 
 - skalere opp statistikerkapasiteten i servicemiljøene, i SKDE eller begge deler,
 
