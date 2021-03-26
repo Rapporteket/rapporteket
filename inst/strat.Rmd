@@ -30,7 +30,7 @@ options(tinytex.verbose = TRUE)
 ```
 
 # Bakgrunn
-Rapporteket er en nasjonal resultattjeneste som formidler statistikk og analyser basert på dynamiske registerdata fra de medisinske kvalitetsregistrene som benytter tjenesten. Det er hvert enkelt register som ved hjelp av tilgjengelige statistikere eller analysemedarbeider fyller tjenesten med ønsket innhold der det primære verktøyet for tallbehandling og formidling er [R](https://www.r-project.org/). Hvert enkelt register bestemmer selv hvilke variabler som skal gjøres tilgjengelig for egen resultattjeneste på Rapporteket og siden dette også kan omfatte person- og helseopplysninger så forutsetter all interaktiv bruk av tjenesten pålogging. Rapporteket er etablert av SKDE og ble første gang satt i drift i 2011. Per mars 2021 er det 13 nasjonale kvalitetregistre som benytter tjenesten.
+Rapporteket er en nasjonal resultattjeneste som formidler statistikk og analyser basert på dynamiske registerdata fra de medisinske kvalitetsregistrene som benytter tjenesten. Det er hvert enkelt register som ved hjelp av tilgjengelige statistikere eller analysemedarbeider fyller tjenesten med ønsket innhold der det primære verktøyet for tallbehandling og formidling er [R](https://www.r-project.org/). Hvert enkelt register bestemmer selv hvilke variabler som skal gjøres tilgjengelig for egen resultattjeneste på Rapporteket og siden dette også kan omfatte person- og helseopplysninger så forutsetter all interaktiv bruk av tjenesten pålogging. Rapporteket er etablert av SKDE og ble første gang satt i drift i 2011. Per mars 2021 er det 11 nasjonale kvalitetregistre som benytter tjenesten.
 
 Rapporteket forutsetter samvirke mellom to hovedkomponenter:
 
@@ -46,6 +46,15 @@ Ved behov for mer informasjon om Rapporteket utover det som er gitt over er det 
 
 # Status for Rapporteket
 Under er det gitt en status for sentrale egenskaper ved Rapporteket __per mars måned 2021__.
+
+## Teknologi
+Teknologien bak Rapporteket er i hovedsak basert på [R](https://www.r-project.org/) som er et [fritt tilgjengelig](https://www.gnu.org/philosophy/free-sw.html) programvaremiljø for statistiske og grafiske formål. All programkode og annet innhold (utenom registerdata) på Rapporteket er strukturert i [R-pakker som lages og vedlikeholdes av statistikere i registrene](https://github.com/Rapporteket). Rapporteket benytter eksisterende og nasjonal infrastruktur for de medisinske kvalitetsregistrene, blant annet for å ivareta tilstrekkelig sikkerhet slik som identifikasjon og adgangskontroll. Teknisk drift av Rapporteket skjer gjennom [Norsk Helsenett](https://www.nhn.no/) med [Helse Nord IKT](https://helsenordikt.no/) som underleverandør.
+
+## Nasjonal koordinering og forvaltning
+Alt av innhold på rapporteket (_i.e._ registrenes resultattjenester) er representert gjennom R-kode som forvaltes og deles gjennom bruk av [GitHub](https://en.wikipedia.org/wiki/GitHub). Her er det etablert en egen [organisasjon for Rapporteket](https://github.com/Rapporteket) som administreres av SKDE.
+
+Nødvendige avklaringer og eventuelle problemer knyttet til nye eller endrede behov som oppstår ved innholdsproduksjon koordineres og løses av SKDE. Aktuelle problemstillinger kan også løftes til forvaltningsgruppen for Rapporteket der Helse Nord IKT inngår sammen med SKDE. Tema som omhandler avhengigheter mellom funksjonalitet knyttet til innhold og underliggende teknologi er særlig aktuell for behandling i forvaltningsgruppen.
+
 
 ## Registre
 På Rapporteket finnes det 11 nasjonale og 14 lokale kvalitetsregistre der disse antallene er basert på formelt eierskap i de respektive dataansvarlige foretakene. I alt er det ni av Norges helseforetak som har egne registre på Rapporteket i tillegg til [Folkehelseinstituttet (FHI)](https://www.fhi.no/) og [Landsforenigen for hjerte- og lungesyke (LHL)](https://www.lhl.no/).
@@ -151,14 +160,6 @@ noric::mst(tab = tabData, cap = cap, label = "libs")
 
 ```
 
-## Teknologi
-Teknologien bak Rapporteket er i hovedsak basert på [R](https://www.r-project.org/) som er et [fritt tilgjengelig](https://www.gnu.org/philosophy/free-sw.html) programvaremiljø for statistiske og grafiske formål. All programkode og annet innhold (utenom registerdata) på Rapporteket er strukturert i [R-pakker som lages og vedlikeholdes av statistikere i registrene](https://github.com/Rapporteket). Rapporteket benytter eksisterende og nasjonal infrastruktur for de medisinske kvalitetsregistrene, blant annet for å ivareta tilstrekkelig sikkerhet slik som identifikasjon og adgangskontroll. Teknisk drift av Rapporteket skjer gjennom [Norsk Helsenett](https://www.nhn.no/) med [Helse Nord IKT](https://helsenordikt.no/) som underleverandør.
-
-## Nasjonal koordinering og forvaltning
-Alt av innhold på rapporteket (_i.e._ registrenes resultattjenester) er representert gjennom R-kode som forvaltes og deles gjennom bruk av [GitHub](https://en.wikipedia.org/wiki/GitHub). Her er det etablert en egen [organisasjon for Rapporteket](https://github.com/Rapporteket) som administreres av SKDE.
-
-Nødvendige avklaringer og eventuelle problemer knyttet til nye eller endrede behov som oppstår ved innholdsproduksjon koordineres og løses av SKDE. Aktuelle problemstillinger kan også løftes til forvaltningsgruppen for Rapporteket der Helse Nord IKT inngår sammen med SKDE. Tema som omhandler avhengigheter mellom funksjonalitet knyttet til innhold og underliggende teknologi er særlig aktuell for behandling i forvaltningsgruppen.
-
 ## Finansiering
 Den tekniske driften av Rapporteket inngår i den nasjonale oppgjørsordningen for kvalitetsregistre. Nasjonale kvalitetsregistre tilbys derfor Rapporteket gratis. Produksjon av innhold er basert på egenfinansiering fra servicemiljøene eller fra registrene selv. Ved behov yter SKDE bistand til innholdsproduksjon, og særlig gjelder dette når et register skal i gang med bruk av Rapporteket for første gang. 
 
@@ -181,7 +182,7 @@ Dataleveranser til Rapporteket fra MRS-baserte registre har siden starten vært 
 
 
 # Videre utvikling
-Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er at når registrene har ansatt egne statistikere, er det enklere å få på plass en resultattjeneste på Rapporteket. En forutsetning for dette er imidlertid en aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
+Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er at etablering og vedlikehold av resultattjenester på Rapporteket går greit når registrene får oppfølging fra statistikere ved SKDE eller har ansatt egne statistikere. I de tilfeller registrene sørger for arbeidet selv er det en forutsetning med aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
 
 - skalere opp statistikerkapasiteten i servicemiljøene, i SKDE eller begge deler,
 
