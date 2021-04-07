@@ -182,7 +182,7 @@ Dataleveranser til Rapporteket fra MRS-baserte registre har siden starten vært 
 
 
 # Videre utvikling
-Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er at etablering og vedlikehold av resultattjenester på Rapporteket går greit når registrene får oppfølging fra statistikere ved SKDE eller har ansatt egne statistikere. I de tilfeller registrene sørger for arbeidet selv er det en forutsetning med aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
+Alle kvalitetsregistrene er avhengig av statistikk- og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er at etablering og vedlikehold av resultattjenester på Rapporteket går greit når registrene får oppfølging fra statistikere ved SKDE eller har ansatt egne statistikere. I de tilfeller registrene sørger for arbeidet selv er det en forutsetning med aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
 
 - skalere opp statistikerkapasiteten i servicemiljøene, i SKDE eller begge deler,
 
@@ -195,3 +195,30 @@ Alle kvalitetsregistrene er avhengig av statistikk og "tallkompetanse" for behan
 - bedre evne til eskalering og konkret handling når utfordringer som oppstår ikke lar seg løse på lavt nivå, og
 
 - tilstrekkelig ivaretakelse av basisdrift av Rapporteket slik som god veiledning og opplæring i bruk ovenfor registrene og forvaltning av løsningen i samarbeid med teknisk tjenesteleverandør
+
+
+Potensialet for å få flere nasjonale kvalitetsregistre på Rapporteket er stort. På regionalt nivå er det kun Helse Nord som har en betydelig andel av egne registre representert på Rapporteket (Tabell \@ref(tab:regs)).
+
+```{r make table all regs, results='asis'}
+tabData <- data.frame(
+  Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
+              "Helse Sør-Øst", "", "", ""),
+  Registre = c(8, 6, 18, 19, NA, NA, NA),
+  Rapporteket = c(6, 1, 3, 1, NA, NA, NA),
+  Plan = c("Ukjent",
+           "Flere kan være aktuelle når dataoverføring fra MRS endres",
+           "Planlegger etablering av seks nye registre",
+           "Ingen konkrete planer om flere registre,",
+           "men gjennomgang skal gjøres våren 2021.",
+           "Mangler R-kompetanse i servicemiljøet.",
+           "Åtte av registrene tilhører KRG og er ikke aktuelle.")
+)
+
+cap <- paste("Totalt antall nasjonale kvalitetsregistre og hvor mange av disse",
+             "som benytter Rapporteket fordel på de fire helsergionene.",
+             "Intensjon eller plan for videre arbeid med",
+             "Rapporteket der det finnes er også angitt.")
+
+noric::mst(tab = tabData, cap = cap, label = "regs")
+
+```
