@@ -59,7 +59,7 @@ Nødvendige avklaringer og eventuelle problemer knyttet til nye eller endrede be
 ## Registre
 På Rapporteket finnes det 11 nasjonale og 14 lokale kvalitetsregistre der disse antallene er basert på formelt eierskap i de respektive dataansvarlige foretakene. I alt er det ni av Norges helseforetak som har egne registre på Rapporteket i tillegg til [Folkehelseinstituttet (FHI)](https://www.fhi.no/) og [Landsforenigen for hjerte- og lungesyke (LHL)](https://www.lhl.no/).
 
-I Rapporteket er registrene representert som [R-pakker](https://en.wikipedia.org/wiki/R_package) og Tabell \@ref(tab:unitMap) angir sammenhengen mellom disse. For vurderinger av blant annet ressursbehov i etablering og vedlikehold av resultattjenester som leveres gjennom Rapporteket så er begrepet R-pakke nyttig å kunne forholde seg til. 
+I Rapporteket er registrene representert som [R-pakker](https://en.wikipedia.org/wiki/R_package) og Tabell \@ref(tab:unitMap) angir sammenhengen mellom disse. For vurderinger av blant annet ressursbehov i etablering og vedlikehold av resultattjenester som leveres gjennom Rapporteket så er begrepet R-pakke nyttig å kunne forholde seg til. En statistiker i full stilling vil erfaringsmessig kunne ivareta et antall kvalitetsregistre på Rapporteket tilsvarende fem R-pakker.
 
 ```{r make table of unitMap, results='asis'}
 tabData <- data.frame(
@@ -106,7 +106,7 @@ noric::mst(tab = tabData, cap = cap, label = "unitMap")
 ```
 
 ## Produksjon av innhold
-Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form av figurer, tabeller og rapporter basert på analyse av registerdata. Disse må ha kompetanse særlig innen tallbehandling men også enkel programmering og har gjerne en naturvitenskapelig utdanning innen matematikk eller statistikk.
+Den viktigste komponenten i Rapporteket er de personene som etablerer og vedlikeholder innhold i form av figurer, tabeller og rapporter basert på analyse av registerdata. Disse må ha kompetanse særlig innen tallbehandling men også enkel programmering og har gjerne en naturvitenskapelig utdanning innen matematikk eller statistikk. For arbeid med Rapporteket må disse personene kunne tilegne seg og beherske programmeringsspråket R.
 
 I de regionale servicemiljøene er det ansatt egne folk som har analyse av registerdata som en sentral arbeidsoppgave og som skal gi støtte til registre i egen region. Men, det er stor variasjon mellom de regionale servicemiljøene hvor mange som er ansatt i en slik funksjon og hvor mange registre de skal dekke. I tillegg har enkelte nasjonale registre ansatt egne statistikere.
 
@@ -124,13 +124,16 @@ tabData <- data.frame(
                           paste("intensiv, intensivberedskap, korona,",
                                 "noric, smerte"),
                           paste("nger")),
-  Innholdsprodusenter = c(3, 0, 4, 0))
+  Innholdsprodusenter = c(2, 0, 2, 0))
 
 cap <- paste("Registre i form av R-pakker som er etablert på",
-             "Rapporteket og antall personer (Innholdsprodusenter) som",
+             "Rapporteket og antall hele stillinger (Innholdsprodusenter) som",
              "jobber med innhold i disse fordelt på de fire helseregionene.",
-             "Innholdsprodusenter i Helse Nord bidrar i tillegg til egne også",
-             "med innhold til registre i de andre helseregionene.")
+             "Innholdsprodusenter i Helse Nord er ansatte i SKDE og bidrar i",
+             "tillegg til egne også",
+             "med innhold til registre i de andre helseregionene.",
+             "Innholdsprodusenter i Helse Vest er alle statistikere ansatt i",
+             "registrene og disse jobber kun med egne registre.")
 
 noric::mst(tab = tabData, cap = cap, label = "currentStatus")
 
@@ -153,8 +156,11 @@ tabData <- data.frame(
              c(paste("Sikker forsendelse og mottak av data.",
                      "Brukes i eksport av pandemidata til FHI."))))
 
-cap <- paste("Nasjonale fellesfunksjoner relatert til bruk av Rapporteket som",
-             "resultattjeneste.")
+cap <- paste("Nasjonale fellesfunksjoner for Rapporteket gitt som respektive",
+             "R-pakker. Disse er etablert og vedlikeholdes",
+             "av ansatte på SKDE som også bidrar med opplæring og veiledning",
+             "av statistikere i registrene og de regionale servicemiljøene i",
+             "bruk av Rapporteket.")
 
 noric::mst(tab = tabData, cap = cap, label = "libs")
 
