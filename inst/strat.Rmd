@@ -59,6 +59,33 @@ Nødvendige avklaringer og eventuelle problemer knyttet til nye eller endrede be
 ## Registre
 På Rapporteket finnes det 11 nasjonale og 14 lokale kvalitetsregistre der disse antallene er basert på formelt eierskap i de respektive dataansvarlige foretakene. I alt er det ni av Norges helseforetak som har egne registre på Rapporteket i tillegg til [Folkehelseinstituttet (FHI)](https://www.fhi.no/) og [Landsforenigen for hjerte- og lungesyke (LHL)](https://www.lhl.no/).
 
+Potensialet for å få flere nasjonale kvalitetsregistre på Rapporteket er stort. På regionalt nivå er det kun Helse Nord som har en betydelig andel av egne registre representert på Rapporteket (Tabell \@ref(tab:regs)).
+
+```{r make table all regs, results='asis'}
+tabData <- data.frame(
+  Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
+              "Helse Sør-Øst", "", "", ""),
+  Registre = c(8, 6, 18, 19, "", "", ""),
+  Rapporteket = c(6, 1, 3, 1, "", "", ""),
+  Plan = c("Ingen konkrete planer nye registre",
+           "Flere kan være aktuelle når dataoverføring fra MRS endres",
+           "Planlegger etablering av seks nye registre",
+           "Ingen konkrete planer om flere registre,",
+           "men gjennomgang skal gjøres våren 2021.",
+           "Mangler R-kompetanse i servicemiljøet.",
+           "Åtte av registrene tilhører KRG og er ikke aktuelle.")
+)
+
+cap <- paste("Totalt antall nasjonale kvalitetsregistre og hvor mange av disse",
+             "som benytter Rapporteket fordel på de fire helsergionene.",
+             "Intensjon eller plan for videre arbeid med",
+             "Rapporteket der det finnes er også angitt.")
+
+noric::mst(tab = tabData, cap = cap, label = "regs", align = "lrrl")
+
+```
+
+
 I Rapporteket er registrene representert som [R-pakker](https://en.wikipedia.org/wiki/R_package) og Tabell \@ref(tab:unitMap) angir sammenhengen mellom disse. For vurderinger av blant annet ressursbehov i etablering og vedlikehold av resultattjenester som leveres gjennom Rapporteket så er begrepet R-pakke nyttig å kunne forholde seg til. En statistiker i full stilling vil erfaringsmessig kunne ivareta et antall kvalitetsregistre på Rapporteket tilsvarende fem R-pakker.
 
 ```{r make table of unitMap, results='asis'}
@@ -174,7 +201,7 @@ Den tekniske driften av Rapporteket inngår i den nasjonale oppgjørsordningen f
 Etter de 10 årene som har gått siden Rapporteket ble etablert ville det ikke være unaturlig å forvente at langt flere enn 11 av de over 50 nasjonale kvalitetsregistrene benyttet seg av denne resultattjenesten. Noen av de større kvalitetsregistrene har allerede egne, velfungerende ordninger for produksjon og distribusjon av resultater som understøtter formålet og således kanskje ikke et reelt behov for å ta i bruk Rapporteket. Men for mange av de andre vil nok en resultattjeneste som Rapporteket kunne gi et betydelig bidrag til mer kontinuerlig overvåkning og forbedring av kvalitet på helsetjenesten. Utfordringene for å få økt bruk av Rapporteket er forsøkt strukturert tematisk under. 
 
 ## Organisering og styring
-Samlet sett tilhører de nasjonale kvalitetsregistrene forskjellige styringslinjer i mange adskilte organisasjoner. Nasjonalt servicemiljø er satt til å koordinere feltet nasjonalt, men gitt underliggene organisering er det ikke mulig med direkte operasjonell styring. De fleste endringer og tiltak vil derfor være basert på konsensuns blant aktørene. For Rapporteket betyr dette at registrene selv velger om- og eventuelt i hvilket omfang de ønsker å benytte resultattjenesten.
+Samlet sett tilhører de nasjonale kvalitetsregistrene forskjellige styringslinjer i mange adskilte organisasjoner. Nasjonalt servicemiljø er satt til å koordinere feltet nasjonalt, men gitt underliggende organisering er det ikke mulig med direkte operasjonell styring. De fleste endringer og tiltak vil derfor være basert på konsensus blant aktørene. For Rapporteket betyr dette at registrene selv velger om- og eventuelt i hvilket omfang de ønsker å benytte resultattjenesten.
 
 ## Kompetanse: kvalitet og kvantitet
 Hovedutfordringen for større utbredelse av Rapporteket er begrensning i kapasitet og delvis kompetanse hos statistikere og analysemedarbeidere som jobber med registerdata. Det har over mange år vært en ambisjon å ansette nok folk med riktig kompetansen i servicemiljøene. Dette har man delvis klart i regionene Nord, Vest og Midt mens Sør-Øst i praksis ikke har folk som kan jobbe med Rapporteket. De registrene som fungerer på Rapporteket idag har enten ansatt egne statistikere i registeret eller det er registre som får behovet dekket av statistikere ved SKDE.
@@ -187,10 +214,12 @@ Rapporteket har etter nylig gjennomført modernisering egentlig ingen kritiske b
 Dataleveranser til Rapporteket fra MRS-baserte registre har siden starten vært av delvis dårlig kvalitet og basert på svært arbeidskrevende overføringsmetodikk, og det er fortsatt slik at nye versjoner av MRS-registre er arbeidskrevende å få på plass. Resultattjenester på Rapporteket for registrene dette gjelder har derfor vært beheftet med feil og har hatt perioder med manglende oppdatering av data. Siden denne situasjonen har eksistert over så mange år har det festet seg et feilaktig inntrykk av at Rapporteket ikke er egnet som resultattjeneste for registre som benytter MRS til datafangst. Det er imidlertid igangsatt et arbeid i HEMIT med endring av format for dataleveranse fra MRS som kan bedre overføring av data til Rapporteket i løpet av våren 2021.
 
 
-# Videre utvikling
-Alle kvalitetsregistrene er avhengig av statistikk- og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er på langt nær tilstrekkelig for å dekke behovet. Erfaringen så langt er at etablering og vedlikehold av resultattjenester på Rapporteket går greit når registrene får oppfølging fra statistikere ved SKDE eller har ansatt egne statistikere. I de tilfeller registrene sørger for arbeidet selv er det en forutsetning med aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre. Følgende punkter vil derfor kunne bidra til økt bruk og samlet nytte av Rapporteket:
+# Forslag til tiltak og videre utvikling
+Alle kvalitetsregistrene er avhengig av statistikk- og "tallkompetanse" for behandling av registerdata slik at formålet kan ivaretas på en forsvarlig og god måte. Det er mange nasjonale kvalitetsregistre som helt eller delvis mangler tilgang til slik kompetanse som også er en forutsetningene for etablering og utvikling av resultattjenester gjennom Rapporteket. Manglende kompetanse og/eller kapasitet hos registrene er delvis kompensert for ved at servicemiljøene bidrar med egne ressurser til registrene men disse er ikke tilstrekkelige for å dekke behovet. Erfaringen så langt er at etablering og vedlikehold av resultattjenester på Rapporteket går greit når registrene får oppfølging fra statistikere ved SKDE eller har ansatt egne statistikere. I de tilfeller registrene sørger for arbeidet selv er det en forutsetning med aktiv veiledning og oppfølging fra SKDE ved oppstart. Når man først er i gang er kravet til oppfølging fra SKDE betydelig mindre.
 
-- skalere opp statistikerkapasiteten i servicemiljøene, i SKDE eller begge deler,
+Følgende tiltak vil være relevante for å oppnå økt bruk og samlet nytte av Rapporteket som en velfungerende og relevant resultattjeneste.
+
+- skalere opp statistikerkapasiteten i servicemiljøene i regionene, i SKDE eller begge deler,
 
 - økt fokus på nødvendigheten av statistikerkompetanse i servicemiljøenes råd-givning ovenfor registrene,
 
@@ -198,33 +227,8 @@ Alle kvalitetsregistrene er avhengig av statistikk- og "tallkompetanse" for beha
 
 - aktivt "fremsnakk" av Rapporteket, særlig ovenfor registre som benytter MRS der det synes å ha festet seg en feilaktig oppfatning av at Rapporteket ikke kan anvendes,
 
-- bedre evne til eskalering og konkret handling når utfordringer som oppstår ikke lar seg løse på lavt nivå, og
+- forbedring av vårt interne samarbeid ved SKDE angående Rapporteket, eksempelvis god støtte når det oppstår utfordringer eller bruk av ressurser "på tvers" for å sikre nødvendig kompetanse og kapasitet, og
 
-- tilstrekkelig ivaretakelse av basisdrift av Rapporteket slik som god veiledning og opplæring i bruk ovenfor registrene og forvaltning av løsningen i samarbeid med teknisk tjenesteleverandør
+- tilstrekkelig ivaretakelse av basisdrift av Rapporteket slik som god veiledning og opplæring i bruk, vedlikehold av felles verktøy og metodikk (som bl.a. bidrar til nødvendig datasikkerhet, effektivitet og kvalitet i arbeidsprosesser) og forvaltning av løsningen i samarbeid med teknisk tjenesteleverandør
 
-
-Potensialet for å få flere nasjonale kvalitetsregistre på Rapporteket er stort. På regionalt nivå er det kun Helse Nord som har en betydelig andel av egne registre representert på Rapporteket (Tabell \@ref(tab:regs)).
-
-```{r make table all regs, results='asis'}
-tabData <- data.frame(
-  Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
-              "Helse Sør-Øst", "", "", ""),
-  Registre = c(8, 6, 18, 19, NA, NA, NA),
-  Rapporteket = c(6, 1, 3, 1, NA, NA, NA),
-  Plan = c("Ukjent",
-           "Flere kan være aktuelle når dataoverføring fra MRS endres",
-           "Planlegger etablering av seks nye registre",
-           "Ingen konkrete planer om flere registre,",
-           "men gjennomgang skal gjøres våren 2021.",
-           "Mangler R-kompetanse i servicemiljøet.",
-           "Åtte av registrene tilhører KRG og er ikke aktuelle.")
-)
-
-cap <- paste("Totalt antall nasjonale kvalitetsregistre og hvor mange av disse",
-             "som benytter Rapporteket fordel på de fire helsergionene.",
-             "Intensjon eller plan for videre arbeid med",
-             "Rapporteket der det finnes er også angitt.")
-
-noric::mst(tab = tabData, cap = cap, label = "regs")
-
-```
+Ledergruppen ved SKDE inviteres til en vurdering av de foreslåtte- og eventuelt egne tiltak både med tanke på prioritering og i hvilken grad disse ansees som gjennomførbare. Konklusjonen fra ledergruppen foreslås fulgt opp av et arbeid i nasjonal servicemiljø for konkretisering av oppgaver og tidsfrister for det videre arbeidet med Rapporteket.
