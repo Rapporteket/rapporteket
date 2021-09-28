@@ -1,0 +1,80 @@
+---
+logo: skde
+logotext: Senter for klinisk dokumentasjon og evaluering (SKDE)  jobber med å kartlegge og synliggjøre geografiske ulikheter i spesialisthelsetjenesten. Målet er å bidra til likeverdige helsetjenester av god kvalitet uansett hvor pasientene bor.
+order: ledergruppen SKDE
+respsonsible: SKDE
+producer: Rapporteket
+fingerprint: test
+title: Rapporteket
+subtitle: Bakgrunn, status og videre utvikling
+author: Are Edvardsen, Kevin O. Thon, Lena R. Olsen, Eva Stensland
+date: "`r format(Sys.time(), '%d. %B, %Y')`"
+output:
+  bookdown::pdf_document2:
+    toc: no
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: pdflatex
+---
+
+# Rapporteket som applikasjonscontainer: søknad om finansiering av forprosjekt
+
+## Sammendrag
+Fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkes det om kr 120 000 som delfinansiering av et forprosjekt ("Proof of Concept" eller "PoC" på nynorsk) som skal legge til rette for containerbasert drift av Rapporteket. Primært vil et slikt tiltak blant anntet gi en betydelig forenkling av teknisk drift og konkrete bidrag til overgangen fra helseregister.no til FALK som innlogging av brukere til Rapporteket. 
+
+## Bakgrunn
+Rapporteket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre og ble satt i drift for første gang i 2011. Per oktober 2021 benyttes Rapporteket av 13 nasjonale medisinske kvalitetsregistre. På Rapporteket har hvert register sin egen R-Shiny applikasjon og alle applikasjonene betjenes av en felles applikasjonsserver (Shiny-Server). En endring der hver applikasjon (Rapporteket for et gitt register) kjøres som en selvstendig enhet innpakket i en applikasjonscontainer er i seg selv enkelt å få til og vil gi en rekke gevinster som betydelig forenkling av driftsoppgaver, lavere risiko for at feil påvirker andre deler av systemet samt at ansvarsdelingen mellom utviklings- og driftsoppgaver vil bli mer tydelig. Utfordringen ligger i de tilpassninger som må gjøres mot øvrig infrastruktur og da særlig innlogging av brukere og automatisert styring av applikasjonscontainere. Potensiell gevinst i et slikt tiltak er betydelig, men det er innledningsvis et behov for å kartlegge og konkretisere mulig praktiske løsninger som må på plass for en slik overgang og det er dette det søkes om finansiering til i første omgang. 
+
+## Hva skal gjøres?
+Kort fortalt må det etableres et fungerende oppsett for automatisk styring av applikasjonscontainere (container proxy) som også kan håndtere autentisering og autorisasjon ved bruk av den åpne standarden [OAuth](https://en.wikipedia.org/wiki/OAuth). Det siste er vesentlig for seinere bruk av FALK for innlogging av brukere til Rapporteket.
+
+[ShinyProxy](https://www.shinyproxy.io/) fra [Open Analytics](https://www.openanalytics.eu/) er en åpen kildekode proxytjener laget spesielt for bruk av R-Shiny applikasjonscontainere på [Docker](https://www.docker.com/) infrastruktur. ShinyProxy er allerede tatt i bruk av SKDE i forbindelse med ["Sykehusviseren"](https://www.skde.no/kvalitetsregistre/alle/sykehus) der innlogging før opplasting av data gjøres ved itegrasjon med [AWS Cognito](https://aws.amazon.com/cognito/) ved bruk av OAuth. Det har tidligere også vært brukt en annen tjeneste for det samme formålet ([Auth0](https://auth0.com/)). Det finnes derfor relevant erfaring, verktøy og oppsett fra tilsvarende brukstilfeller.
+
+Hovedutfordringene i dette forprosjektet er antatt å være at
+
+1. innloggingsflyten som benyttes i ShinyProxy er begrenset til brukernavn og gruppetilhørighet noe som ikke er tilstrekkelig for Rapporteket, og
+2. OAuth i ShinyProxy i utganspunktet er basert på [Authorization Code Flow](https://oauth.net/2/grant-types/authorization-code/) mens FALK benytter den samme men med [PKCE utvidelse](https://oauth.net/2/pkce/)
+
+I første omgang må det derfor klargjøres hvilke endringer som er nødvendige i ShinyProxy og/eller i underliggende [ContainerProxy](https://www.containerproxy.io/). Under og etter utvikling av programkode må endringene prøves ut i et kontrollert miljø der det benyttes en simulert eller ekte utgave av FALK samt Rapporteket for et eller flere registre i form av containerapplikasjoner. Alternativt og i tilfelle man ser at etablering og vedlikehold av lokale endringer ikke vil være formålstjenlig eller mulig så vil man ha et solid grunnlag for å utforme en bestilling til Open Analytics for om mulig å innarbeide ønskede endringer i kommende offisielle versjoner av ShinyProxy/ProxyContainer.
+
+## Hvorfor er det lurt?
+En endring av nåværende driftsform for Rapporteket til drift av containerapplikasjoner vil ha stort potensiale for gevinst på flere områder. Noen av disse er
+
+* De aller fleste av dagens systemavhengigheter vil forsvinne noe som vil forenkle driftsoppgavene betydelig samt redusere omfanget av nødvendig koordinasjon mellom utviklere (av innhold på Rapporteket) og driftspersonell. Flere prosesser kan automatiseres og det vil ligge bedre til rette for kontinuerlig kvalitetskontroll og leveranse av applikasjoner. Å bytte driftsleverandør, eksemplevis ved flytting fra helseregister.no til Norsk Helsenett, vil bli betraktelig enklere.
+
+* Infrastrukturen bak et slikt system skalerer godt, det vil si at systemet fungerer slik det skal også når "pågangen" blir stor/endres, fordi det enkelt kan settes opp ved bruk av etablerte metoder slik som [Docker Swarm](https://docs.docker.com/engine/swarm/) eller [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes).
+
+* Applikasjoner på Rapporteket (les registre) og sågar hver enkelt innlogging til samme applikasjon (register) vil kjøre isolert fra hverandre. Effekten av eventuelle feil som måtte oppstå vil da kunne begrenses til containeren den oppstår i og således ikke påvirke de andre.
+
+* Utviklere av innhold på Rapporteket vil lettere kunne identifisere feil som kan oppstå i en driftsfase før koden forlater eget utviklingsmiljø. Det vil derfor kunne lages applikasjoner med bedre kvalitet og med mindre sannsynlighet for at feil oppstår i driftsfasen.
+
+* Hvert enkelt register vil ha frihet til å ta i bruk særegenheter som ansees som nødvendige eller nyttige uten at dette vil påvirke andre registre på Rapporteket slik tilfelle er idag når alle registre (applikasjoner) betjenes av en felles applikasjonsserver. 
+
+## Hva koster det?
+Arbeidet vil foregå i et praktisk samarbeid mellom to seksjoner ved HNIKT (utvikling og applikasjonsdrift) og SKDE. Kostnader som det her søkes om finansiering for er kun timer medgått i forbindelse med utvikling av programvare ved HNIKT. Status for arbeidet skal rapporteres av forvaltningsgruppen for Rapporteket under ledelse av HNIKT. Oppgaver, omfang og finansieringsbehov er gitt i tabell \@ref(tab:task).
+
+```{r make table all regs, results='asis'}
+tabData <- data.frame(
+  Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
+              "Helse Sør-Øst", "", "", ""),
+  Registre = c(8, 6, 18, 19, "", "", ""),
+  Rapporteket = c(6, 1, 3, 1, "", "", ""),
+  Plan = c("Ingen konkrete planer nye registre",
+           "Flere kan være aktuelle når dataoverføring fra MRS endres",
+           "Planlegger etablering av seks nye registre",
+           "Ingen konkrete planer om flere registre,",
+           "men gjennomgang skal gjøres våren 2021.",
+           "Mangler R-kompetanse i servicemiljøet.",
+           "Åtte av registrene tilhører KRG og er ikke aktuelle.")
+)
+
+cap <- paste("Totalt antall nasjonale kvalitetsregistre og hvor mange av disse",
+             "som benytter Rapporteket fordel på de fire helsergionene.",
+             "Intensjon eller plan for videre arbeid med",
+             "Rapporteket der det finnes er også angitt.")
+
+rapbase::mst(tab = tabData, cap = cap, label = "task", align = "lrrl")
+
+```
+
+### Om Rapporteket
