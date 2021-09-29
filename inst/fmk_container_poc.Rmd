@@ -1,9 +1,16 @@
 ---
-title: Rapporteket som applikasjonscontainer
-subtitle: Søknad om finansiering av forprosjekt
-author: Ketil Holden, Are Edvardsen, Morten Engan
+title: "Rapporteket som applikasjonscontainer: Søknad om finansiering av forprosjekt"
+subtitle: "Søknad om finansiering av forprosjekt"
+author: "Ketil Holden, Are Edvardsen, Morten Engan"
 date: "`r format(Sys.time(), '%d. %B, %Y')`"
-abstract: Fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkes det om kr 118 940 som delfinansiering av et forprosjekt ("Proof of Concept" eller "PoC" på nynorsk) som skal legge til rette for containerbasert drift av Rapporteket. Primært vil et slikt tiltak blant anntet gi en betydelig forenkling av teknisk drift og konkrete bidrag til overgangen fra helseregister.no til FALK som innlogging av brukere til Rapporteket.
+abstract: Fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkes det om kr
+  118 940 som delfinansiering av et forprosjekt ("Proof of Concept" eller "PoC" på
+  nynorsk) som skal legge til rette for containerbasert drift av Rapporteket. Primært
+  vil et slikt tiltak blant anntet gi en betydelig forenkling av teknisk drift og
+  konkrete bidrag til overgangen fra helseregister.no til FALK som innlogging av brukere
+  til Rapporteket.
+params:
+  tableFormat: pdf
 ---
 
 # Bakgrunn
@@ -17,9 +24,10 @@ Kort fortalt må det etableres et fungerende oppsett for automatisk styring av a
 Hovedutfordringene i dette forprosjektet er antatt å være at
 
 1. innloggingsflyten som benyttes i ShinyProxy er begrenset til brukernavn og gruppetilhørighet noe som ikke er tilstrekkelig for Rapporteket der blant annet rolle og kontaktiformasjon til brukere er nødvendig, og
+
 2. OAuth i ShinyProxy i utganspunktet er basert på [Authorization Code Flow](https://oauth.net/2/grant-types/authorization-code/) mens FALK benytter den samme men med [PKCE utvidelse](https://oauth.net/2/pkce/).
 
-I første omgang må det derfor klargjøres hvilke endringer som er nødvendige i ShinyProxy og/eller i underliggende [ContainerProxy](https://www.containerproxy.io/). Under og etter utvikling av programkode må endringene prøves ut i et kontrollert miljø der det benyttes en simulert eller ekte utgave av FALK samt Rapporteket for et eller flere registre i form av containerapplikasjoner. Alternativt og i tilfelle man ser at etablering og vedlikehold av lokale endringer ikke vil være formålstjenlig eller mulig så vil man ha etablert et tilstrekkelig grunnlag for å utforme en bestilling til Open Analytics for om mulig å innarbeide ønskede endringer i kommende offisielle versjoner av ShinyProxy/ProxyContainer.
+I første omgang må det derfor klargjøres hvilke endringer som er nødvendige i ShinyProxy og/eller i underliggende [ContainerProxy](https://www.containerproxy.io/). Under og etter utvikling av programkode må endringene prøves ut i et kontrollert miljø der det benyttes en simulert pålogging samt Rapporteket for et eller flere registre i form av containerapplikasjoner for å verifisere at brukeregenskaper blir behandlet riktig av proxytjeneren. Alternativt og i tilfelle man ser at etablering og vedlikehold av lokale endringer ikke vil være formålstjenlig eller mulig så vil man ha etablert et tilstrekkelig grunnlag for å utforme en bestilling til Open Analytics for om mulig å innarbeide ønskede endringer i kommende offisielle versjoner av ShinyProxy/ProxyContainer.
 
 # Hvorfor er det lurt?
 En endring av nåværende driftsform for Rapporteket til drift av containerapplikasjoner vil ha stort potensiale for gevinst på flere områder. Noen av disse er
@@ -69,12 +77,13 @@ tabData <- data.frame(
 cap <- paste("Kategorier av oppgaver i prosjektet, antatt omfang og",
              "søknadsbeløp. Det er antatt en timepris på kr 992,-")
 
-rapbase::mst(tab = tabData, cap = cap, label = "task", align = "llrr", type = "html")
+rapbase::mst(tab = tabData, cap = cap, label = "task", align = "llrr",
+             type = params$tableFormat)
 
 ```
 
 # Sluttprodukt og arbeidsperiode
-Målet for arbeidet er nådd når det er det er mulig for en testbruker å logge inn i en containerapplikasjon på Rapporteket ved bruk av OAuth fra en simulert eller ekte instans av FALK. Alternativt mål i tilfelle det vurderes som uhensiktsmessig med lokal implementasjon vil være en ferdig utformet bestilling til Open Analytics for tilsvarende implementering i ShinyProxy/ContainerProxy. Uansett hvilket av disse to målene som nås vil det deretter være aktuelt med en utrulling av løsningen på Rapporteket for ordinær drift for alle registre. Det vil kunne bli aktuelt å søke FMK om ytterligere finansiering.
+Målet for arbeidet er nådd når en forespørsel om pålogging håndteres riktig av proxytjeneren og at de relevante brukeregenskapene kan gjøres tilgjengelig i en containerapplikasjon på Rapporteket. Alternativt mål i tilfelle det vurderes som uhensiktsmessig med lokal implementasjon vil være en ferdig utformet bestilling til Open Analytics for tilsvarende implementering i ShinyProxy/ContainerProxy. Uansett hvilket av disse to målene som nås vil det deretter være aktuelt med en utrulling av løsningen på Rapporteket for ordinær drift for alle registre. Det vil da være aktuelt å søke FMK om ytterligere finansiering.
 
 Arbeidet det her søkes om midler til vil foregå i løpet av høsten 2021 og være avsluttet senest innen utgangen av året.
 
@@ -106,6 +115,7 @@ tabData <- data.frame(
 
 cap <- paste("Prosjektmetadata.")
 
-rapbase::mst(tab = tabData, cap = cap, label = "meta", align = "ll", type = "html")
+rapbase::mst(tab = tabData, cap = cap, label = "meta", align = "ll",
+             type = params$tableFormat)
 
 ```
