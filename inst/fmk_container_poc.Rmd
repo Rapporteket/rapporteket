@@ -4,7 +4,7 @@ subtitle: "Søknad om finansiering av forprosjekt"
 author: "Ketil Holden, Are Edvardsen, Morten Engan"
 date: "`r format(Sys.time(), '%d. %B, %Y')`"
 abstract: Fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkes det om kr
-  118 940 som delfinansiering av et forprosjekt ("Proof of Concept" eller "PoC" på
+  119 040 som delfinansiering av et forprosjekt ("Proof of Concept" eller "PoC" på
   nynorsk) som skal legge til rette for containerbasert drift av Rapporteket. Primært
   vil et slikt tiltak blant anntet gi en betydelig forenkling av teknisk drift og
   konkrete bidrag til overgangen fra helseregister.no til FALK som innlogging av brukere
@@ -71,7 +71,7 @@ tabData <- data.frame(
            "39 680",
            "29 760",
            "",
-           "118 940")
+           "119 040")
 )
 
 cap <- paste("Kategorier av oppgaver i prosjektet, antatt omfang og",
@@ -107,10 +107,10 @@ tabData <- data.frame(
             "Rapporteket som applikasjonscontainer",
             "HNIKT",
             "Ketil Holden",
-            "Kr 118 940,-",
+            "Kr 119 040,-",
             "1503 27 23796",
             "883658752",
-            "Prosjektnr xxxxxx")
+            "Prosjektnr 100367")
 )
 
 cap <- paste("Prosjektmetadata.")
