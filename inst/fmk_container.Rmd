@@ -1,0 +1,135 @@
+---
+title: "Rapporteket som applikasjonscontainer: Søknad om finansiering av gjennomføring"
+author: "Morten Engan (HNIKT), Are Edvardsen (SKDE), Kristian Nordtømme (NHN)"
+date: "`r format(Sys.time(), '%d. %B, %Y')`"
+abstract: Fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkes det om kr
+  119 040 som delfinansiering av aktivitet for ferdigstillelese av Rapporteket som applikasjonscontainer. Arbeidsoppgavene vil være knyttet til definisjon og valg av arkitektur, teknologi og metodikk der målet er å etablere et system for kontinuerlig integrasjon og leveranse av resultattjenester. Målet vil være nådd når et eksisterende register på dagens utgave av Rapporteket kan demonstreres i full skala som en applikasjonscontainer i et relevant driftsmiljø. Aktiviteten det søkes om finansiering til er en videreføring
+  av forprosjektet som FMK tidligere har gitt støtte til.
+params:
+  tableFormat: pdf
+---
+
+# Bakgrunn
+Rapporteket er en resultattjeneste for tilgjengeliggjøring av statistikk og analyser for medisinske kvalitetsregistre og ble satt i drift for første gang i 2011. Per april 2022 benyttes Rapporteket av 13 nasjonale i tillegg til en rekke lokale medisinske kvalitetsregistre. På Rapporteket har hvert register sin egen R-Shiny applikasjon og alle applikasjonene betjenes av en felles applikasjonsserver (Shiny-Server). En endring der hver applikasjon (Rapporteket for et gitt register) kjøres som en selvstendig enhet innpakket i en applikasjonscontainer er i seg selv enkelt å få til og vil gi en rekke gevinster som betydelig forenkling av driftsoppgaver, lavere risiko for at feil påvirker andre deler av systemet samt at ansvarsdelingen mellom utviklings- og driftsoppgaver vil bli mer tydelig. Utfordringen ligger i å gjøre kloke valg av arkitektur, teknologi og metodikk som er tåler endring (fremtidsrettet) og som samtidig ivaretar best mulig kvalitet på de resultatjenestene som skal leveres. Et eksempel på en fremtidig endring vil være et skifte av driftsleverandør.
+
+Flytting av driftsansvar fra Helse Nord IKT til Norsk helsenett er allered besluttet og finansiert gjennom felles oppgjørsordning. Denne søknaden inneholder derfor IKKE aktivitet som er knyttet til etablering av et driftsmiljø hos Norsk Helsenett _per se_. 
+
+# Hva skal gjøres?
+Prosjektet må fullføre en rekke oppgaver hos ulike aktører for å nå målet om å kunne demonstrere resultattjenesten som en applikasjonskontainer for et eksisterende kvalitetsregister i full skala. Disse oppgavene er beskrevet under.
+
+## Rapporteket claims i Falk
+Forprosjeketet demonstrerte bruk av Falk som autentiseringsløsning mot Rapporteket som applikasjonscontainer for et vilkårlig sett av tilganger (claims) slik vist i Figur x. Rapporteket har et spesifikt krav til tilgangsinfomrmasjon slik som register- og organisasjonstilhørighet, rolle(r) i registeret, o.s.v., som alle må være tilgjengelig gjennom claims fra Falk. I dette prosjektet skal Helse Nord IKT i samarbeid med Hemit etablere nødvendige innslag i Falk sitt tilgangstre slik at Rapporteket kan motta et komplett sett av tilgangsinformasjon.
+
+## PKCE-flow for ShinyProxy
+I gjennomført forprosjekt er det allerede etablert en patch til [ShinyProxy](https://www.shinyproxy.io/) slik at autentisering og autorisasjon til Rapporteket som containerapplikasjon kan skje gjennom Falk ved bruk av [OAuth](https://en.wikipedia.org/wiki/OAuth) med [PKCE utvidelse](https://oauth.net/2/pkce/). Det som da mangler er å etablere et standardisert oppsett for bygg, verifisering og distribusjon av patchet utgave av ShinyProxy samt dokumentasjon av metoden. I tillegg vil eksisterende patch bli tilbudt [Open Analytics](https://www.openanalytics.eu/) slik at de om mulig kan legge denne til offisielle utgaver av ShinyProxy. I så fall vil det ikke lengre være nødvendig å ivareta lokal patching av ShinyProxy.
+
+## Rutiner for kontinuerlig integrasjon og leveranse
+Her er ambisjonen å etablere en sammenhengende prosess hele veien fra utvikling og endring av programvare til leveranse av resultattjenesten i produksjon. Bruk av en slike prosesser krever tydelig definisjon av krav og rutiner hos den enkelte, identifisering av egnede verktøy og opplæring i bruk av disse for de ulike oppgavene og klare grenseflater mellom alle aktørene som skal være involvert. Automatisering vil også være et vikitg bidrag for å sikre god kvaliet i leveransene. Stikkord for utvikling av resultattjenestene vil være systematisk enhetstesting, makker-gjennomgang av kode (peer review), versjonshåndtering, automatisert bygging og testing av programvare forran hver leveranse til ulike miljø (_e.g._ QA, PRODUKSJON). For drift av tjenesten vil det være fokus på funksjonelle registre for applikasjoner (container image) i ulike versjoner for installasjon og tilbakerulling samt endringshåndtering av konfigurasjon for både driftsmiljøet og for containerapplikasjonene.
+
+## Teknisk arkitektur
+
+## Plan for flytting av registre til NHN
+Usikker på om denne bør være med i denne søknaden...
+
+Kort fortalt må det etableres et fungerende oppsett for automatisk styring av applikasjonscontainere (container proxy) som også kan håndtere autentisering og autorisasjon ved bruk av den åpne standarden [OAuth](https://en.wikipedia.org/wiki/OAuth). Det siste er vesentlig for seinere bruk av FALK for innlogging av brukere til Rapporteket.
+
+[ShinyProxy](https://www.shinyproxy.io/) fra [Open Analytics](https://www.openanalytics.eu/) er en åpen kildekode proxytjener laget spesielt for bruk av R-Shiny applikasjonscontainere på [Docker](https://www.docker.com/) infrastruktur. ShinyProxy er allerede tatt i bruk av SKDE i forbindelse med ["Sykehusviseren"](https://www.skde.no/kvalitetsregistre/alle/sykehus) der innlogging før opplasting av data gjøres ved itegrasjon med [AWS Cognito](https://aws.amazon.com/cognito/) ved bruk av OAuth. Det har tidligere også vært brukt en annen tjeneste for det samme formålet ([Auth0](https://auth0.com/)). Det finnes derfor relevant erfaring, verktøy og oppsett fra tilsvarende brukstilfeller.
+
+Hovedutfordringene i dette forprosjektet er antatt å være at
+
+1. innloggingsflyten som benyttes i ShinyProxy er begrenset til brukernavn og gruppetilhørighet noe som ikke er tilstrekkelig for Rapporteket der blant annet rolle og kontaktiformasjon til brukere er nødvendig, og
+
+2. OAuth i ShinyProxy i utganspunktet er basert på [Authorization Code Flow](https://oauth.net/2/grant-types/authorization-code/) mens FALK benytter den samme men med [PKCE utvidelse](https://oauth.net/2/pkce/).
+
+I første omgang må det derfor klargjøres hvilke endringer som er nødvendige i ShinyProxy og/eller i underliggende [ContainerProxy](https://www.containerproxy.io/). Under og etter utvikling av programkode må endringene prøves ut i et kontrollert miljø der det benyttes en simulert pålogging samt Rapporteket for et eller flere registre i form av containerapplikasjoner for å verifisere at brukeregenskaper blir behandlet riktig av proxytjeneren. Alternativt og i tilfelle man ser at etablering og vedlikehold av lokale endringer ikke vil være formålstjenlig eller mulig så vil man ha etablert et tilstrekkelig grunnlag for å utforme en bestilling til Open Analytics for om mulig å innarbeide ønskede endringer i kommende offisielle versjoner av ShinyProxy/ProxyContainer.
+
+# Hvorfor er det lurt?
+En endring av nåværende driftsform for Rapporteket til drift av containerapplikasjoner vil ha stort potensiale for gevinst på flere områder. Noen av disse er
+
+* De aller fleste av dagens systemavhengigheter vil forsvinne noe som vil forenkle driftsoppgavene betydelig samt redusere omfanget av nødvendig koordinasjon mellom utviklere (av innhold på Rapporteket) og driftspersonell. Flere prosesser kan automatiseres og det vil ligge bedre til rette for kontinuerlig kvalitetskontroll og leveranse av applikasjoner. Å bytte driftsleverandør, eksemplevis ved flytting fra helseregister.no til Norsk Helsenett, vil bli betraktelig enklere.
+
+* Infrastrukturen bak et slikt system skalerer godt, det vil si at systemet fungerer slik det skal også når "pågangen" blir stor/endres, fordi det enkelt kan settes opp ved bruk av etablerte metoder slik som [Docker Swarm](https://docs.docker.com/engine/swarm/) eller [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes).
+
+* Applikasjoner på Rapporteket (les registre) og sågar hver enkelt innlogging til samme applikasjon (register) vil kjøre isolert fra hverandre. Effekten av eventuelle feil som måtte oppstå vil da kunne begrenses til containeren den oppstår i og således ikke påvirke de andre.
+
+* Utviklere av innhold på Rapporteket vil lettere kunne identifisere feil som kan oppstå i en driftsfase før koden forlater eget utviklingsmiljø. Det vil derfor kunne lages applikasjoner med bedre kvalitet og med mindre sannsynlighet for at feil oppstår i driftsfasen.
+
+* Hvert enkelt register vil ha frihet til å ta i bruk særegenheter som ansees som nødvendige eller nyttige uten at dette vil påvirke andre registre på Rapporteket slik tilfelle er idag når alle registre (applikasjoner) betjenes av en felles applikasjonsserver. 
+
+# Hva koster det?
+Arbeidet vil foregå i et praktisk samarbeid mellom to seksjoner ved HNIKT (utvikling og applikasjonsdrift) og SKDE. Kostnader som det her søkes om finansiering for er kun arbeidstimer i forbindelse med utvikling av programvare ved HNIKT. Status for arbeidet skal rapporteres av forvaltningsgruppen for Rapporteket under ledelse av HNIKT. Oppgaver, omfang og finansieringsbehov for dette forprosjektet er gitt i tabell \@ref(tab:task).
+
+```{r make table all regs, results='asis', echo=FALSE}
+tabData <- data.frame(
+  Aktivitet =  c("Etablere utviklingsmiljø",
+                 "Etablere testmiljø",
+                 "Etablere pilotregister i Docker",
+                 "Gjennomgang av ContainerProxy kode",
+                 "Utvikling ny kode",
+                 "Usikkerhet",
+                 "",
+                 "Sum"),
+  Utfører = c("HNIKT UTV",
+              "HNIKT APPDRIFT",
+              "SKDE",
+              "HNIKT UTV",
+              "HNIKT UTV",
+              "HNIKT",
+              "",
+              ""),
+  Timer = c(30, 10, 20, 20, 40, 30, "", 150),
+  Søknadsbeløp = c("29 760",
+           "0",
+           "0",
+           "19 840",
+           "39 680",
+           "29 760",
+           "",
+           "119 040")
+)
+
+cap <- paste("Kategorier av oppgaver i prosjektet, antatt omfang og",
+             "søknadsbeløp. Det er antatt en timepris på kr 992,-")
+
+rapbase::mst(tab = tabData, cap = cap, label = "task", align = "llrr",
+             type = params$tableFormat)
+
+```
+
+# Sluttprodukt og arbeidsperiode
+Målet for arbeidet er nådd når en forespørsel om pålogging håndteres riktig av proxytjeneren og at de relevante brukeregenskapene kan gjøres tilgjengelig i en containerapplikasjon på Rapporteket. Alternativt mål i tilfelle det vurderes som uhensiktsmessig med lokal implementasjon vil være en ferdig utformet bestilling til Open Analytics for tilsvarende implementering i ShinyProxy/ContainerProxy. Uansett hvilket av disse to målene som nås vil det deretter være aktuelt med en utrulling av løsningen på Rapporteket for ordinær drift for alle registre. Det vil da være aktuelt å søke FMK om ytterligere finansiering.
+
+Arbeidet det her søkes om midler til vil foregå i løpet av høsten 2021 og være avsluttet senest innen utgangen av året.
+
+# Tilgrensende aktivitet og potensielle samarbeidspartnere
+Parallelt med denne aktivitetene foregår det også arbeid med overgang fra helseregister.no til FALK for nasjonale registre som benytter OpenQReg for fangst av data. Både teknologi og etablert relasjon mellom HNIKT og Hemit vil komme til anvendelse i dette prosjektet. Forvaltningsgruppen for Rapporteket er allerede i samtaler med NHN om blant annet en framtidig flytting av driftsasvaret for Rapporteket fra HNIKT til NHN. Vårt eget ønske om å ta i bruk containerteknologi passer veldig godt med med den utviklingen som nå foregår på NHN sitt eget driftsmiljø.
+
+# Formalia
+Relevante søknadsdata er gitt i tabell \@ref(tab:meta).
+
+```{r make table meta, results='asis', echo=FALSE}
+tabData <- data.frame(
+  Enhet =  c("Strategiområde",
+             "Prosjektnavn",
+             "Prosjekteier",
+             "Prosjektleder",
+             "Søknadssum",
+             "Kontonummer",
+             "Organisasjonsnummer",
+             "Merk overføring"),
+  Verdi = c("Resultatsystem",
+            "Rapporteket som applikasjonscontainer",
+            "HNIKT",
+            "Ketil Holden",
+            "Kr 119 040,-",
+            "1503 27 23796",
+            "883658752",
+            "Prosjektnr 100367")
+)
+
+cap <- paste("Prosjektmetadata.")
+
+rapbase::mst(tab = tabData, cap = cap, label = "meta", align = "ll",
+             type = params$tableFormat)
+
+```
