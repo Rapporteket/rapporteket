@@ -19,7 +19,7 @@ Prosjektet må fullføre en rekke oppgaver hos ulike aktører for å nå målet 
 Forprosjektet (se vedlegg 2) demonstrerte bruk av Falk som autentiseringsløsning mot Rapporteket som applikasjonscontainer for et vilkårlig sett av tilganger (claims) slik vist i Figur \ref{fig:login}.
 
 \begin{figure}[H]
-\includegraphics[width=0.75\textwidth, height=!]{/home/rstudio/rapporteket/inst/login.png}
+\includegraphics[width=0.75\textwidth, height=!]{/home/rstudio/rapporteket/inst/fmk_container/login.png}
 \centering
 \caption{Innlogging til et testregister på Rapporteket gjennom Falk ved bruk av tilgjengelige claims gjennomført i forprosjektet. Resterende felter må også kunne fylles ut av Falk for å oppnå en funksjonell innlogging til Rapporteket.}
 \label{fig:login}
@@ -37,7 +37,7 @@ Her er ambisjonen å etablere en sammenhengende prosess hele veien fra utvikling
 Helse Nord IKT er i dag driftsleverandør for Rapporteket. Så snart som mulig skal denne oppgaven flyttes til Norsk helsenett. På lang sikt kan det også hende at Rapporteket skal driftes av helt andre aktører enn de som i dag er aktuelle. Relevant teknologi og behovene hos de som benytter tjenestene har også en høy endringstakt. Alt dette må være i fokus ved design av løsningen for å ivareta lavest mulig kompleksitet samtidig som man sikrer tilstrekkelig robusthet for å håndtere nødvendige endringer over tid og gjeldende krav til kvalitet. Som en spin-off av forprosjektet er det etablert en arkitekturskisse av driftsløsningen (Figur \ref{fig:arch}) som et utgangspunkt for videre arbeid i dette prosjektet. Videreutviklingen vil skje i et samarbeid mellom Helse Nord IKT og Norsk helsenett (se vedlegg 1) der målene er å ivareta behovene gitt over og i koordinasjon med [skysatsingen i Norsk helsenett](https://www.nhn.no/sky/skysatsing-i-norsk-helsenett).
 
 \begin{figure}[H]
-\includegraphics[width=0.95\textwidth, height=!]{/home/rstudio/rapporteket/inst/arch.png}
+\includegraphics[width=0.95\textwidth, height=!]{/home/rstudio/rapporteket/inst/fmk_container/arch.png}
 \centering
 \caption{Foreløpig systemskisse som utgangspunkt for videre arbeid med arkitektur for et nytt driftsmiljø.}
 \label{fig:arch}
@@ -129,7 +129,7 @@ tabData <- data.frame(
             "Rapporteket som applikasjonscontainer II",
             "HNIKT",
             "Morten Engan",
-            "Kr 356 400,-",
+            "Kr 401 920,-",
             "1503 27 23796",
             "883658752",
             "Prosjektnr 100367")
