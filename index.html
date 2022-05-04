@@ -36,6 +36,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -54,14 +56,8 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -84,20 +80,15 @@
     </li>
   </ul>
 </li>
+      </ul>
+<ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="reference/index.html">Reference</a>
-</li>
-<li>
-  <a href="news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://github.com/Rapporteket/rapporteket/">
+  <a href="https://github.com/Rapporteket/rapporteket/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -109,87 +100,96 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="rapporteket-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#rapporteket-" class="anchor"></a>Rapporteket <img src="reference/figures/logo.svg" align="right" height="150">
+<div class="section level1">
+<div class="page-header"><h1 id="rapporteket-">Rapporteket <img src="reference/figures/logo.svg" align="right" height="150"><a class="anchor" aria-label="anchor" href="#rapporteket-"></a>
 </h1></div>
 <!-- badges: start -->
-
 <p>Følgende informasjon er tilgjengelig:</p>
 <ul>
 <li>
-<a href="https://rapporteket.github.io/rapporteket/articles/kort_introduksjon.html">Kort om Rapporteket</a> / <a href="https://rapporteket.github.io/rapporteket/articles/short_introduction.html">Rapporteket: a Short Introduction</a>
+<a href="https://rapporteket.github.io/rapporteket/articles/kort_introduksjon.html" class="external-link">Kort om Rapporteket</a> / <a href="https://rapporteket.github.io/rapporteket/articles/short_introduction.html" class="external-link">Rapporteket: a Short Introduction</a>
 </li>
-<li><a href="https://rapporteket.github.io/rapporteket/articles/hva_hvorfor_hvordan.html">Rapporteket, hva, hvordan, hvorfor (FAQ)</a></li>
-<li><a href="https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html">Rapporteket, generell informasjon</a></li>
+<li><a href="https://rapporteket.github.io/rapporteket/articles/hva_hvorfor_hvordan.html" class="external-link">Rapporteket, hva, hvordan, hvorfor (FAQ)</a></li>
+<li><a href="https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html" class="external-link">Rapporteket, generell informasjon</a></li>
 </ul>
-<p>Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. <a href="https://github.com/Rapporteket/rapporteket/issues">Innspill og kommentarer er derfor svært velkomne</a>.</p>
-<div id="for-utviklere-av-innhold-på-rapporteket-generelt" class="section level2">
-<h2 class="hasAnchor">
-<a href="#for-utviklere-av-innhold-p%C3%A5-rapporteket-generelt" class="anchor"></a>For utviklere av innhold på Rapporteket generelt</h2>
-<p>Dette er <a href="https://rapporteket.github.io/rapporteket">informasjon om Rapporteket</a> vedlikeholdt som en R-pakke. Målgruppen er først og fremst brukere av Rapporteket selv om innholdet også kan være nytting for de som utvikler innhold og tjenster på Rapporteket. Spesifikk informasjon om/for hvert enkelt register på Rapporteket finnes i respektive R-pakker som alle er tilgjengelig på <a href="https://github.com/Rapporteket">GitHub</a>.</p>
-<p>Alt innhold på Rapporteket er strukturert i R-pakker der koden tilgjengeliggjøres på <a href="https://github.com/Rapporteket">GitHub</a>. For å bidra kreves en <a href="https://github.com/join">github-konto</a> og medlemsskap i organisasjonen <em>Rapporteket</em>.</p>
+<p>Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. <a href="https://github.com/Rapporteket/rapporteket/issues" class="external-link">Innspill og kommentarer er derfor svært velkomne</a>.</p>
+<div class="section level2">
+<h2 id="for-utviklere-av-innhold-på-rapporteket-generelt">For utviklere av innhold på Rapporteket generelt<a class="anchor" aria-label="anchor" href="#for-utviklere-av-innhold-p%C3%A5-rapporteket-generelt"></a>
+</h2>
+<p>Dette er <a href="https://rapporteket.github.io/rapporteket" class="external-link">informasjon om Rapporteket</a> vedlikeholdt som en R-pakke. Målgruppen er først og fremst brukere av Rapporteket selv om innholdet også kan være nytting for de som utvikler innhold og tjenster på Rapporteket. Spesifikk informasjon om/for hvert enkelt register på Rapporteket finnes i respektive R-pakker som alle er tilgjengelig på <a href="https://github.com/Rapporteket" class="external-link">GitHub</a>.</p>
+<p>Alt innhold på Rapporteket er strukturert i R-pakker der koden tilgjengeliggjøres på <a href="https://github.com/Rapporteket" class="external-link">GitHub</a>. For å bidra kreves en <a href="https://github.com/join" class="external-link">github-konto</a> og medlemsskap i organisasjonen <em>Rapporteket</em>.</p>
 </div>
-<div id="for-utviklere-av-dette-prosjektet-rapporteket-spesielt" class="section level2">
-<h2 class="hasAnchor">
-<a href="#for-utviklere-av-dette-prosjektet-rapporteket-spesielt" class="anchor"></a>For utviklere av dette prosjektet (<em>rapporteket</em>) spesielt</h2>
-<p><a href="https://helse-nord.no/skde">SKDE</a> har et særlig ansvar for å holde denne pakken (<em>rapporteket</em>) oppdatert men også andre kan bidra (eksempelvis gjennom <a href="https://help.github.com/en/articles/fork-a-repo">“fork”</a> og <a href="https://help.github.com/en/articles/about-pull-requests">“pull request”</a>). Ved å bidra godtar man også <a href="https://rapporteket.github.io/rapporteket/CODE_OF_CONDUCT.html">de etiske retningslinjene</a> som gjelder for prosjektet.</p>
+<div class="section level2">
+<h2 id="for-utviklere-av-dette-prosjektet-rapporteket-spesielt">For utviklere av dette prosjektet (<em>rapporteket</em>) spesielt<a class="anchor" aria-label="anchor" href="#for-utviklere-av-dette-prosjektet-rapporteket-spesielt"></a>
+</h2>
+<p><a href="https://helse-nord.no/skde" class="external-link">SKDE</a> har et særlig ansvar for å holde denne pakken (<em>rapporteket</em>) oppdatert men også andre kan bidra (eksempelvis gjennom <a href="https://help.github.com/en/articles/fork-a-repo" class="external-link">“fork”</a> og <a href="https://help.github.com/en/articles/about-pull-requests" class="external-link">“pull request”</a>). Ved å bidra godtar man også <a href="https://rapporteket.github.io/rapporteket/CODE_OF_CONDUCT.html" class="external-link">de etiske retningslinjene</a> som gjelder for prosjektet.</p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/Rapporteket/rapporteket/">https://​github.com/​Rapporteket/​rapporteket/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/Rapporteket/rapporteket/issues">https://​github.com/​Rapporteket/​rapporteket/​issues</a>
-</li>
+<li><a href="https://github.com/Rapporteket/rapporteket/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/Rapporteket/rapporteket/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
 <li><small>file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CONTRIBUTING.html">Contributing guide</a></li>
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
-<div class="developers">
-<h2>Developers</h2>
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li>Are Edvardsen <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-5210-3656" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html#citation">Citing rapporteket</a></li>
+</ul>
+</div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Are Edvardsen <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-5210-3656" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Lena Ringstad Olsen <br><small class="roles"> Author </small>  </li>
 <li>Kevin Otto Thon <br><small class="roles"> Author </small>  </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/rapporteket/rapporteket/releases"><img src="https://img.shields.io/github/v/release/rapporteket/rapporteket?sort=semver" alt="Version"></a></li>
-<li><a href="https://github.com/Rapporteket/rapporteket/actions"><img src="https://github.com/Rapporteket/rapporteket/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-green.svg" alt="Lifecycle: stable"></a></li>
-<li><a href="https://rapporteket.github.io/rapporteket/"><img src="https://img.shields.io/badge/Doc--grey.svg" alt="Doc"></a></li>
+<li><a href="https://github.com/rapporteket/rapporteket/releases" class="external-link"><img src="https://img.shields.io/github/v/release/rapporteket/rapporteket?sort=semver" alt="Version"></a></li>
+<li><a href="https://github.com/Rapporteket/rapporteket/actions" class="external-link"><img src="https://github.com/Rapporteket/rapporteket/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-green.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://rapporteket.github.io/rapporteket/" class="external-link"><img src="https://img.shields.io/badge/Doc--grey.svg" alt="Doc"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Are Edvardsen, Lena Ringstad Olsen, Kevin Otto Thon.</p>
+  <p></p>
+<p>Developed by Are Edvardsen, Lena Ringstad Olsen, Kevin Otto Thon.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -197,6 +197,8 @@
 
   
 
+
+  
 
   </body>
 </html>

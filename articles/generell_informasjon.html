@@ -32,6 +32,8 @@
 </script>
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -50,14 +52,8 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -80,20 +76,15 @@
     </li>
   </ul>
 </li>
+      </ul>
+<ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
-<li>
-  <a href="https://github.com/Rapporteket/rapporteket/">
+  <a href="https://github.com/Rapporteket/rapporteket/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -109,21 +100,21 @@
       <h1 data-toc-skip>Rapporteket, generell informasjon</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/Rapporteket/rapporteket/blob/master/vignettes/generell_informasjon.Rmd"><code>vignettes/generell_informasjon.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/Rapporteket/rapporteket/blob/HEAD/vignettes/generell_informasjon.Rmd" class="external-link"><code>vignettes/generell_informasjon.Rmd</code></a></small>
       <div class="hidden name"><code>generell_informasjon.Rmd</code></div>
 
     </div>
 
     
     
-<div id="rapporteket" class="section level1">
-<h1 class="hasAnchor">
-<a href="#rapporteket" class="anchor"></a>RAPPORTEKET</h1>
+<div class="section level2">
+<h2 id="rapporteket">RAPPORTEKET<a class="anchor" aria-label="anchor" href="#rapporteket"></a>
+</h2>
 <p>Rapporteket er en elektronisk resultattjeneste som inneholder daglig oppdaterte resultater fra registeret. Tjenesten er tilgjengelig for medisinske kvalitetsregistre. Gjennom Rapporteket kan hver registrerende avdeling se egne resultater og sammenligne med resten av landet. Man kan også benytte resultater fra Rapporteket til videre deling av resultater.</p>
-<div id="innhold" class="section level2">
-<h2 class="hasAnchor">
-<a href="#innhold" class="anchor"></a>Innhold</h2>
-<p>Rapporteket er en on-line resultattjeneste som nås gjennom samme portal som registrets innregistreringsløsning. Den er en frittstående ressurs som henter data fra andre kilder. Det betyr at resultattjenesten kan benyttes uavhengig av registrets innregistreringsløsning. All aktivitet logges. All programvare er basert på åpen kildekode. Rapporteket er bygd opp ved hjelp av statistikkprogrammet R og webpubliseringsverktøyet R-Shiny. All R-kode for de ulike registrene kan finnes på <a href="https://github.com/Rapporteket/rapporteket" class="uri">https://github.com/Rapporteket/rapporteket</a></p>
+<div class="section level3">
+<h3 id="innhold">Innhold<a class="anchor" aria-label="anchor" href="#innhold"></a>
+</h3>
+<p>Rapporteket er en on-line resultattjeneste som nås gjennom samme portal som registrets innregistreringsløsning. Den er en frittstående ressurs som henter data fra andre kilder. Det betyr at resultattjenesten kan benyttes uavhengig av registrets innregistreringsløsning. All aktivitet logges. All programvare er basert på åpen kildekode. Rapporteket er bygd opp ved hjelp av statistikkprogrammet R og webpubliseringsverktøyet R-Shiny. All R-kode for de ulike registrene kan finnes på <a href="https://github.com/Rapporteket/rapporteket" class="external-link uri">https://github.com/Rapporteket/rapporteket</a></p>
 <p>Resultatene genereres på grunnlag av all tilgjengelig informasjon i Registerets database. Det betyr at når man skal lage automatisk genererte resultater som figurer og tabeller, må man ta høyde for at datagrunnlaget er dynamisk (dvs. i stadig endring).</p>
 <p>Begrepet «rapport» brukes tradisjonelt i noe diffust registermiljøet. En rapport kan i denne sammenheng først og fremst omfatte figurer og tabeller som oppsummerer data hentet direkte fra registerets datakilde. En rapport kan også være ei sammenstilling av figurer og/eller tabeller som presenteres i nettleseren eller som et pdf-dokument. En rapport kan også være det man vanligvis tenker på som en rapport, nemlig et dokument med både figurer, tabeller, analyser og tekst (prosa). Rapporter kan settes opp til å sendes ut regelmessig på e-post.</p>
 <p><em>Eksempler på hvilke resultater man kan ha på Rapporteket:</em></p>
@@ -141,17 +132,17 @@
 <li>Nøyaktig spesifikasjon av tabeller. Skal man ha statistiske mål (gjennomsnitt, sd, osv.) eller andeler. Skal andel beregnes med eller uten ukjente? Er noen variable bare aktuelle å vise for et gitt utvalg av en annen variabel? Hvordan skal variablene grupperes i ulike tabeller? Hvilke utvalg skal det være mulig å gjøre i tabellene? *Registeret har mulighet til å velge registerspesifikk fargepalett for sine figurer. (Alternativt får man en palett med fire blåfarger valgt fra “offentliggjøringspaletten”.) Et bestillingskjema for noen av figurtypene som tilbys på rapporteket og en beskrivelse av hvordan bestilling kan spesifiseres finner du her: [lenker til et regneark]</li>
 </ul>
 </div>
-<div id="bestilling" class="section level2">
-<h2 class="hasAnchor">
-<a href="#bestilling" class="anchor"></a>Bestilling</h2>
+<div class="section level3">
+<h3 id="bestilling">Bestilling<a class="anchor" aria-label="anchor" href="#bestilling"></a>
+</h3>
 <p>Hvis du ønsker å bestille Rapporteket for ditt register er første steg å ta kontakt med det Nasjonale Servicemiljøet ved Are Edvardsen (<a href="mailto:are.edvardsen@skde.no" class="email">are.edvardsen@skde.no</a>), alternativt <a href="mailto:rapporteket@skde.no" class="email">rapporteket@skde.no</a>. Servicemiljøet vil bistå registeret med videre bestilling.</p>
 <p>For å kunne jobbe med et register, er det viktig at det finnes en detaljert variabeldokumentasjon av alle variable i registeret, at registeret kan formidle hva de ønsker å finne på Rapporteket for det aktuelle registeret (bestilling), Dette innebærer å spesifisere hvilke type figurer og tabeller man ønsker, samt hvilke variable som skal visualiseres.</p>
 <p>Når det konkrete arbeidet starter, er det viktig at det er en faglig kontaktperson i registeret er tilgjengelig for spørsmål, avklaringer og diskusjon.</p>
 <p>Vi vil være behjelpelige med å komme fram endelig utforming av figurer, tabeller og rapporter. Avhengig av hvordan man blir enige om å dele opparbeidet, vil hele eller deler av resultattjenesten vil komme i testversjon ei stund etter ”fysisk” oppstart. Det er da viktig at noen fra registeret aktivt bruker testversjon, setter seg inn i hvordan systemet fungerer, bruker dataene kritisk og kommer med tilbakemeldig på mulige feil og eventuelle misforståleser mht. funksjonalitet. Det er viktig å være klar over at statistikeren ikke har medisinsk kompetanse og følgelig ikke har noe grunnlag for å vurdere om et resultat ser vettig ut.</p>
 </div>
-<div id="kostnader" class="section level2">
-<h2 class="hasAnchor">
-<a href="#kostnader" class="anchor"></a>Kostnader</h2>
+<div class="section level3">
+<h3 id="kostnader">Kostnader<a class="anchor" aria-label="anchor" href="#kostnader"></a>
+</h3>
 <p>Utvikling av innhold vil fortrinnsvis utføres av en statistiker i Servicemiljøet eller hos registeret og således ikke kreve ekstra kostnader i form av penger. Men ikke undervurder at det kreves kostnader i form av tid og engasjement fra registeret. Slike kostnader vil avhenge av registerets kompleksitet og hvor omfattende resultattjeneste man ønsker.</p>
 <p>Når Rapporteket settes i produksjon, påløper det en fast årlig driftsutgift til Norsk Helsenett.</p>
 </div>
@@ -169,11 +160,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Are Edvardsen, Lena Ringstad Olsen, Kevin Otto Thon.</p>
+  <p></p>
+<p>Developed by Are Edvardsen, Lena Ringstad Olsen, Kevin Otto Thon.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -181,6 +174,8 @@
 
   
 
+
+  
 
   </body>
 </html>
