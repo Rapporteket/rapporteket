@@ -1,5 +1,5 @@
 ---
-title: "<img src='../man/figures/logo.svg' align='right' height='80' /> Rapporteket as container application"
+title: "Rapporteket as container application"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Rapporteket as container application}
