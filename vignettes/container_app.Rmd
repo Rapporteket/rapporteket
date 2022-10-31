@@ -14,10 +14,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(rapporteket)
-```
-
 ## Short introduction
 Since 2019 [Rapporteket](https://rapporteket.github.io/rapporteket/) has been provided as shiny applications hosted by [shiny-server](https://www.rstudio.com/products/shiny/shiny-server/). From 2023 on, application will be migrated to standalone container application based on the [Docker platform](https://www.docker.com/) and hosted in a [kubernetes](https://kubernetes.io/) cluster. This document proposes methods that aim to provide an agile and robust process from development to deployment throughout the lifecycle. As such, this document is also meant to be a primer for discussions on further improvements and refinements.
 
@@ -31,14 +27,16 @@ This image is based on [Ubuntu LTS](https://releases.ubuntu.com/), common system
 Registry speciffic [R-shiny applications](https://shiny.rstudio.com/) are added ontop of the [base image](https://github.com/Rapporteket/base-r). Source code management for each registry application happens under the [Rapportkeet organization at GitHub](https://github.com/Rapporteket/) where the respective Dockerfiles for building these images also resides.
 
 ## Pipeline for continuous integration and delivery (CI/CD)
-To ensure that changes to Rapporteket can be delivered in a timely and reliable manner speciffic workflows are adopted. These pipelines for both the base image and registry applications are illustrated below.
+To ensure that changes to Rapporteket can be delivered in a timely and reliable manner specific workflows are adopted. These pipelines for both the base image and registry applications are illustrated below.
 
-![alt img](../inst/base_image.png)
+![Base R image lifecycle](../inst/base_image.png)
+
+![Rapporteket application image lifecycle](../inst/app_image.png)
 
 ## CI/CD tools and methods
 Vulnerability test and monitoring of container images is performed by [snyk](https://snyk.io/). The base container image is monitored by weekly scans to detect emerging threats and changes to underlying code is also scanned as part of all [pull requests](https://www.pagerduty.com/resources/learn/what-is-a-pull-request/) to prevent new vulnerabilities from entering the main project. Currently, vulnerabilities with low or medium severity are accepted, high and critical are not.
 
-As all code repositories are managed at GitHub, [Github Actions]() are used to implement the CI/CD policy and are triggered both on a schedule and on code update requests.
+As all code repositories are managed at GitHub, [Github Actions](https://docs.github.com/en/actions) are used to implement the CI/CD policy and are triggered both on a schedule and on code update requests.
 
 ## Deployment
 _TBD NHN private cloud services TBD_
