@@ -13,6 +13,6 @@ components:
     href: https://github.com/rapporteket/rapporteket
 
 template:
+  bootstrap: 5
   params:
     bootswatch: flatly
-    ganalytics: UA-145582048-2
