@@ -29,9 +29,9 @@ Registry speciffic [R-shiny applications](https://shiny.rstudio.com/) are added 
 ## Pipeline for continuous integration and delivery (CI/CD)
 To ensure that changes to Rapporteket can be delivered in a timely and reliable manner specific workflows are adopted. These pipelines for both the base image and registry applications are illustrated below.
 
-![Base R image lifecycle](../inst/base_image.png)
+![Base R image lifecycle](base_image.png)
 
-![Rapporteket application image lifecycle](../inst/app_image.png)
+![Rapporteket application image lifecycle](app_image.png)
 
 ## CI/CD tools and methods
 Vulnerability test and monitoring of container images is performed by [snyk](https://snyk.io/). The base container image is monitored by weekly scans to detect emerging threats and changes to underlying code is also scanned as part of all [pull requests](https://www.pagerduty.com/resources/learn/what-is-a-pull-request/) to prevent new vulnerabilities from entering the main project. Currently, vulnerabilities with low or medium severity are accepted, high and critical are not.
