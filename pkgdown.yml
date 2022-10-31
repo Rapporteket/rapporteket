@@ -1,11 +1,12 @@
 pandoc: 2.7.3
-pkgdown: 2.0.3
+pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
+  container_app: container_app.html
   exgr: exgr.html
   generell_informasjon: generell_informasjon.html
   hva_hvorfor_hvordan: hva_hvorfor_hvordan.html
   kort_introduksjon: kort_introduksjon.html
   short_introduction: short_introduction.html
-last_built: 2022-05-04T12:31Z
+last_built: 2022-10-31T14:14Z
 
