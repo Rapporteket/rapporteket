@@ -19,14 +19,14 @@ library(rapporteket)
 ```
 
 ## Rapporteket er ikke en "teknisk løsning"
-<img src="../inst/whatIs1.png" align="center" height="400" />
+<img src="whatIs1.png" align="center" height="400" />
 
 ## Bruk
 
 ### Interaktivitet
-<img src="../inst/whatIs2.png" align="center" height="600" />
+<img src="whatIs2.png" align="center" height="600" />
 
-<img src="../inst/whatIs2b.png" align="center" height="500" />
+<img src="whatIs2b.png" align="center" height="500" />
 
 ### Utsendelser
-<img src="../inst/whatIs3.png" align="center" height="800" />
+<img src="whatIs3.png" align="center" height="800" />
