@@ -2,7 +2,7 @@
 title: "Rapporteket, hva, hvorfor, hvordan? (FAQ)"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Rapporteket, hva, hvorfor, hvordan?}
+  %\VignetteIndexEntry{Rapporteket, hva, hvorfor, hvordan? (FAQ)}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
