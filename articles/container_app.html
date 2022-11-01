@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">rapporteket</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +74,8 @@
 
 
 
-<script src="container_app_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+
+<div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Rapporteket as container application</h1>
             
@@ -88,39 +89,74 @@
 <div class="section level2">
 <h2 id="short-introduction">Short introduction<a class="anchor" aria-label="anchor" href="#short-introduction"></a>
 </h2>
-<p>Since 2019 <a href="https://rapporteket.github.io/rapporteket/" class="external-link">Rapporteket</a> has been provided as shiny applications hosted by <a href="https://www.rstudio.com/products/shiny/shiny-server/" class="external-link">shiny-server</a>. From 2023 on, application will be migrated to standalone container application based on the <a href="https://www.docker.com/" class="external-link">Docker platform</a> and hosted in a <a href="https://kubernetes.io/" class="external-link">kubernetes</a> cluster. This document proposes methods that aim to provide an agile and robust process from development to deployment throughout the lifecycle. As such, this document is also meant to be a primer for discussions on further improvements and refinements.</p>
+<p>Since 2019 <a href="https://rapporteket.github.io/rapporteket/" class="external-link">Rapporteket</a> has
+been provided as <a href="https://shiny.rstudio.com/" class="external-link">R-shiny
+applications</a> hosted by <a href="https://www.rstudio.com/products/shiny/shiny-server/" class="external-link">shiny-server</a>.
+From 2023 on, applications will be migrated to standalone container
+applications hosted in a <a href="https://kubernetes.io/" class="external-link">kubernetes</a>
+cluster. This document proposes methods that aim to provide an agile and
+robust process from development to deployment throughout the application
+lifecycle. As such, this document is also meant to be a primer for
+discussions on further improvements and refinements.</p>
 </div>
 <div class="section level2">
 <h2 id="container-content">Container content<a class="anchor" aria-label="anchor" href="#container-content"></a>
 </h2>
-<p>In this set-up, each registry will be represented as a standalone container application at Rapporteket, <em>i.e.</em> deployment will be based on registry speciffic container images. However, registries at Rapporteket all share a common set of features such as system environment and underlying software (<em>e.g.</em> <a href="https://cran.r-project.org/" class="external-link">R</a>). These will all be established as a base container image the all registry speciffic container images are build upon. Both types of container images are described below.</p>
+<p>In this set-up, each registry will be represented as a standalone
+container application at Rapporteket, <em>i.e.</em> deployment will be
+based on registry specific container images. However, registries at
+Rapporteket all share a common set of features such as system
+environment and underlying software (<em>e.g.</em> <a href="https://cran.r-project.org/" class="external-link">R</a>). These will all be established
+as a base container image that all registry container images are built
+upon. Both types of container images are described below.</p>
 <div class="section level3">
 <h3 id="base-container-image">Base container image<a class="anchor" aria-label="anchor" href="#base-container-image"></a>
 </h3>
-<p>This image is based on <a href="https://releases.ubuntu.com/" class="external-link">Ubuntu LTS</a>, common system libraries, <a href="https://cran.r-project.org/sources.html" class="external-link">R-release</a> and common <a href="https://en.wikipedia.org/wiki/R_package" class="external-link">R-packages</a>. Relevant system locale setting are also defined in this image. The outset is provided by <a href="https://github.com/rocker-org/rocker-versioned2/blob/master/README.md" class="external-link">rocker/r-verse</a> that keeps track of whatever applies to Ubuntu LTS and R-stable. Specification for building the base image is provided by the <a href="https://github.com/Rapporteket/base-r/blob/main/Dockerfile" class="external-link">corresponding Dockerfile</a>.</p>
+<p>This image is built on <a href="https://releases.ubuntu.com/" class="external-link">Ubuntu
+LTS</a>, common system libraries, <a href="https://cran.r-project.org/sources.html" class="external-link">R-release</a> and common
+<a href="https://en.wikipedia.org/wiki/R_package" class="external-link">R-packages</a>.
+Relevant system locale settings are also defined in this image. The
+outset is provided by <a href="https://github.com/rocker-org/rocker-versioned2/blob/master/README.md" class="external-link">rocker/r-verse</a>
+that keeps track of whatever applies to Ubuntu LTS and R-release.
+Specifications for building the base image is provided by the <a href="https://github.com/Rapporteket/base-r/blob/main/Dockerfile" class="external-link">corresponding
+Dockerfile</a>.</p>
 </div>
 <div class="section level3">
 <h3 id="application-container-image">Application container image<a class="anchor" aria-label="anchor" href="#application-container-image"></a>
 </h3>
-<p>Registry speciffic <a href="https://shiny.rstudio.com/" class="external-link">R-shiny applications</a> are added ontop of the <a href="https://github.com/Rapporteket/base-r" class="external-link">base image</a>. Source code management for each registry application happens under the <a href="https://github.com/Rapporteket/" class="external-link">Rapportkeet organization at GitHub</a> where the respective Dockerfiles for building these images also resides.</p>
+<p>Registry R-shiny applications are added on top of the <a href="https://github.com/Rapporteket/base-r" class="external-link">base image</a>. Source code
+management for each registry application is hosted by the <a href="https://github.com/Rapporteket/" class="external-link">Rapportkeet organization at
+GitHub</a> where the respective Dockerfiles for building these images
+also resides.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="pipeline-for-continuous-integration-and-delivery-cicd">Pipeline for continuous integration and delivery (CI/CD)<a class="anchor" aria-label="anchor" href="#pipeline-for-continuous-integration-and-delivery-cicd"></a>
 </h2>
-<p>To ensure that changes to Rapporteket can be delivered in a timely and reliable manner specific workflows are adopted. These pipelines for both the base image and registry applications are illustrated below.</p>
+<p>To ensure that changes to applications at Rapporteket can be
+delivered in a timely and reliable manner specific workflows are
+adopted. Pipelines for both the base image and registry applications are
+illustrated below.</p>
 <div class="figure">
-<img src="base_image.png" alt=""><p class="caption">Base R image lifecycle</p>
+<img src="base_image.png" alt=""><p class="caption">Base container image workflow</p>
 </div>
 <div class="figure">
-<img src="app_image.png" alt=""><p class="caption">Rapporteket application image lifecycle</p>
+<img src="app_image.png" alt=""><p class="caption">Registry application container image workflow</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="cicd-tools-and-methods">CI/CD tools and methods<a class="anchor" aria-label="anchor" href="#cicd-tools-and-methods"></a>
 </h2>
-<p>Vulnerability test and monitoring of container images is performed by <a href="https://snyk.io/" class="external-link">snyk</a>. The base container image is monitored by weekly scans to detect emerging threats and changes to underlying code is also scanned as part of all <a href="https://www.pagerduty.com/resources/learn/what-is-a-pull-request/" class="external-link">pull requests</a> to prevent new vulnerabilities from entering the main project. Currently, vulnerabilities with low or medium severity are accepted, high and critical are not.</p>
-<p>As all code repositories are managed at GitHub, <a href="https://docs.github.com/en/actions" class="external-link">Github Actions</a> are used to implement the CI/CD policy and are triggered both on a schedule and on code update requests.</p>
+<p>Vulnerability test and monitoring of container images is performed by
+<a href="https://snyk.io/" class="external-link">snyk</a>. The base container image is
+monitored by weekly scans to detect emerging threats and changes to
+underlying code is also scanned as part of all <a href="https://www.pagerduty.com/resources/learn/what-is-a-pull-request/" class="external-link">pull
+requests</a> to prevent new vulnerabilities from entering the main
+project. Currently, vulnerabilities with low or medium severity are
+accepted, high and critical are not.</p>
+<p>As all code repositories are managed at GitHub, <a href="https://docs.github.com/en/actions" class="external-link">Github Actions</a> are used to
+enforce policies and run CI/CD tasks. Execution of such tasks are both
+scheduled and triggered by code update requests.</p>
 </div>
 <div class="section level2">
 <h2 id="deployment">Deployment<a class="anchor" aria-label="anchor" href="#deployment"></a>
