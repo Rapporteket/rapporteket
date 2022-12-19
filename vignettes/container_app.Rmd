@@ -40,4 +40,5 @@ As all code repositories are managed at GitHub, [Github Actions](https://docs.gi
 
 ## Deployment
 _TBD NHN private cloud services TBD_
+![Suggested deployment process.](deploy.png)
 
