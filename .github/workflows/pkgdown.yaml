@@ -7,7 +7,7 @@ name: pkgdown
 
 jobs:
   pkgdown:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       GITHUB_PAT: ${{ secrets.GH_TOKEN }}
     steps:
@@ -30,7 +30,7 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-          
+
       - name: Install system dependencies Linux
         run: sudo apt-get install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
 
