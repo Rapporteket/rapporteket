@@ -181,14 +181,13 @@ registry will trigger the deploy pipeline where the new image is pulled
 by the <em>Harbour image registry</em> and scanned for vulnerabilities.
 If this scanning is not successful, <em>i.e.</em> that unacceptable
 security issues are identified, a summary of relevant issues is reported
-to the development team via &lt;<strong>please select:</strong> email,
-slack, other channel&gt;. Upon a successful vulnerability scanning the
-image will be deployed to the QA environment from where it can be
-tested, <em>e.g.</em> by an end user test team. If tests are successful
-the release process can commence, and if not the QA-loop will have to
-start all over again. The QA deploy step is &lt;<strong>please
-check:</strong> fully automatic&gt; and will trigger on any changes to
-the main code branch.</p>
+to the development team via Rapporteket standard email inbox. Upon a
+successful vulnerability scanning the image will be deployed to the QA
+environment from where it can be tested, <em>e.g.</em> by an end user
+test team. If tests are successful the release process can commence, and
+if not the QA-loop will have to start all over again. The QA deploy step
+is fully automatic and will trigger on any changes to the main code
+branch.</p>
 </div>
 <div class="section level3">
 <h3 id="production">Production<a class="anchor" aria-label="anchor" href="#production"></a>
@@ -197,16 +196,18 @@ the main code branch.</p>
 code will be made and tagged by use of <a href="https://semver.org/" class="external-link">semantic versioning</a>. A new release will
 trigger an automated publish pipeline that will push a new image to the
 <em>Dockerhub image registry</em>. This image is tagged according to the
-version number of the code release. Any new image tagged with a semantic
-version number taking precedence over existing ones will be pulled by
-the <em>Harbour image registry</em> and scanned for vulnerabilities
-&lt;<strong>please check:</strong> following the exact same approach as
-for the QA process&gt;. When successful, a final approval will have to
-be made. &lt;<strong>please describe both actions taken and how and to
-whom this will be reported</strong>&gt;. After approval the application
-image will be deployed to the production environment. Overall, the
-production deploy step will apply both automated and manual
-processes.</p>
+version number of the code release and a static “production” tag that
+will serve the same purpose at the often used <em>latest</em> tag. These
+images will be pulled by the <em>Harbour image registry</em> and scanned
+for vulnerabilities following the exact same approach as for the QA
+process. When successful, the application image will be deployed to the
+production environment. In case a roll-back is needed, any existing
+image tagged with a semantic version number may be re-tagged with the
+static “production” tag. For this proof of concept, a roll-back will be
+part of the CI-process in either the development or deployment workflow.
+Overall, the production deploy step may therefore apply both automated
+and manual processes. This approach may well be adjusted to meet not yet
+known future demands for tighter control and change management.</p>
 </div>
 <div class="section level3">
 <h3 id="vulnerability-scanning">Vulnerability scanning<a class="anchor" aria-label="anchor" href="#vulnerability-scanning"></a>
@@ -216,10 +217,9 @@ application code changes and a new version is to be deployed. Since new
 vulnerabilities may well emerge for an application image that has
 already been deployed to the QA or production environment security
 scanning will also be run on a schedule. In this case and if new and
-unacceptable threats are identified the application image will be
-&lt;<strong>please check:</strong> left running&gt; but the results of
-the vulnerability scanning will be reported in the same way as describe
-above.</p>
+unacceptable threats are identified the application image will be left
+running but the results of the vulnerability scanning will be reported
+in the same way as describe above.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
