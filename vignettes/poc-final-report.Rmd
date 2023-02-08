@@ -17,12 +17,12 @@ knitr::opts_chunk$set(
 ```
 
 # Sammendrag
-I mai 2022 ble der fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkt om delfinansiering for tilrettelegging av en mer standardisert og "skybasert" drift av Rapporteket, primært hos Norsk Helsenett. Prosjektet fikk innvilget søknaden i juni og arbeidet startet for fult etter sommeren 2022 i et samarbeid mellom SKDE, Helse Nord IKT og Norsk Helsenett. Ved avslutning i februar 2023 har prosjektet etablert og demonstrert et fungerende oppsett som kan tas i bruk i en fremtidig flytteprosess. I dette ligger det blant annet en definert teknisk arkitektur, ny mellomvare som ivaretar og styrker kjerneegenskaper for applikasjoner på Rapporteket, bruk av eksterne tjenester for autentisering og autorisasjon samt stor skalerbarhet i et fremtidsrettet driftsmiljø. Utover å legge til rette for flytting vil også følgende gevinster kunne forventes: økt utviklingstakt og kvalitet for applikasjoner, mer tydelig ansvarsfordeling mellom applikasjons-utvikling og -drift, forenklet og rimeligere drift og færre avhengigheter til spesifikke komponenter og leverandører.
+I mai 2022 ble det fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkt om delfinansiering for tilrettelegging av en mer standardisert og "skybasert" drift av Rapporteket, primært hos Norsk Helsenett. Prosjektet fikk innvilget søknaden i juni og arbeidet startet påfølgende høst i et samarbeid mellom SKDE, Helse Nord IKT og Norsk Helsenett. Ved avslutning i februar 2023 har prosjektet etablert og demonstrert et fungerende oppsett som kan tas i bruk i en fremtidig flytteprosess. I dette ligger det blant annet en definert teknisk arkitektur, ny mellomvare som ivaretar og styrker kjerneegenskaper for applikasjoner på Rapporteket, bruk av eksterne tjenester for autentisering og autorisasjon samt stor skalerbarhet i et fremtidsrettet driftsmiljø. Utover å legge til rette for flytting vil også følgende gevinster kunne forventes: økt utviklingstakt og kvalitet for applikasjoner, mer tydelig ansvarsfordeling mellom applikasjons-utvikling og -drift, forenklet og rimeligere drift og færre avhengigheter til spesifikke komponenter og leverandører.
 
 # Innledning
-Rapporteket er en resultattjeneste som tilbyr statistikk og analyser til medisinske kvalitetsregistre og ble satt i drift for første gang i 2011. Utvikling og drift av tjenesten har skjedd i et samarbeid mellom SKDE og Helse Nord IKT. På Rapporteket har hvert register sin egen R-Shiny applikasjon og alle applikasjonene betjenes av en felles applikasjonsserver (Shiny-Server). En endring der hver applikasjon (Rapporteket for et gitt register) kjøres som en selvstendig enhet innpakket i en applikasjonscontainer vil gi en rekke gevinster som betydelig forenkling av driftsoppgaver, lavere risiko for at feil påvirker andre deler av systemet samt at ansvarsdelingen mellom utviklings- og driftsoppgaver vil bli mer tydelig. Utfordringen ligger i å gjøre kloke valg av arkitektur, teknologi og metodikk som er tåler fremtidige endringer og som samtidig ivaretar best mulig kvalitet på de resultatjenestene som skal leveres. Et eksempel på en fremtidig endring vil være et skifte av driftsleverandør eller nye behov for teknologi og funksjonalitet.
+Rapporteket er en resultattjeneste som tilbyr statistikk og analyser til medisinske kvalitetsregistre og ble satt i drift for første gang i 2011. Utvikling og drift av tjenesten har skjedd i et samarbeid mellom SKDE og Helse Nord IKT. På Rapporteket har hvert register sin egen R-Shiny applikasjon og alle applikasjonene betjenes av en felles applikasjonsserver (shiny-server). En endring der hver applikasjon (Rapporteket for et gitt register) kjøres som en selvstendig enhet innpakket i en applikasjonscontainer vil gi en rekke gevinster: betydelig forenkling av driftsoppgaver, lavere risiko for at feil påvirker andre deler av systemet samt at ansvarsdelingen mellom utviklings- og driftsoppgaver vil bli mer tydelig. Utfordringen ligger i å gjøre kloke valg av arkitektur, teknologi og metodikk som er tåler fremtidige endringer og som samtidig ivaretar best mulig kvalitet på de resultattjenestene som skal leveres. Eksempler på en fremtidige endringer kan være skifte av driftsleverandør eller behov for endringer av teknologi og funksjonalitet.
 
-Flytting av driftsansvar fra Helse Nord IKT til Norsk helsenett er allerede besluttet og finansiert gjennom felles oppgjørsordning. Dette prosjektet har etablert og demonstrert et fungerende oppsett som legger til rette for at flytteprosessen kan starte. 
+Flytting av driftsansvar fra Helse Nord IKT til Norsk helsenett er allerede besluttet og finansiert gjennom felles oppgjørsordning. Dette prosjektet har etablert og demonstrert et fungerende oppsett som legger til rette for at flytteprosessen kan starte.
 
 # Leveranser
 
@@ -93,7 +93,7 @@ Utgangspunktet for oppsett av infrastruktur ble hentet fra forprosjektet og etab
 
 ![Beskrivelse av infrastrukturen slik den ble anvendt i prosjektet](arch.png)
 
-> Teknisk arkitektur slik den er utarbeidet her er fremtidsrettet og designet for å understøtte alle oppgaver knyttet til drift av Rapporteket. Med fremtidsrettet menes det at valgt løsningen har fokus på høy grad av automatisering og skalerbarhet knyttet til livssyklus og bruk av relevante applikasjoner. Prosjektet har gjennom fullskala testing demonstrert operasjonalisering av arkitekturen i en privat skyløsning og at denne understøtter alle kjente oppgaver for applikasjonere som skal kjøre på Rapporteket. 
+> Teknisk arkitektur slik den er utarbeidet her er fremtidsrettet og designet for å understøtte alle oppgaver knyttet til drift av Rapporteket. Med fremtidsrettet menes at valgt løsningen har fokus på høy grad av automatisering og skalerbarhet knyttet til livssyklus og bruk av relevante applikasjoner. Prosjektet har gjennom fullskala testing demonstrert operasjonalisering av arkitekturen i en privat skyløsning og at denne understøtter alle kjente oppgaver for applikasjonere som skal kjøre på Rapporteket. 
 
 <!--- to be used for final doc 
 \begin{figure}[H]
@@ -135,29 +135,38 @@ Et av målene i prosjektet var bruk av [Falk](https://falk.hemit.org/) som ny tj
 
 > Siden Rappoteket er basert på R-Shiny applikasjoner og at fremtidig driftsform vil være container basert så er ShinyProxy som mellomtjener en sentral komponent som blant annet ivaretar god skalering og integrasjon mot eksterne autentisering- og autorisasjonstjenester. Prosjeket har demonstrert at bruken av ShinyProxy fungere etter hensikten i den arkitekturen som er etablert for driftsmiljøet. Videre demonstreres nytten av åpen kildekode for å kunne gjøre egne tilpassinger og å kunne bidra til at slike tilpassinger også kan komme andre til gode.
 
+![Skjermdump av deploy av ShinyProxy gjennom [Argo CD](https://argo-cd.readthedocs.io/en/stable/) i driftsmiljøet hos Norsk Helsenett](sp_deploy.png)
+
 ## Falk som identitetsleverandør til Rapporteket
 [Falk](https://falk.hemit.org/) er en innloggingstjeneste som er ment for bruk i forbindelse med nasjonale medisinske kvalitetsregistre. Når en applikasjon benytter Falk for autentisering (sikring av en persons identitet) så kan det skje ved bruk av [OpenID-standarden](https://en.wikipedia.org/wiki/OpenID) og passer derfor godt for prosjektets oppsett av Rapporteket. Tilsvarende samhandling om autorisasjon (tilganger) kan være mer utfordrende da ulike applikasjoner vil ha ulike krav. Her har Falk etablert egne "applikasjonstyper", for eksempel for bruk av Medisinsk RegistreringsSystem (MRS) og OpenQReg (OQR) som begge har innsamling av registerdata gjennom web-skjema som formål. Det er ikke etablert en egen "applikasjonstype" for Rapporteket og i dette prosjektet ble derfor "applikasjonstypen" til OQR brukt. I Falk er det ikke mulig å etablere "brukergrupper" som er sentralt ved bruk av ShinyProxy og "brukergrupper" ble derfor simulert gjennom anvendelse av OQR-applikasjonstypens "brukerroller". Øvrig behov for autorisasjon ble ivaretatt gjennom et internt "tilgangstre", tilsvarende anvendelsen i OQR for å ivareta spesifikke krav til autorisasjon utover det som er tilgjengelig gjennom Falk.
 
 > Rappporteket satt opp som applikasjonscontainer kan benytte Falk som innloggingstjeneste. Ved å kombinere brukeridentitet og brukeregenskaper levert fra Falk med informasjon fra et lokalt tilgangstre viser prosjektet at autentisering og autorisasjon fungerer tilfredsstillende. Behovet for brukergrupper er i prosjektet simulert ved anvendelse av brukerroller fra Falk. Ved en fremtidig utvidelse av Falk slik at tjenesten også inneholder mulighet for brukergrupper kan metoden for samvirke mellom Falk og Rapporteket slik den er etablert i prosjektet benyttes uten store endringer.
 
 ## Biprodukter fra prosjektet
+Som en følge av aktiviteten i prosjektet har det blitt skapt nye- og videreutviklet eksisterende komponenter som er relevante for Rapporteket. To offisielle R-pakker, [rapbase](https://CRAN.R-project.org/package=rapbase) og [sship](https://CRAN.R-project.org/package=sship), har blitt publisert i nye versjoner på [CRAN](https://cran.r-project.org/). Videre er det etablert et nytt basis docker image [rapporteket/base-r](https://hub.docker.com/r/rapporteket/base-r/tags) som representerer et felles utgangspunkt for alle registre som skal etableres på et fremtidig skybasert Rapportek. Nasjonalt register for ablasjonsbehandling og elektrofysiologi i Norge (AblaNor) er av prosjektet brukt som testregister og er således allerede klargjort for en fremtidig flytting av Rapporteket sitt driftsmiljø fra Helse Nord IKT til privat sky hos Norsk Helsenett.
 
-- rapbase
-- sship
-- base-r
-- ablanor er klargjort for flytting til nytt driftsmiljø
+[Spin-off hos Helse Nord IKT???]
+
+[Spin-off hos Norsk Helsenett???]
 
 
 # Anbefalinger
 
-Før flytting:
-- forhåndsgodkjent change hos nhn
-- etablering av egen kanal for utveksling av info ifm ci/cd
-- driftsleverandør inn i forvaltningsgruppe
-- forvaltningsgruppen ansvarlig for ci/cd
-- forvaltningsgruppen ansvarlig for opprettelse, tilbaketrekking og kontroll av tilganger
-- grupper i Falk
-- gå fra generisk til spesifikk "mellomlagring" av image i Harbour (fra dockerhub) slik at det kan settes spesifikke sync- og scanning-regler samt deploy (i PoC gjelder generelle regler for speiling av dockerhub) 
+## Endring av driftsleverandør
+Før og under en fremtidig flytting av Rapporteket fra nåværende driftsform til privat sky hos Norsk Helsenett er følgende aktiviteter og hensyn antatt som relevante:
 
-Videre forbedring:
-- tilknyttet utv miljø for Rapporteket hos driftsleverandør -> tilgang til data er viktig
+- etablering av en egen Rapporteket applikasjonstype i Falk der det er mulig å forvalte selvvalgte brukergrupper,
+- ny driftsleverandør bør være representert i forvaltningsgruppen før en flytteprosess startes,
+- forvaltningsgruppen for Rapporteket bør få ansvar for opprettelse, tilbaketrekking og kontroll av tilganger i tilfelle det er ønskelig å sentralisere denne oppgaven,
+- forvaltningsgruppen bør ha overordnet ansvar for kontinuerlig integrasjon, leveranse og deploy
+- i det praktiske arbeidet knyttet til kontinuerlig integrasjon, leveranse og deploy bør det etablere en egen informasjonskanal og prosjektet har identifisert  [slack](https://slack.com/) som et elegant og enkelt alternativ,
+- det bør legges innsats i å etablere forhåndsgodkjente endringsrutiner hos driftsleverandøren i forbindelse med deploy for å ivareta størst mulig grad av automatisering
+- hos driftsleverandør bør det etableres egen "Rapporteket policy" ved mellomlagring av container image for på den måten å optimalisere ønsket nivå av sikkerhet og automatisering
+
+[Andre anbefalinger til aktivitet knyttet til flytting???]
+
+
+## Videre utvikling
+Etterhvert som etableringen av privat sky hos Norsk Helsenett modnes vil det være naturlig å også se på muligheten for etablering av et eget utviklingsmiljø for Rapporteket. Slik utvikling er avhengig av nærhet til registerdata som for alle praktiske og formelle formål allerede er etablert hos Norsk Helsenett. Metoder og verktøy som i dag benyttes i utviklingen av registrenes resultattjenester på Rapporteket er allerede i stor grad er basert på container-teknologi og vil derfor være godt egnet i den infrastrukturen som er i ferd med å ta form hos Norsk Helsenett.
+
+[Andre anbefalinger til fremtidig videreutvikling???]
