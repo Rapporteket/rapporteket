@@ -151,7 +151,7 @@ ShinyProxy er en mellomtjener basert på [Spring boot](https://spring.io/project
 
 * tilpasset drift i kubernetes som er en sentral del av privat sky hos Norsk helsenett (Figur \ref{fig:spdeploy}).
 
-Et av målene i prosjektet var bruk av Falk som ny tjeneste for innlogging til Rapporteket og et av kravene for bruk av Falk var autentisering basert på OpenID med PKCE utvidelse. ShinyProxy hadde ved prosjektoppstart støtte for OpenID, men ikke med PKCE. Helse Nord IKT etablerte en lokal utvidelse av koden til ShinyProxy og patchet utgave med PKCE-støtte ble brukt videre i arbeidet. Samme kodeutvidelse ble også gitt til Open Analytics med forespørsel om innarbeiding i fremtidige offisielle versjoner av ShinyProxy og denne endringen vil være med fra og med versjon 3.0.0 av ShinyProxy. I følge Open Analytics vil denne versjonen slippes i slutten av februar 2023.
+Et av målene i prosjektet var bruk av [Falk](https://falk.hemit.org/) som ny tjeneste for innlogging til Rapporteket og et av kravene for bruk av Falk var autentisering basert på OpenID med PKCE utvidelse. ShinyProxy hadde ved prosjektoppstart støtte for OpenID, men ikke med PKCE. Helse Nord IKT etablerte en lokal utvidelse av koden til ShinyProxy og patchet utgave med PKCE-støtte ble brukt videre i arbeidet. Samme kodeutvidelse ble også gitt til [Open Analytics](https://www.openanalytics.eu/) med forespørsel om innarbeiding i fremtidige offisielle versjoner av ShinyProxy og denne endringen vil være med fra og med versjon 3.0.0 av ShinyProxy. I følge Open Analytics vil denne versjonen slippes i slutten av februar 2023.
 
 \begin{figure}[H]
 \includegraphics[width=0.95\textwidth, height=!]{`r system.file("fmk_container/sp_deploy.png", package = "rapporteket")`}
