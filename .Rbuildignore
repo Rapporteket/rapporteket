@@ -14,3 +14,5 @@
 ^vignettes/rapporteket_hva_hvorfor_hvordan\.Rmd$
 ^appveyor\.yml$
 ^\.lintr$
+^doc$
+^Meta$
