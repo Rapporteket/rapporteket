@@ -1,8 +1,8 @@
 ---
 title: 'Rapporteket som applikasjonscontainer: Sluttrapport'
-author: "Morten Engan (HNIKT), Are Edvardsen (SKDE), Tove Sverkmo (NHN)"
+author: "Morten Engan (HNIKT), Are Edvardsen (SKDE), Tove Sverkmo (NHN), Sigurd Hansen (HNIKT)"
 date: "`r format(Sys.time(), '%d. %B, %Y')`"
-abstract: 'I mai 2022 ble det fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkt om delfinansiering for tilrettelegging av en mer standardisert og "skybasert" drift av Rapporteket, primært hos Norsk Helsenett. Prosjektet fikk innvilget søknaden i juni og arbeidet startet påfølgende høst i et samarbeid mellom Helse Nord IKT, SKDE og Norsk Helsenett. Ved avslutning i februar 2023 har prosjektet etablert og demonstrert et fungerende oppsett som kan tas i bruk i en fremtidig flytteprosess. I dette ligger det blant annet en definert teknisk arkitektur, ny mellomvare som ivaretar og styrker kjerneegenskaper for applikasjoner på Rapporteket, bruk av eksterne tjenester for autentisering og autorisasjon samt stor skalerbarhet i et fremtidsrettet driftsmiljø. Utover å legge til rette for flytting vil også følgende gevinster kunne forventes: økt utviklingstakt og kvalitet for applikasjoner, mer tydelig ansvarsfordeling mellom applikasjons-utvikling og -drift, forenklet og rimeligere drift og færre avhengigheter til spesifikke komponenter og leverandører.'
+abstract: 'I mai 2022 ble det fra Teknologiforum for medisinske kvalitetsregistre (FMK) søkt om delfinansiering for tilrettelegging av en mer standardisert og "skybasert" drift av Rapporteket, primært hos Norsk Helsenett. Prosjektet fikk innvilget søknaden i juni og arbeidet startet påfølgende høst i et samarbeid mellom Helse Nord IKT, SKDE og Norsk Helsenett. Ved avslutning i februar 2023 har prosjektet etablert og demonstrert et fungerende oppsett som kan legges til grunn for en fremtidig flytteprosess. I dette ligger det blant annet en definert teknisk arkitektur, ny mellomvare som ivaretar og styrker kjerneegenskaper for applikasjoner på Rapporteket, bruk av eksterne tjenester for autentisering og autorisasjon samt stor skalerbarhet i et fremtidsrettet driftsmiljø. Utover å legge til rette for flytting vil også følgende gevinster kunne forventes: økt utviklingstakt og kvalitet for applikasjoner, mer tydelig ansvarsfordeling mellom applikasjons-utvikling og -drift, forenklet og rimeligere drift og færre avhengigheter til spesifikke komponenter og leverandører.'
 reglogo: '`r system.file("fmk_container/fmk_container_final_report_coworker.png", package = "rapporteket")`'
 regtext: ''
 userFullName: 'FMK'
@@ -108,14 +108,14 @@ På utviklersiden (hos registrene) er det etablert en metodikk som inneholder en
 \begin{figure}[H]
 \includegraphics[width=0.95\textwidth, height=!]{`r system.file("fmk_container/base_image.png", package = "rapporteket")`}
 \centering
-\caption{Skisse av automatisert og manuelle prosesser for etablering av basis image for container applikasjoner (registre) på Rapporteket. Basis imaget inneholder i hovedsak et tynt OS og programvaremiljøet R.}
+\caption{Illustrasjon av automatisert og manuelle prosesser for etablering av et felles basis image for alle container applikasjoner (registre) på Rapporteket. Basis imaget inneholder i hovedsak et tynt operativsystem og programvaremiljøet R.}
 \label{fig:baseimage}
 \end{figure}
 
 \begin{figure}[H]
 \includegraphics[width=0.95\textwidth, height=!]{`r system.file("fmk_container/app_image.png", package = "rapporteket")`}
 \centering
-\caption{Skisse av automatiserte og manuelle prosesser for etablering av et container image for et gitt register på Rapporteket. Imaget bygger på et basis image (over) og R-koden som ligger til grunn for et gitt register på Rapporteket.}
+\caption{Illustrasjon av automatiserte og manuelle prosesser for etablering av et container image for et gitt register på Rapporteket. Imaget bygger på et basis image (over) og R-koden som ligger til grunn for dette register på Rapporteket.}
 \label{fig:appimage}
 \end{figure}
 
@@ -125,7 +125,7 @@ I Norsk helsenett sin private sky er det satt opp et eget image register som hen
 \begin{figure}[H]
 \includegraphics[width=0.95\textwidth, height=!]{`r system.file("fmk_container/deploy.png", package = "rapporteket")`}
 \centering
-\caption{Skisse av prosessen for driftsetting av container applikasjoner. De to fargekodede radene angir ansvarsområdene og kolonnene skiller mellom prosessene for deploy til kvalitetskontroll (QA) og produksjon.}
+\caption{Illustrasjon av prosessen for driftsetting av container applikasjoner. De to fargekodede radene angir ansvarsområdene og kolonnene skiller mellom prosessene for deploy til kvalitetskontroll (QA) og produksjon.}
 \label{fig:deploy}
 \end{figure}
 
@@ -136,6 +136,7 @@ I Norsk helsenett sin private sky er det satt opp et eget image register som hen
 \label{fig:cicd}
 \end{figure}
 
+> _Prosjektet har etablert en sammenhengende kjede for kontinuerlig integrasjon, leveranse og deploy av container applikasjoner for Rapporteket. Gjennom et minimum av grenseflater og forenklede tilbakemeldingsmekanismer mellom deltagende organisasjoner er det demonstrert en fungerende og i stor grad automatisert prosess for driftsetting av en Rapporteket-applikasjon i full skala._
 
 
 ## ShinyProxy og OpenID med PKCE-flyt
@@ -149,7 +150,7 @@ ShinyProxy er en mellomtjener basert på [Spring boot](https://spring.io/project
 
 * mulighet for gjenbruk av identitet og autorisasjon (single-sign on)
 
-* tilpasset drift i kubernetes som er en sentral del av privat sky hos Norsk helsenett (Figur \ref{fig:spdeploy}).
+* tilpasset drift i [kubernetes](https://kubernetes.io/) som er en sentral del av privat sky hos Norsk helsenett (Figur \ref{fig:spdeploy}).
 
 Et av målene i prosjektet var bruk av [Falk](https://falk.hemit.org/) som ny tjeneste for innlogging til Rapporteket og et av kravene for bruk av Falk var autentisering basert på OpenID med PKCE utvidelse. ShinyProxy hadde ved prosjektoppstart støtte for OpenID, men ikke med PKCE. Helse Nord IKT etablerte en lokal utvidelse av koden til ShinyProxy og patchet utgave med PKCE-støtte ble brukt videre i arbeidet. Samme kodeutvidelse ble også gitt til [Open Analytics](https://www.openanalytics.eu/) med forespørsel om innarbeiding i fremtidige offisielle versjoner av ShinyProxy og denne endringen vil være med fra og med versjon 3.0.0 av ShinyProxy. I følge Open Analytics vil denne versjonen slippes i slutten av februar 2023.
 
@@ -168,7 +169,8 @@ Et av målene i prosjektet var bruk av [Falk](https://falk.hemit.org/) som ny tj
 
 > _Rapporteket satt opp som applikasjonscontainer kan benytte Falk som innloggingstjeneste. Ved å kombinere brukeridentitet og brukeregenskaper levert fra Falk med informasjon fra et lokalt tilgangstre viser prosjektet at autentisering og autorisasjon fungerer tilfredsstillende. Behovet for brukergrupper er i prosjektet simulert ved anvendelse av brukerroller fra Falk. Ved en fremtidig utvidelse av Falk slik at tjenesten også inneholder mulighet for brukergrupper kan metoden for samvirke mellom Falk og Rapporteket slik den er etablert i prosjektet benyttes uten store endringer._
 
-## Biprodukter fra prosjektet
+
+## Nye komponenter og verdifulle erfaringer fra prosjektet
 Som en følge av aktiviteten i prosjektet har det blitt skapt nye- og videreutviklet eksisterende komponenter som er relevante for Rapporteket. To offisielle R-pakker, [rapbase](https://cran.r-project.org/package=rapbase) og [sship](https://cran.r-project.org/package=sship), har blitt publisert i nye versjoner på [CRAN](https://cran.r-project.org/). Videre er det etablert et nytt basis docker image [rapporteket/base-r](https://hub.docker.com/r/rapporteket/base-r/tags) som representerer et felles utgangspunkt for alle registre som skal etableres på et fremtidig skybasert Rapportek. Nasjonalt register for ablasjonsbehandling og elektrofysiologi i Norge (AblaNor) er av prosjektet brukt som testregister og er således allerede klargjort for en fremtidig flytting av Rapporteket sitt driftsmiljø fra Helse Nord IKT til privat sky hos Norsk Helsenett (Figur \ref{fig:luablanor} og \ref{fig:scablanor}).
 
 \begin{figure}[H]
@@ -187,7 +189,7 @@ Som en følge av aktiviteten i prosjektet har det blitt skapt nye- og videreutvi
 
 Helse Nord IKT har gjennom prosjektet fått verdifull erfaring med applikasjoner som container samt Kubernetes og andre støtteverktøy til bruk i bygging av egen deployment pipeline.
 
-[Spin-off hos Norsk Helsenett???]
+NHN Privat Sky er i første rekke tenkt som en plattformtjeneste for NHN sine eksisterende nasjonale løsninger, men det er et mål å kunne tilby plattformtjenester også til eksterne kunder som av ulike årsaker ønsker å plassere nasjonale løsninger i NHN Privat Sky. Dette prosjektet har vist at det er realistisk å få til en fungerende deployprosess fra utviklere som sitter eksternt, inn til NHN Privat Sky. Det er et krav om at alle miljøer/tjenester i NHN Privat Sky skal ha et driftsteam fra NHN, og det er også gjort i dette prosjektet. For å legge til rette for stabil drift, god forvaltning samt hyppige og smidige deployer, er det avgjørende å få opp ansvarsmatriser mellom de involverte aktørene i den aktuelle tjenesten, slik at det er tydelig hvem som har hovedansvar og hvem utfører oppgaven(e). Dette prosjektet har gitt NHN en svært nyttig erfaring med hvordan ansvars- og oppgavedelingen kan fungere i praksis, og samtidig gitt innsikt i hva det må jobbes videre med for å "modne" NHN Privat Sky ytterligere.
 
 
 # Anbefalinger
@@ -203,15 +205,12 @@ Før og under en fremtidig flytting av Rapporteket fra nåværende driftsform ti
 
 * forvaltningsgruppen bør ha overordnet ansvar for kontinuerlig integrasjon, leveranse og deploy
 
-* i det praktiske arbeidet knyttet til kontinuerlig integrasjon, leveranse og deploy bør det etableres en egen informasjonskanal og prosjektet har identifisert slack som et elegant og enkelt alternativ,
+* i det praktiske arbeidet knyttet til kontinuerlig integrasjon, leveranse og deploy bør det etableres en egen informasjonskanal og prosjektet har identifisert [slack](https://slack.com/) som et elegant og enkelt alternativ,
 
 * det bør legges innsats i å etablere forhåndsgodkjente endringsrutiner hos driftsleverandøren i forbindelse med deploy for å ivareta størst mulig grad av automatisering
 
 * hos driftsleverandør bør det etableres egen "Rapporteket policy" ved mellomlagring av container image for på den måten å optimalisere ønsket nivå av sikkerhet og automatisering
 
-[Andre anbefalinger til aktivitet knyttet til flytting???]
 
 ## Videre utvikling
 Etter hvert som etableringen av privat sky hos Norsk Helsenett modnes vil det være naturlig å også se på muligheten for etablering av et eget utviklingsmiljø for Rapporteket. Slik utvikling er avhengig av nærhet til registerdata som for alle praktiske og formelle formål allerede er etablert hos Norsk Helsenett. Metoder og verktøy som i dag benyttes i utviklingen av registrenes resultattjenester på Rapporteket er allerede i stor grad er basert på container-teknologi og vil derfor være godt egnet i den infrastrukturen som er i ferd med å ta form hos Norsk Helsenett.
-
-[Andre anbefalinger til fremtidig videreutvikling???]
