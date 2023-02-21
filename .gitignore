@@ -7,3 +7,5 @@ inst/*.html
 inst/*.md
 inst/*.pdf
 pkgdown/*
+/doc/
+/Meta/
