@@ -4,6 +4,6 @@
 #' is, how to get stated, regular use and development of content. As such, this
 #' packages cointaines no (or very few) R functions
 #'
-#' @docType package
 #' @name rapporteket
 NULL
+"_PACKAGE"
