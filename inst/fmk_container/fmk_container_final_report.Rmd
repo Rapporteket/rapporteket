@@ -81,7 +81,6 @@ cap <- paste(
 
 rapbase::mst(tab = tabData, cap = cap, label = "pers", align = "lll",
              type = params$tableFormat)
-
 ```
 
 I alt er prosjektet fakturert 336 arbeidstimer og leie av infrastruktur og driftsmiljø for til sammen kr 408 315,- fordelt på aktivitet hos Helse Nord IKT v/systemutvikling og Norsk Helsenett. Det ble også levert et betydelig, men ukjent antall selvfinansierte arbeidstimer fra SKDE. Ved prosjektslutt gjenstår det til sammen kr 102 605,- som i hovedsak stammer fra forprosjektet og vil i sin helhet tilbakeføres Teknologiforum for medisinske kvalitetsregistre (FMK).

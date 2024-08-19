@@ -139,7 +139,6 @@ cap <- paste("Prosjektmetadata.")
 
 rapbase::mst(tab = tabData, cap = cap, label = "meta", align = "ll",
              type = params$tableFormat)
-
 ```
 
 # Vedlegg
