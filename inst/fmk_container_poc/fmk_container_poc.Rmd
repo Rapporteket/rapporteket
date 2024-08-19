@@ -65,13 +65,13 @@ tabData <- data.frame(
               ""),
   Timer = c(30, 10, 20, 20, 40, 30, "", 150),
   Søknadsbeløp = c("29 760",
-           "0",
-           "0",
-           "19 840",
-           "39 680",
-           "29 760",
-           "",
-           "119 040")
+                   "0",
+                   "0",
+                   "19 840",
+                   "39 680",
+                   "29 760",
+                   "",
+                   "119 040")
 )
 
 cap <- paste("Kategorier av oppgaver i prosjektet, antatt omfang og",
@@ -117,5 +117,4 @@ cap <- paste("Prosjektmetadata.")
 
 rapbase::mst(tab = tabData, cap = cap, label = "meta", align = "ll",
              type = params$tableFormat)
-
 ```

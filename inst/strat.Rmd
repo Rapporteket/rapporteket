@@ -25,7 +25,7 @@ output:
 ---
 
 ```{r set options and load packages, include = FALSE}
-knitr::opts_chunk$set(echo=FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 options(tinytex.verbose = TRUE)
 ```
 
@@ -94,8 +94,8 @@ tabData <- data.frame(
                "HISREG*", "NKR*", "NoRGast*", "NRA*", "Muskel*",
                "NordicScir*",
                "Intensivregisteret*", "NORIC Nasjonal*", "NORIC UNN",
-               "NORIC Bodø","NORIC St Olav", "NORIC HUS", "NORIC SUS",
-               "NORIC Arendal","NORIC AHUS", "NORIC Rikshospitalet",
+               "NORIC Bodø", "NORIC St Olav", "NORIC HUS", "NORIC SUS",
+               "NORIC Arendal", "NORIC AHUS", "NORIC Rikshospitalet",
                "NORIC Ullevål", "NORIC LHL", "Smerte Nasjonal*",
                "Smerte UNN", "Smerte St Olav", "Smerte HUS",
                "Smerte OUS", "NGER*"),
@@ -146,11 +146,11 @@ tabData <- data.frame(
   Region =  c("Helse Nord", "Helse Midt", "Helse Vest",
               "Helse Sør-Øst"),
   `R-pakke` = c(paste("norspis, hisreg, norgast, nakke,",
-                                "nra, rygg, muskel"),
-                          paste("nordicscir"),
-                          paste("intensiv, intensivberedskap, korona,",
-                                "noric, smerte"),
-                          paste("nger")),
+                      "nra, rygg, muskel"),
+                paste("nordicscir"),
+                paste("intensiv, intensivberedskap, korona,",
+                      "noric, smerte"),
+                paste("nger")),
   Innholdsprodusenter = c(2, 0, 2, 0))
 
 cap <- paste("Registre i form av R-pakker som er etablert på",
@@ -171,17 +171,17 @@ For å oppnå best mulig kvalitet, effektivitet og ivaretakelse av sikkerhet er 
 
 ```{r make table of common libraries, results='asis'}
 tabData <- data.frame(
-  `R-pakke` = c("rapbase","", "rapFigurer", "raptools", "rapRegTemplate",
+  `R-pakke` = c("rapbase", "", "rapFigurer", "raptools", "rapRegTemplate",
                 "rapporteket", "sship"),
   Funksjon = c(paste("Brukerhåndtering, databasekoblinger, bruksstatistikk, ",
                      "konfigurasjon mm."),
-             "Obligatorisk for alle registre på Rapporteket.",
-             "Kodemaler for ulike figurtyper. Brukes av noen registre.",
-             "Forvaltningsverktøy. Brukes av SKDE og HNIKT.",
-             "Kodeeksempler for opplæring og etablering.",
-             "Dokumentasjon om Rapporteket.",
-             c(paste("Sikker forsendelse og mottak av data.",
-                     "Brukes i eksport av pandemidata til FHI."))))
+               "Obligatorisk for alle registre på Rapporteket.",
+               "Kodemaler for ulike figurtyper. Brukes av noen registre.",
+               "Forvaltningsverktøy. Brukes av SKDE og HNIKT.",
+               "Kodeeksempler for opplæring og etablering.",
+               "Dokumentasjon om Rapporteket.",
+               c(paste("Sikker forsendelse og mottak av data.",
+                       "Brukes i eksport av pandemidata til FHI."))))
 
 cap <- paste("Nasjonale fellesfunksjoner for Rapporteket gitt som respektive",
              "R-pakker. Disse er etablert og vedlikeholdes",
@@ -190,7 +190,6 @@ cap <- paste("Nasjonale fellesfunksjoner for Rapporteket gitt som respektive",
              "bruk av Rapporteket.")
 
 noric::mst(tab = tabData, cap = cap, label = "libs")
-
 ```
 
 ## Finansiering
