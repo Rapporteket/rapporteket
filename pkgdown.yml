@@ -1,5 +1,5 @@
 pandoc: 3.1.11
-pkgdown: 2.1.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   container_app: container_app.html
@@ -8,4 +8,4 @@ articles:
   hva_hvorfor_hvordan: hva_hvorfor_hvordan.html
   kort_introduksjon: kort_introduksjon.html
   short_introduction: short_introduction.html
-last_built: 2024-08-19T11:01Z
+last_built: 2025-01-17T08:27Z
