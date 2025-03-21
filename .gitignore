@@ -9,3 +9,4 @@ inst/*.pdf
 pkgdown/*
 /doc/
 /Meta/
+*.bkp
