@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1">
   <diagram id="NtRQC4Yf2EBrrEhXGuK9" name="AlleVar">
-    <mxGraphModel dx="2072" dy="4405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2438" dy="4599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -365,6 +365,60 @@
         </mxCell>
         <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-1" value="&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;Roskva laster over&lt;/span&gt;&lt;br style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;data fra&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;Qreg TEST Database&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;til&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;QA&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;Rapporteket Database&lt;/span&gt;&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.publish;labelBackgroundColor=#FFFFFF;fontSize=12;fillColor=#2072B8;" vertex="1" parent="1">
           <mxGeometry x="1096.5" y="-76" width="57" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-2" target="Rlp62eV4Cp5Yy7YXBmrY-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-2" value="Utvikler endrer&lt;br&gt;i test-database" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.my_site;fontColor=#000000;labelBackgroundColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="244" y="725" width="58" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-3" target="Rlp62eV4Cp5Yy7YXBmrY-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-3" value="Mail kommuniseret&lt;br&gt;ut til register&lt;br&gt;og statistikermiljø &lt;br&gt;at nå er endringer&lt;br&gt;er planlagt" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.dynamic_distribution_group;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="34" y="720" width="58" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-8" target="Rlp62eV4Cp5Yy7YXBmrY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-8" value="&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;Roskva laster over&lt;/span&gt;&lt;br style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;data fra&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;Qreg TEST Database&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;til&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;QA&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251);&quot;&gt;Rapporteket Database&lt;/span&gt;&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.publish;labelBackgroundColor=#FFFFFF;fontSize=12;fillColor=#2072B8;" vertex="1" parent="1">
+          <mxGeometry x="483" y="725.5" width="57" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-9" target="Rlp62eV4Cp5Yy7YXBmrY-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-9" value="Mail kommuniseret&lt;br&gt;ut til register&lt;br&gt;og statistikermiljø &lt;br&gt;at nå er endringer&lt;br&gt;i datadumper&lt;br&gt;lagt ut i QA.Rapporteket&lt;br&gt;database" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.dynamic_distribution_group;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="716" y="720" width="58" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-10" target="Rlp62eV4Cp5Yy7YXBmrY-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-10" value="Register/statistiker&lt;br&gt;ser over endringer&lt;br&gt;i variabler&lt;br&gt;og ordner rapporter" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#60A917;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="951" y="724.5" width="46" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-11" target="Rlp62eV4Cp5Yy7YXBmrY-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-11" value="Mail kommuniseres&lt;br&gt;til HNIKT at datadump&lt;br&gt;kan legges ut i&lt;br&gt;prod.Rapporteket&lt;br&gt;database" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.dynamic_distribution_group;labelBackgroundColor=none;fontSize=12;fontColor=#000000;fillColor=#60A917;" vertex="1" parent="1">
+          <mxGeometry x="1175" y="720" width="58" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-12" target="Rlp62eV4Cp5Yy7YXBmrY-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-12" value="Utvikler endrer&lt;br&gt;i prod-database" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.my_site;fontColor=#000000;labelBackgroundColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1409" y="725" width="58" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-13" target="Rlp62eV4Cp5Yy7YXBmrY-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-13" value="Automatiske&lt;br&gt;overføringer&lt;br&gt;over natten" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.publish;labelBackgroundColor=#FFFFFF;fontSize=12;fillColor=#2072B8;" vertex="1" parent="1">
+          <mxGeometry x="1644" y="725.5" width="57" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-14" value="Register og statistiker&lt;br&gt;sjekker at variabler&lt;br&gt;ser ok ut i PROD" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#60A917;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1874" y="724.5" width="46" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-23" value="&lt;h1&gt;Dataflyt for endringer i datagrunnlaget Qreg&lt;/h1&gt;&lt;p&gt;Endringer foretatt av HN-IKT i datagrunnlaget som kan påvirke Rapporteket-applikasjonene&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="14.75" y="550" width="566" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
