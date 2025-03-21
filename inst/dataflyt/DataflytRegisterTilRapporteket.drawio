@@ -491,6 +491,60 @@
         <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-50" value="SKDE kontakter&lt;div&gt;NHN&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.dynamic_distribution_group;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="860" y="1227.35" width="58" height="59" as="geometry" />
         </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-52" value="&lt;h1&gt;Endring av Rapporteket sine basisfunksjoner&lt;/h1&gt;&lt;p&gt;Rapase, basis-docker-image eller andre basis-funksjoner endres på en slik måte at det&lt;/p&gt;&lt;p&gt;påvirker Rapporteket-applikasjonene til register&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="19" y="1360" width="566" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-53" target="Rlp62eV4Cp5Yy7YXBmrY-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-53" value="SKDE implementerer&lt;div&gt;endring&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.my_site;fontColor=#000000;labelBackgroundColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="76" y="1483" width="58" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-55" target="Rlp62eV4Cp5Yy7YXBmrY-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-55" value="Mail kommuniseret&lt;br&gt;ut til register&lt;br&gt;og statistikermiljø &lt;br&gt;at endring er implementert" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.dynamic_distribution_group;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="302" y="1478" width="58" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-56" target="Rlp62eV4Cp5Yy7YXBmrY-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-56" value="Register/statistiker&lt;br&gt;ser over endringer&lt;br&gt;og ordner rapporter&lt;div&gt;i samarbeid med SKDE&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#60A917;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="512.5" y="1482.5" width="46" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-59" target="Rlp62eV4Cp5Yy7YXBmrY-53">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1650" />
+              <mxPoint x="105" y="1650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-61" value="Ja" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Rlp62eV4Cp5Yy7YXBmrY-60">
+          <mxGeometry x="-0.3028" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-59" target="Rlp62eV4Cp5Yy7YXBmrY-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-67" value="Nei" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Rlp62eV4Cp5Yy7YXBmrY-66">
+          <mxGeometry x="-0.1106" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-59" value="Må det til mer&lt;br&gt;endringer" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.help;fontSize=12;fontColor=#000000;fillColor=#60A917;" vertex="1" parent="1">
+          <mxGeometry x="715.75" y="1482.5" width="49" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Rlp62eV4Cp5Yy7YXBmrY-65" target="Rlp62eV4Cp5Yy7YXBmrY-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-65" value="SKDE legger ny&lt;div&gt;release i QA&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#2072B8;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.sites.my_site;fontColor=#000000;labelBackgroundColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1483" width="58" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-68" value="Register og statistiker&lt;br&gt;sjekker at applikasjon&lt;br&gt;ser ok ut i QA" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#60A917;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1182.25" y="1483" width="46" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
