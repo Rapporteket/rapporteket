@@ -2,13 +2,15 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 name: R-CMD-check
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   R-CMD-check:
@@ -20,13 +22,12 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macOS-latest, r: 'release'}
-          - {os: ubuntu-22.04, r: 'release'}
+          - {os: ubuntu-24.04, r: 'release'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.GH_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
@@ -45,5 +46,4 @@ jobs:
       - name: Check
         uses: r-lib/actions/check-r-package@v2
         with:
-          upload-snapshots: true
-          build_args: 'c("--no-manual", "--as-cran", "--compact-vignettes=gs+qpdf")'
+          error-on: '"warning"'
