@@ -151,7 +151,8 @@ tabData <- data.frame(
                 paste("intensiv, intensivberedskap, korona,",
                       "noric, smerte"),
                 paste("nger")),
-  Innholdsprodusenter = c(2, 0, 2, 0))
+  Innholdsprodusenter = c(2, 0, 2, 0)
+)
 
 cap <- paste("Registre i form av R-pakker som er etablert på",
              "Rapporteket og antall hele stillinger (Innholdsprodusenter) som",
@@ -181,7 +182,8 @@ tabData <- data.frame(
                "Kodeeksempler for opplæring og etablering.",
                "Dokumentasjon om Rapporteket.",
                c(paste("Sikker forsendelse og mottak av data.",
-                       "Brukes i eksport av pandemidata til FHI."))))
+                       "Brukes i eksport av pandemidata til FHI.")))
+)
 
 cap <- paste("Nasjonale fellesfunksjoner for Rapporteket gitt som respektive",
              "R-pakker. Disse er etablert og vedlikeholdes",
