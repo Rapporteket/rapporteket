@@ -53,10 +53,6 @@ Det er registeret som definerer hvilke resultater/visualiseringer de ønsker å 
 * Kontaktperson(er) – Det er viktig at denne personen er tilgjengelig og kan respondere på henvendelser relativt raskt, særlig i perioder hvor man har avtalt at det skal jobbes med registeret.
 * Bestilling med spesifikasjon (gjerne ei tegning) av hvilke figurer man ønsker, samt hvilke variabler som skal framstilles med denne type figur. Det må også spesifiseres hva man ønsker å kunne filtrere resultatene på, f.eks. tidsperiode, kjønn, alder, diagnose, osv..  Det er svært viktig at registeret tenker gjennom hva slags informasjon som er viktig og kan oppgi forutsetninger som ligger til grunn. (F.eks. om man skal utelate pasienter som er overført til andre sykehus ved beregning av liggetid.).
 * Spesifikasjonene må være konkrete. Skal man ha statistiske mål (gjennomsnitt, sd, osv.) eller andeler? Skal andel beregnes med eller uten ukjente? Er noen variable bare aktuelle å vise for et gitt utvalg av en annen variabel? Hvordan skal variablene grupperes i ulike tabeller eller figurer? Hvilke utvalg skal det være mulig å gjøre?
-*Registeret kan velge en egen fargepalett for sine figurer. Alternativt får man en palett med blåfarger, samt grått og rødt valgt fra "offentliggjøringspaletten".
-(Et bestillingskjema for noen av figurtypene som tilbys på rapporteket og en beskrivelse av hvordan bestilling kan spesifiseres finner du her: [lenker til et regneark] - MÅ SE OM DETTE REGNEARKET FORTSATT ER MULIG Å FINNE...)
-
-
 
 ## Kostnader
 Utvikling av innhold vil fortrinnsvis utføres av en statistiker i Servicemiljøet eller hos registeret og således ikke kreve ekstra kostnader i form av penger. Men ikke undervurder at det kreves kostnader i form av tid og engasjement fra registeret. Slike kostnader vil avhenge av registerets kompleksitet og hvor omfattende resultattjeneste man ønsker. 
