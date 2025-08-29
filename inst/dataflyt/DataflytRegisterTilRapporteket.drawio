@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="NtRQC4Yf2EBrrEhXGuK9" name="AlleVar">
-        <mxGraphModel dx="4172" dy="4120" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1612" dy="4120" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -394,8 +394,8 @@
                 <mxCell id="Rlp62eV4Cp5Yy7YXBmrY-59" value="Fungerer&lt;div&gt;applikasjon&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.help;fontSize=12;fontColor=#000000;fillColor=#60A917;" parent="1" vertex="1">
                     <mxGeometry x="737.38" y="-1925.5" width="49" height="49" as="geometry"/>
                 </mxCell>
-                <mxCell id="JKf9CEfHuf6O12jxrugK-3" value="&lt;h1&gt;Endring i Rapporteket-applikasjon&lt;/h1&gt;&lt;p&gt;Register/statistikker gjør endringer i selve rapporteket-applikasjonen til registeret (hovedsakelig endringer i R-kode)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="49.99999999999999" y="-3130" width="420" height="100" as="geometry"/>
+                <mxCell id="JKf9CEfHuf6O12jxrugK-3" value="&lt;h1&gt;Endring i Rapporteket-applikasjon&lt;/h1&gt;&lt;p style=&quot;text-align: left;&quot;&gt;Register/statistikker gjør endringer i selve rapporteket-applikasjonen til registeret. Det er endringer i kode (hovedsakelig R) som ligger på https://github.com/Rapporteket/&amp;lt;register&amp;gt;.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="50.24999999999999" y="-3140" width="420" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="JKf9CEfHuf6O12jxrugK-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="JKf9CEfHuf6O12jxrugK-4" target="JKf9CEfHuf6O12jxrugK-11" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -550,14 +550,15 @@
                     <mxGeometry x="880.25" y="-1335.5" width="49" height="49" as="geometry"/>
                 </mxCell>
                 <mxCell id="D78ok7mh7IAtvR6c5HxT-15" value="Følg spor&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot;Endringer i&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;Rapporteket-applikasjon&quot;&lt;/span&gt;&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#60A917;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="1320.25" y="-1336.5" width="48.5" height="50" as="geometry"/>
+                    <mxGeometry x="1083" y="-1336.5" width="48.5" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="D78ok7mh7IAtvR6c5HxT-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D78ok7mh7IAtvR6c5HxT-17" target="D78ok7mh7IAtvR6c5HxT-15" edge="1">
+                <mxCell id="D78ok7mh7IAtvR6c5HxT-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="D78ok7mh7IAtvR6c5HxT-17" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1790.25" y="-1510"/>
-                            <mxPoint x="1790.25" y="-1311"/>
+                            <mxPoint x="1790" y="-1510"/>
+                            <mxPoint x="1790" y="-1311"/>
                         </Array>
+                        <mxPoint x="1560" y="-1311" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="D78ok7mh7IAtvR6c5HxT-21" value="Nei" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="D78ok7mh7IAtvR6c5HxT-20" vertex="1" connectable="0">
@@ -597,12 +598,23 @@
                 </mxCell>
                 <mxCell id="3" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="1345" y="-1250" as="sourcePoint"/>
-                        <mxPoint x="905" y="-1250" as="targetPoint"/>
+                        <mxPoint x="1150" y="-1310" as="sourcePoint"/>
+                        <mxPoint x="700" y="-1200" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="1345" y="-1180"/>
-                            <mxPoint x="905" y="-1180"/>
+                            <mxPoint x="1209.5" y="-1310"/>
+                            <mxPoint x="1209.5" y="-1210"/>
+                            <mxPoint x="1209.5" y="-1150"/>
+                            <mxPoint x="700" y="-1150"/>
                         </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="Følg spor&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;&quot;Endringer i&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237));&quot;&gt;Rapporteket-applikasjon&quot;&lt;/span&gt;&lt;/div&gt;" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.users;fillColor=#60A917;labelBackgroundColor=none;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="1463" y="-1340" width="48.5" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="4">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1350" y="-1350" as="sourcePoint"/>
+                        <mxPoint x="1487" y="-1420" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
