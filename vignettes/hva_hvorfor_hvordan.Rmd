@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ### Hvorfor trenger mitt register Rapporteket?
-For å få tilgang til kontinuerlig oppdaterte resultater fra registeret
+Ditt register trenger Rapporteket i hovedsak for å få tilgang til kontinuerlig oppdaterte resultater fra registeret.
 Når man bruker tid på å registrere data, er det viktig å kunne få noe tilbake i form av resultater.
 Alle avdelinger som registrerer vil kunne få tilgang til å gå inn på Rapporteket å se på sine resultater.
 Registeret definerer selv hva det skal være mulighet for å se på sitt Rapportek og hvem som få tilgang til resultatene.
@@ -23,7 +23,7 @@ Man kan også velge å vise ulike deler av Rapporteket til personer med ulike ro
 Gjennom Rapporteket kan hver registrerende avdeling se egne resultater og sammenligne med resten av landet.
 På denne måten kan man også lære av hverandres erfaringer. 
 
-### Hva er forskjell på Rapporteket og nettsidene som viser kvalitetsindikatorer?
+### Hva er forskjellen på Rapporteket og nettsidene som viser kvalitetsindikatorer?
 På de offentlige nettsidene er det anonymiserte data som ligger til grunn for visningene og det er i hovedsak resultater fra kvalitetsindikatorer som vises.
 På Rapporteket kan man i prinsippet lage resultater for alle variable og vise de resultatene man ønsker.
 Data i Rapporteket oppdateres daglig, mens data på nettsidene oppdateres manuelt, vanligvis to ganger i året. 
@@ -39,12 +39,12 @@ Data i Rapporteket oppdateres daglig, mens data på nettsidene oppdateres manuel
 Nei.
 
 ### Hvordan går jeg fram for å få Rapporteket?
-Ta kontakt med Nasjonalt Servicemiljø eller Servicemiljøet i din region.
+Ta kontakt med Servicemiljøet i din region.
 Videre prosess blir å avklare hvem som skal utvikle innhold på Rapporteket for registeret.
 Fortrinnsvis er dette en statistiker i egen region eller i registeret.
 
 ### Hvor mye arbeid/tid/ressurser vil det kreve fra registeret for å få på plass Rapporteket?
 Det kommer an på hvor mye man ønsker å vise på Rapporteket og hvor komplekst registeret er.
 Jo mer innhold og jo høyere kompleksitet, desto mer tid og involvering krever dette fra registeret. 
-Vær klar over at hver gang man gjør ei oppdatering/endring av sin innregistreringsløsning, vil det kreves at man har en grundig sjekk av resultater på Rapporteket siden endringene i de aller fleste tilfeller, krever tilpasning av koden på Rapporteket.
+Det er også viktig å være klar over at hver gang man gjør ei oppdatering/endring av sin innregistreringsløsning, vil det kreves at man har en grundig sjekk av resultater på Rapporteket siden endringene i de aller fleste tilfeller, krever tilpasning av koden på Rapporteket.
 
