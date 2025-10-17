@@ -1,6 +1,6 @@
 Package: rapporteket
 Title: Informasjon om Rapporteket
-Version: 1.1.1
+Version: 2.0.0
 Authors@R: c(
     person(given = "Lena Ringstad",
            family = "Olsen",
@@ -12,7 +12,7 @@ Authors@R: c(
            email = "kevin.thon@helse-nord.no"),
     person(given = "Ingrid",
            family = "Bondevik",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "ingrid.bondevik@helse-nord.no",
            comment = c(ORCID = "0000-0002-8564-255X")),
     person(given = "Are",
@@ -30,11 +30,6 @@ URL: https://rapporteket.github.io/rapporteket/index.html,
     https://github.com/Rapporteket/rapporteket
 BugReports: https://github.com/Rapporteket/rapporteket/issues
 Description: Oppdatert informasjon om Rapporteket vedlikeholdt som en R-pakke.
-    Målgruppen er først og fremst for de som utvikler innhold og tjenster på
-    Rapporteket, selv om innholdet også kan være nytting for de som bruker
-    Rapporteket. Spesifikk informasjon om/for hvert enkelt register på
-    Rapporteket finnes i respektive R-pakker som alle er tilgjengelig fra
-    github.com/Rapporteket.
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
