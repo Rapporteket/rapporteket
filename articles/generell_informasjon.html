@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rapporteket</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,6 @@
 <li><a class="dropdown-item" href="../articles/container_app.html">Rapporteket as container application</a></li>
     <li><a class="dropdown-item" href="../articles/exgr.html">Hva er Rapporteket?</a></li>
     <li><a class="dropdown-item" href="../articles/generell_informasjon.html">Rapporteket, generell informasjon</a></li>
-    <li><a class="dropdown-item" href="../articles/hva_hvorfor_hvordan.html">Rapporteket, hva, hvorfor, hvordan? (FAQ)</a></li>
     <li><a class="dropdown-item" href="../articles/kort_introduksjon.html">Kort om Rapporteket</a></li>
     <li><a class="dropdown-item" href="../articles/short_introduction.html">Rapporteket: a Short Introduction</a></li>
   </ul>
@@ -71,21 +70,16 @@
 <h2 id="rapporteket">RAPPORTEKET<a class="anchor" aria-label="anchor" href="#rapporteket"></a>
 </h2>
 <p>Rapporteket er en elektronisk resultattjeneste som er tilgjengelig
-for medisinske kvalitetsregistre Tjenesten viser oppdaterte resultater
-fra registeret og datagrunnlaget oppdateres daglig. Gjennom Rapporteket
-kan hver registrerende avdeling se egne resultater og sammenligne med
-resten av landet. Man kan også benytte resultater fra Rapporteket til
-videre formidling av resultater.</p>
+for medisinske kvalitetsregistre. For mer informasjon om Rapporteket, se
+<a href="https://www.kvalitetsregistre.no/formidling/rapporteket" class="external-link">kvalitetsregistre.no</a></p>
 <div class="section level3">
 <h3 id="innhold">Innhold<a class="anchor" aria-label="anchor" href="#innhold"></a>
 </h3>
-<p>Rapporteket er en on-line resultattjeneste som nås gjennom
-FALK-pålogging og kan benyttes uavhengig av registrets
-innregistreringsløsning. Rapporteket er bygd opp ved hjelp av
-statistikkprogrammet R og webpubliseringsverktøyet Shiny. All
-programvare er basert på åpen kildekode. R-koden, som danner grunnlaget
-for registerets Rapporteket-applikasjon, finnes på <a href="https://github.com/Rapporteket" class="external-link uri">https://github.com/Rapporteket</a>. Hvert register har sin
-egen Rapporteket-applikasjon og all aktivitet logges.</p>
+<p>Rapporteket er bygd opp ved hjelp av statistikkprogrammet R og
+webpubliseringsverktøyet Shiny. All programvare er basert på åpen
+kildekode. R-koden, som danner grunnlaget for registerets
+Rapporteket-applikasjon, finnes på <a href="https://github.com/Rapporteket" class="external-link uri">https://github.com/Rapporteket</a>. Hvert register har sin
+egen Rapporteket-applikasjon.</p>
 <p>Resultatene genereres på grunnlag av data tilgjengelig fra
 Registerets database. Det betyr at når man skal lage automatisk
 genererte resultater som figurer og tabeller, må man ta høyde for at
@@ -113,71 +107,6 @@ Rapporten er til en hver tid oppdatert med alle data som er overført til
 Rapportekets database.</li>
 </ul>
 </div>
-<div class="section level3">
-<h3 id="bestilling">Bestilling<a class="anchor" aria-label="anchor" href="#bestilling"></a>
-</h3>
-<p>Hvis du ønsker å bestille Rapporteket for ditt register er første
-steg å ta kontakt med Nasjonale Servicemiljø eller Servicemiljøet i din
-region. Servicemiljøet vil bistå registeret med videre bestilling.
-Spørsmål kan også rettes til <a href="mailto:rapporteket@skde.no" class="email">rapporteket@skde.no</a>.</p>
-<p>For å kunne jobbe med et register, er det viktig at det finnes en
-detaljert variabeldokumentasjon av alle variable i registeret, og at
-registeret kan formidle hva de ønsker å finne på Rapporteket for det
-aktuelle registeret. Dette innebærer å spesifisere hvilke type figurer
-og tabeller man ønsker, samt hvilke variable som skal visualiseres.</p>
-<p>Når det konkrete arbeidet starter, er det viktig at det er en faglig
-kontaktperson i registeret er tilgjengelig for spørsmål, avklaringer og
-diskusjon.</p>
-<p>Vi vil være behjelpelige med å komme fram endelig utforming av
-figurer, tabeller og rapporter. Avhengig av hvordan man blir enige om å
-dele opparbeidet, vil hele eller deler av resultattjenesten vil komme i
-testversjon ei stund etter «fysisk» oppstart. Det er da viktig at noen
-fra registeret aktivt bruker testversjon, setter seg inn i hvordan
-systemet fungerer, bruker dataene kritisk og kommer med tilbakemeldig på
-mulige feil og eventuelle misforståleser mht. funksjonalitet. Det er
-viktig å være klar over at statistikeren ikke har medisinsk kompetanse
-og følgelig ikke har noe grunnlag for å vurdere om et resultat ser
-vettig ut.</p>
-<p>Det er registeret som definerer hvilke resultater/visualiseringer de
-ønsker å finne på Rapporteket. En bestilling av Rapporteket må minst
-inneholde følgende informasjon:</p>
-<ul>
-<li>Dokumentasjon av variable, dvs. variabelnavn i
-innregistreringsskjema, hvilket navn variabelen har i databasen, hvilke
-verdier en variabel kan ha (koder og tekst), dataformat (tekst,
-numerisk, dato, osv.) og avhengigheter mellom variablene. En korrekt
-kodebok vil kunne gi svar på mye av dette. Hvordan variablene henger
-sammen, dvs. hvordan de eventuelt er innbyrdes avhengige, samt hvordan
-ulike tabeller skal kobles sammen, må også registeret kunne formidle
-informasjon om.</li>
-<li>Kontaktperson(er) – Det er viktig at denne personen er tilgjengelig
-og kan respondere på henvendelser relativt raskt, særlig i perioder hvor
-man har avtalt at det skal jobbes med registeret.</li>
-<li>Bestilling med spesifikasjon (gjerne ei tegning) av hvilke figurer
-man ønsker, samt hvilke variabler som skal framstilles med denne type
-figur. Det må også spesifiseres hva man ønsker å kunne filtrere
-resultatene på, f.eks. tidsperiode, kjønn, alder, diagnose, osv.. Det er
-svært viktig at registeret tenker gjennom hva slags informasjon som er
-viktig og kan oppgi forutsetninger som ligger til grunn. (F.eks. om man
-skal utelate pasienter som er overført til andre sykehus ved beregning
-av liggetid.).</li>
-<li>Spesifikasjonene må være konkrete. Skal man ha statistiske mål
-(gjennomsnitt, sd, osv.) eller andeler? Skal andel beregnes med eller
-uten ukjente? Er noen variable bare aktuelle å vise for et gitt utvalg
-av en annen variabel? Hvordan skal variablene grupperes i ulike tabeller
-eller figurer? Hvilke utvalg skal det være mulig å gjøre?</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="kostnader">Kostnader<a class="anchor" aria-label="anchor" href="#kostnader"></a>
-</h3>
-<p>Utvikling av innhold vil fortrinnsvis utføres av en statistiker i
-Servicemiljøet eller hos registeret og således ikke kreve ekstra
-kostnader i form av penger. Men ikke undervurder at det kreves kostnader
-i form av tid og engasjement fra registeret. Slike kostnader vil avhenge
-av registerets kompleksitet og hvor omfattende resultattjeneste man
-ønsker.</p>
-</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -186,7 +115,7 @@ av registerets kompleksitet og hvor omfattende resultattjeneste man
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by Are Edvardsen, Lena Ringstad Olsen, Kevin Otto Thon.</p>
+  <p>Developed by Lena Ringstad Olsen, Kevin Otto Thon, Ingrid Bondevik, Are Edvardsen, Arnfinn Hykkerud Steindal.</p>
 </div>
 
 <div class="pkgdown-footer-right">
