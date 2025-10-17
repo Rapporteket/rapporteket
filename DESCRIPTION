@@ -2,11 +2,6 @@ Package: rapporteket
 Title: Informasjon om Rapporteket
 Version: 1.1.1
 Authors@R: c(
-    person(given = "Are",
-           family = "Edvardsen",
-           role = c("aut", "cre"),
-           email = "biorakel@gmail.com",
-           comment = c(ORCID = "0000-0002-5210-3656")),
     person(given = "Lena Ringstad",
            family = "Olsen",
            role = c("aut"),
@@ -14,15 +9,32 @@ Authors@R: c(
     person(given = "Kevin Otto",
            family = "Thon",
            role = c("aut"),
-           email = "kevin.thon@helse-nord.no"))
+           email = "kevin.thon@helse-nord.no"),
+    person(given = "Ingrid",
+           family = "Bondevik",
+           role = c("aut", "cre"),
+           email = "ingrid.bondevik@helse-nord.no",
+           comment = c(ORCID = "0000-0002-8564-255X")),
+    person(given = "Are",
+           family = "Edvardsen",
+           role = c("aut"),
+           email = "biorakel@gmail.com",
+           comment = c(ORCID = "0000-0002-5210-3656")),
+    person(given = "Arnfinn Hykkerud",
+           family = "Steindal",
+           role = c("aut", "cre"),
+           email = "arnfinn.steindal@gmail.com",
+           comment = c(ORCID = "0000-0002-4088-7860"))
+           )
 URL: https://rapporteket.github.io/rapporteket/index.html,
     https://github.com/Rapporteket/rapporteket
 BugReports: https://github.com/Rapporteket/rapporteket/issues
 Description: Oppdatert informasjon om Rapporteket vedlikeholdt som en R-pakke.
-    Målgruppen er først og fremst brukere av Rapporteket selv om innholdet også
-    kan være nytting for de som utvikler innhold og tjenster på Rapporteket.
-    Spesifikk informasjon om/for hvert enkelt register på Rapporteket finnes i
-    respektive R-pakker som alle er tilgjengelig fra github.com/Rapporteket.
+    Målgruppen er først og fremst for de som utvikler innhold og tjenster på
+    Rapporteket, selv om innholdet også kan være nytting for de som bruker
+    Rapporteket. Spesifikk informasjon om/for hvert enkelt register på
+    Rapporteket finnes i respektive R-pakker som alle er tilgjengelig fra
+    github.com/Rapporteket.
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
