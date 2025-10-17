@@ -3,8 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   container_app: container_app.html
-  exgr: exgr.html
   generell_informasjon: generell_informasjon.html
   kort_introduksjon: kort_introduksjon.html
   short_introduction: short_introduction.html
-last_built: 2025-10-17T10:07Z
+last_built: 2025-10-17T13:23Z
