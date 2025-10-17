@@ -11,7 +11,6 @@
 Følgende informasjon er tilgjengelig:
 
 - [Kort om Rapporteket](https://rapporteket.github.io/rapporteket/articles/kort_introduksjon.html) / [Rapporteket: a Short Introduction](https://rapporteket.github.io/rapporteket/articles/short_introduction.html)
-- [Rapporteket, hva, hvordan, hvorfor (FAQ)](https://rapporteket.github.io/rapporteket/articles/hva_hvorfor_hvordan.html)
 - [Rapporteket, generell informasjon](https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html)
 
 Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. [Innspill og kommentarer er derfor svært velkomne](https://github.com/Rapporteket/rapporteket/issues).
