@@ -10,8 +10,8 @@
 
 Følgende informasjon er tilgjengelig:
 
-- [Kort om Rapporteket](https://rapporteket.github.io/rapporteket/articles/kort_introduksjon.html) / [Rapporteket: a Short Introduction](https://rapporteket.github.io/rapporteket/articles/short_introduction.html)
-- [Rapporteket, generell informasjon](https://rapporteket.github.io/rapporteket/articles/generell_informasjon.html)
+- [Kort om Rapporteket](https://rapporteket.github.io/rapporteket/articles/aa_kort_introduksjon.html) / [Rapporteket: a Short Introduction](https://rapporteket.github.io/rapporteket/articles/ab_short_introduction.html)
+- [Rapporteket, generell informasjon](https://rapporteket.github.io/rapporteket/articles/ac_generell_informasjon.html)
 
 Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. [Innspill og kommentarer er derfor svært velkomne](https://github.com/Rapporteket/rapporteket/issues).
 
