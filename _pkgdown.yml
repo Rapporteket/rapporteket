@@ -1,4 +1,5 @@
 destination: docs
+url: https://rapporteket.github.io/rapporteket/index.html
 development:
   mode: auto
 
