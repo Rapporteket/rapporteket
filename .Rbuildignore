@@ -7,10 +7,6 @@
 ^docs$
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
-^vignettes/01_kort_om_rapporteket\.Rmd$
-^vignettes/02_short_introduction\.Rmd$
-^vignettes/03_generell_informasjon\.Rmd$
-^vignettes/04_container_app\.Rmd$
 ^\.lintr$
 ^doc$
 ^Meta$
