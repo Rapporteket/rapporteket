@@ -30,7 +30,7 @@ URL: https://rapporteket.github.io/rapporteket/index.html,
     https://github.com/Rapporteket/rapporteket
 BugReports: https://github.com/Rapporteket/rapporteket/issues
 Description: Oppdatert informasjon om Rapporteket vedlikeholdt som en R-pakke.
-License: file LICENSE
+License: file LICENSE.md
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
