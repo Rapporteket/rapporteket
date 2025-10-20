@@ -6,4 +6,7 @@ articles:
   ab_short_introduction: ab_short_introduction.html
   ac_generell_informasjon: ac_generell_informasjon.html
   ad_container_app: ad_container_app.html
-last_built: 2025-10-20T13:27Z
+last_built: 2025-10-20T13:32Z
+urls:
+  reference: https://rapporteket.github.io/rapporteket/index.html/reference
+  article: https://rapporteket.github.io/rapporteket/index.html/articles
