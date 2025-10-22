@@ -2,11 +2,11 @@ pandoc: 3.1.11
 pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
-  aa_kort_introduksjon: aa_kort_introduksjon.html
-  ab_short_introduction: ab_short_introduction.html
-  ac_generell_informasjon: ac_generell_informasjon.html
-  ad_container_app: ad_container_app.html
-last_built: 2025-10-20T13:49Z
+  p_01_kort_introduksjon: p_01_kort_introduksjon.html
+  p_02_short_introduction: p_02_short_introduction.html
+  p_03_generell_informasjon: p_03_generell_informasjon.html
+  p_20_container_app: p_20_container_app.html
+last_built: 2025-10-22T10:10Z
 urls:
   reference: https://rapporteket.github.io/rapporteket/index.html/reference
   article: https://rapporteket.github.io/rapporteket/index.html/articles
