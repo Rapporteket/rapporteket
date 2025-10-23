@@ -68,6 +68,8 @@ CREATE TABLE IF NOT EXISTS `autoreport` (
 
 ### Logg-database
 
+Når rapporteket-applikasjonen starter opp og brukes, skrives det til to tabeller i en logg-database. Dette kommer i tillegg til det som logges i Norsk Helsenett sine systemer. Det skriver til disse to tabellene når *rapbase*-funksjonene `appLogger`, `repLogger` og `autLogger` brukes. Se [rapbase sin dokumentasjon](https://rapporteket.github.io/rapbase/reference/logger.html) for mer informasjon om bruk av disse funksjonene.
+
 Miljøvariablen `MYSQL_DB_LOG` brukes av *rapbase* for å finne navnet på logg-databasen, og må defineres:
 ```r
 Sys.setenv(MYSQL_DB_LOG="db_log")
