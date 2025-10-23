@@ -5,8 +5,9 @@ articles:
   p_01_kort_introduksjon: p_01_kort_introduksjon.html
   p_02_short_introduction: p_02_short_introduction.html
   p_03_generell_informasjon: p_03_generell_informasjon.html
+  p_04_ny_release: p_04_ny_release.html
   p_20_container_app: p_20_container_app.html
-last_built: 2025-10-22T10:10Z
+last_built: 2025-10-23T13:31Z
 urls:
   reference: https://rapporteket.github.io/rapporteket/index.html/reference
   article: https://rapporteket.github.io/rapporteket/index.html/articles
