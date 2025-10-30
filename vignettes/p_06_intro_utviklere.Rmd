@@ -48,13 +48,14 @@ Dette er:
 
 ## Dette trenger du for å utvikle Rapportek:
 
-For å kunne utvikle Rapportek-applikasjon 
+For å kunne utvikle Rapportek-applikasjon trenger man
+
 - R og RStudio installert
-- Kjennskap til R og Shiny
+- kjennskap til R og Shiny
 - Git installert
-- Github repository (dette lages av SKDE)
-- Kjennskap til git og GitHub
-- Databaseinnstallasjon (MySQL/MariaDB)
+- et *repository* på  [github.com/Rapporteket](https://github.com/Rapporteket/) (dette lages av SKDE)
+- kjennskap til git og GitHub
+- databaseinnstallasjon (MySQL/MariaDB)
 - LaTeX installert
 
 I tillegg er det nyttig med docker installert for å kunne teste applikasjonen i et så likt miljø som mulig som det den skal kjøres på NHN.
