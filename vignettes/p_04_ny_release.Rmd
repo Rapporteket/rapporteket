@@ -34,6 +34,8 @@ vignette: >
      ![Skjermbilde av github-nettside, publiser](img/publish-release.png)
 
 2. Vent til ny versjon er dyttet opp til Harbor. Sjekk status under github.com/Rapporteket/\<ditt rapportekt\>/actions.
-3. Endre i fila `values-qa.yaml` på [helsegitlab](https://helsegitlab.nhn.no/). Vent noen minutt på at ny versjon dukker opp på [rapporteket.qa.nhn.no/app/\<ditt rapportekt\>](https://rapporteket.qa.nhn.no/).
+3. Endre til nytt versjonsnummer i fila `values-qa.yaml` i qa på [helsegitlab](https://helsegitlab.nhn.no/team-register/rapporteket/rapporteket). 
+*Eksempel:* image: ncr.sky.nhn.no/rapporteket/intensiv:3.1.19 -> image: ncr.sky.nhn.no/rapporteket/intensiv:3.1.20
+Vent noen minutter på at ny versjon dukker opp på [rapporteket.qa.nhn.no/app/\<ditt rapportekt\>](https://rapporteket.qa.nhn.no/).
 4. **Sjekk applikasjonen nøye.**
 5. Hvis alt er OK, opprett en *merge request* mot prod-grena ved å gjøre tilsvarende endring i `values-prod.yaml` som ble gjort i punkt 3.

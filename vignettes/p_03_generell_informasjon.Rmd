@@ -25,8 +25,6 @@ R-koden, som danner grunnlaget for registerets Rapporteket-applikasjon, finnes p
 Hvert register har sin egen Rapporteket-applikasjon.
 
 Resultatene genereres på grunnlag av data tilgjengelig fra Registerets database. 
-Det betyr at når man skal lage automatisk genererte resultater som figurer og tabeller, må man ta høyde for at datagrunnlaget er dynamisk (dvs. i stadig endring).
-
 Resultater vil i denne sammenheng først og fremst være figurer og tabeller som oppsummerer data hentet fra registerets datakilde.
 Det kan også være ferdige rapporter i form av et dokument med figurer, tabeller, analyser og tekst (prosa).
 Rapporter kan settes opp til å sendes ut regelmessig  på e-post.
