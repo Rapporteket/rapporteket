@@ -14,7 +14,7 @@ Følgende informasjon er tilgjengelig:
 - [Rapporteket, generell informasjon](https://rapporteket.github.io/rapporteket/articles/p_03_generell_informasjon.html)
 - [Hvordan publisere ny versjon av en Rapporteket-applikasjon](https://rapporteket.github.io/rapporteket/articles/p_04_ny_release.html)
 
-Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. [Innspill og kommentarer er derfor svært velkomne](https://github.com/Rapporteket/rapporteket/issues).
+Det er et mål at informasjonen skal være relevant, dekkende og oppdatert. [Innspill og kommentarer er derfor svært velkomne](https://github.com/Rapporteket/rapporteket/issues). (Trykk på knappen "New issue" og beskriv hva du ønsker skal endres/legges til.)
 
 
 ## For utviklere av innhold på Rapporteket generelt
