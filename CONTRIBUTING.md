@@ -1,0 +1,11 @@
+# NA
+
+[SKDE](https://www.skde.no/) har et særlig ansvar for å holde denne
+pakken (*rapporteket*) oppdatert men også andre kan bidra (eksempelvis
+gjennom
+[*fork*](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
+og [*pull
+request*](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)).
+Ved å bidra godtar man også [de etiske
+retningslinjene](https://rapporteket.github.io/rapporteket/CODE_OF_CONDUCT.html)
+som gjelder for prosjektet.
