@@ -47,6 +47,7 @@ navnet på abonnement-databasen. Hvis man har abonnement-funksjonalitet i
 sitt rapportek, må denne miljøvariabelen defineres:
 
 ``` r
+
 Sys.setenv(MYSQL_DB_AUTOREPORT="db_autoreport")
 ```
 
@@ -91,6 +92,7 @@ Miljøvariablen `MYSQL_DB_LOG` brukes av *rapbase* for å finne navnet på
 logg-databasen, og må defineres:
 
 ``` r
+
 Sys.setenv(MYSQL_DB_LOG="db_log")
 ```
 

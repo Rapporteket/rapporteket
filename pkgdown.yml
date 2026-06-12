@@ -1,4 +1,4 @@
-pandoc: 3.1.11
+pandoc: 3.8.3
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
@@ -10,7 +10,7 @@ articles:
   p_06_intro_utviklere: p_06_intro_utviklere.html
   p_07_git: p_07_git.html
   p_20_container_app: p_20_container_app.html
-last_built: 2026-04-22T07:10Z
+last_built: 2026-06-12T11:50Z
 urls:
   reference: https://rapporteket.github.io/rapporteket/index.html/reference
   article: https://rapporteket.github.io/rapporteket/index.html/articles
